@@ -1,0 +1,111 @@
+<% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
+    , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="ja">
+        <%- include('/common/_headContent', { meta }) %>
+
+            <body data-page="../en">
+                <%- include('/common/_header', { meta }) %>
+                    <section class="about-hero c-wrapper">
+                        <h2 class="about-hero-title c-heading-title">テクロスとは</h2>
+                        <div class="about-hero-text c-explanation-text">
+                            <p>株式会社テクロスは、20年以上にわたり培ってきた医療分野での経験を基盤に、データサイエンスを核とした新たな挑戦を続ける企業です。</p>
+                            <p>
+                                従来の循環器領域におけるニュースの配信・イベント企画・情報発信・コンサルティングの実績を礎に、独自開発した「InsighTCROSS®」をはじめとする革新的なソリューションを展開し、全ての診療科における医薬品企業・医療機器企業・医療機関など、多様なステークホルダーに向けてサービスを提供しています。
+                            </p>
+                            <p>
+                                弊社は既存の枠組みにとらわれず、国内外の医療業界に新しい価値をもたらすことに挑み続け、次世代の医療を支える変革を牽引してまいります。
+                            </p>
+                        </div>
+                    </section>
+                    <section class="about-philosophy c-wrapper">
+                        <div class="about-philosophy-item">
+                            <h3 class="about-philosophy-item-title">Mission</h3>
+                            <p class="about-philosophy-item-text">定性的な観点を超え、医療分野にエビデンスベースの活動をもたらし、持続可能な医療に貢献すること。</p>
+                        </div>
+                        <div class="about-philosophy-line"></div>
+                        <div class="about-philosophy-item">
+                            <h3 class="about-philosophy-item-title">Vision</h3>
+                            <p class="about-philosophy-item-text">10年後、医療分野におけるエビデンスベースのソリューションプロバイダーとして、リーダー企業となること。
+                            </p>
+                        </div>
+                        <div class="about-philosophy-line"></div>
+                        <div class="about-philosophy-item">
+                            <h3 class="about-philosophy-item-title">Value</h3>
+                            <p class="about-philosophy-item-text">過去の成功を超える革新を起こす挑戦を続けること。
+                            </p>
+                        </div>
+                    </section>
+                    <section class="about-strengths c-wrapper">
+                        <h3>独自性と価値</h3>
+                        <ul class="about-strengths-list">
+                            <li class="about-strengths-list-item">
+                                <div>
+                                    <img src="../../asset/img/about/strengths1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>高度な専門人材</h4>
+                                <p>博士・修士保有者、医師、看護師など、高度な専門資格を持つ人材による体制</p>
+                            </li>
+                            <li class="about-strengths-list-item">
+                                <div>
+                                    <img src="../../asset/img/about/strengths1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>専門性と展開力</h4>
+                                <p>循環器領域で培った専門性と幅広い医療分野への展開力</p>
+                            </li>
+                            <li class="about-strengths-list-item">
+                                <div>
+                                    <img src="../../asset/img/about/strengths1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>豊富な実績</h4>
+                                <p>国内外の製薬・医療機器企業との豊富な実績</p>
+                            </li>
+                            <li class="about-strengths-list-item">
+                                <div>
+                                    <img src="../../asset/img/about/strengths1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>高度なデータ活用力</h4>
+                                <p>独自開発ソリューション「InsighTCROSS®」を含む高度なデータ活用力</p>
+                            </li>
+                            <li class="about-strengths-list-item">
+                                <div>
+                                    <img src="../../asset/img/about/strengths1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>知的財産の強み</h4>
+                                <p>知的財産の強み：国内特許3件、出願中2件、PCT出願5件（2025年9月現在）</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="about-company c-wrapper">
+                        <h3>会社概要</h3>
+                        <ul class="about-company-list">
+                            <li class="about-company-list-item">
+                                <h4>社名</h4>
+                                <p>株式会社テクロス（TCROSS Co., Ltd.）</p>
+                            </li>
+                            <li class="about-company-list-item">
+                                <h4>所在地</h4>
+                                <p>東京都新宿区新宿1-9-1 NEOX新宿ビル7F</p>
+                            </li>
+                            <li class="about-company-list-item">
+                                <h4>代表者</h4>
+                                <p>橋本 悟</p>
+                            </li>
+                            <li class="about-company-list-item">
+                                <h4>事業内容</h4>
+                                <p>
+                                    ・コンサルティング（医薬品・医療機器・全診療科対象）<br />・データサイエンス事業（InsighTCROSS®を核としたデータ分析・予測）<br />・医療情報配信（TCROSS
+                                    NEWS®）<br />・学術集会・ライブコースの企画・運営<br />・海外進出サポートやグローバル展開支援<br />・国内事業：臨床研究支援
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+                    <%- include('/common/_contact') %>
+                        <%- include('/common/_footer', { meta }) %>
+                            <script src="<%= meta.basePath %>asset/js/main.js"></script>
+            </body>
+
+        </html>

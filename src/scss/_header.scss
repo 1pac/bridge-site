@@ -1,0 +1,236 @@
+@use "sass:map";
+@use 'common.vars';
+
+/*! =====================
+    header_section
+    ===================== */
+.header {
+    width: 100%;
+
+    .header-info {
+        width: 100%;
+        background-color: map.get(common.$colors, black30);
+        padding-block: 16px;
+        padding-left: 82px;
+        padding-right: 80px;
+
+        &-wrapper {
+            width: 100%;
+            max-width: 1424px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        &-icn {
+            padding: 2px;
+            margin-right: 8px;
+
+            span {
+                width: 12px;
+                height: 12px;
+                display: block;
+                border-radius: 50%;
+                background-color: map.get(common.$colors, red300);
+            }
+        }
+
+        &-txt {
+            display: flex;
+            font-size: 16px;
+        }
+
+        &-txt p:nth-of-type(1) {
+            font-weight: 700;
+        }
+
+        &-txt p:nth-of-type(2) {
+            padding-left: 16px;
+        }
+
+        &-txt p:nth-of-type(3) {
+            padding-left: 10px;
+        }
+
+    }
+
+
+    .header-nav {
+        width: 100%;
+        background-image: url('../img/common/header_bg.jpg');
+        background-size: 100% 100%;
+
+        padding-block: 16px;
+        padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+
+        &-logo {
+            width: 138px;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &-menu {
+            background-color: #fff;
+            border-radius: 48px;
+            padding: 10px 32px;
+        }
+
+        ul {
+            display: flex;
+            gap: calc((24 / 1600) * 100vw);
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+
+            li {
+                position: relative;
+                transition: color 0.3s;
+
+                a {
+                    white-space: nowrap;
+
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        content: '';
+                        width: 100%;
+                        height: 1.5px;
+                        background: map.get(common.$colors, t-green);
+                        bottom: -8px;
+                        transform: scale(0, 1);
+                        transform-origin: center top;
+                        transition: transform 0.3s;
+                    }
+
+                    &:hover::after {
+                        transform: scale(1, 1);
+                    }
+                }
+
+                &._is-contact a {
+                    position: relative;
+                    display: inline-block;
+                    padding: 7px 16px;
+                    border-radius: 80px;
+                    border: 1px solid #4b5157;
+                    overflow: hidden;
+                    transition: border-color .3s ease;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 0;
+                        border-radius: inherit;
+                        border: 1px solid map.get(common.$colors, t-green);
+                        transition: height 0.5s ease;
+                        box-sizing: border-box;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        border-color: transparent;
+                        color: #fff;
+
+                        &::after {
+                            height: 100%;
+                        }
+                    }
+                }
+
+
+            }
+
+            li:hover {
+                cursor: pointer;
+                color: map.get(common.$colors, t-green);
+            }
+
+            li:nth-of-type(6) {
+                color: map.get(common.$colors, black400);
+            }
+
+            li:nth-of-type(7) {
+                width: 65px;
+            }
+        }
+
+        &-lang {
+            position: relative;
+            font-weight: 500;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 40%;
+                right: 0;
+                margin-left: calc((8 / 1600) * 100vw);
+                width: calc((6 / 1600) * 100vw);
+                height: calc((6 / 1600) * 100vw);
+                border-right: calc((2 / 1600) * 100vw) solid #333;
+                border-bottom: calc((2 / 1600) * 100vw) solid #333;
+                transform: translateY(-50%) rotate(45deg);
+                transition: border-right-color 0.3s, border-bottom-color 0.3s;
+
+                pointer-events: none;
+            }
+
+            &:hover::after {
+                border-right-color: map.get(common.$colors, t-green);
+                border-bottom-color: map.get(common.$colors, t-green);
+            }
+        }
+
+        #header-nav-select {
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            width: 100%;
+
+            &:hover {
+                cursor: pointer;
+                color: map.get(common.$colors, t-green);
+            }
+        }
+
+        &-wapper {
+            width: 100%;
+            max-width: 1424px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 15px;
+
+            h1 {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .header-info-txt-sub {
+        position: relative;
+    }
+
+    .header-info-txt-sub::after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        width: 8px;
+        height: 8px;
+        margin-left: 10px;
+        border-right: 2px solid #333;
+        border-bottom: 2px solid #333;
+        transform: translateY(-50%) rotate(-45deg);
+        pointer-events: none;
+    }
+
+}

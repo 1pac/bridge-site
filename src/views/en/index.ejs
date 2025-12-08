@@ -1,0 +1,117 @@
+<% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
+    , selected: "selected" , optionJp: "Japanese" , optionEn: "English" , terms: "terms of service" ,
+    privacy: "privacy policy" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="ja">
+        <%- include('/common/_headContent', { meta }) %>
+
+            <body data-page="../jp">
+                <%- include('/common/_header', { meta }) %>
+                    <section class="top-hero c-wrapper">
+                        <div class="top-hero-heading">
+                            <h2 class="top-hero-heading-title c-heading-title">
+                                <p>医療領域のen</p>
+                                <p>コミュニケーションに</p>
+                                <p>変革を</p>
+                            </h2>
+                            <div class="top-hero-heading-text c-heading-text">
+                                <p>テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。</p>
+                                <p>営業やマーケティングの領域にサイエンスの視点を取り入れ、</p>
+                                <p>医療産業の持続的な発展に寄与することを目指しています。</p>
+                            </div>
+                            <a href="#" class="c-link">
+                                <p>Who we are</p>
+                                <div class="c-link-icn"></div>
+                            </a>
+                        </div>
+                        <div class="top-hero-features">
+                            <div class="top-hero-features-news">
+                                <p class="top-hero-features-newsTitle">Features</p>
+                                <div class="top-hero-features-newsText">
+                                    <p>2025 .12.28</p>
+                                    <p>|</p>
+                                    <a href="#">新規導入薬を最初に処方する医師（アーリーアダプター）の特定を可能にするInsighTCROSS®
+                                        EarlyScriptersを発表します</a>
+                                </div>
+                                <div class="top-hero-features-newsText">
+                                    <p>2025 .12.28</p>
+                                    <p>|</p>
+                                    <a href="#">希少疾患領域においてInsighTCROSS®のトライアルでデータドリブンな新しい営業戦略の可能性を実証しました</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section class="our-services c-wrapper">
+                        <h2 class="our-services-title c-inter">Our Services</h2>
+                        <div class="our-services-list">
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services1.png" alt="データサイエンス事業">
+                                <h3>データサイエンス事業</h3>
+                            </a>
+
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services2.png" alt="臨床研究サポート事業">
+                                <h3>臨床研究サポート事業</h3>
+                            </a>
+
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services3.png" alt="イベントコーディネート事業">
+                                <h3>イベントコーディネート事業</h3>
+                            </a>
+
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services4.png" alt="WEB マーケティング事業">
+                                <h3>WEB マーケティング事業</h3>
+                            </a>
+
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services5.png" alt="メディアコミュニケーション事業">
+                                <h3>メディアコミュニケーション事業</h3>
+                            </a>
+
+                            <a href="#" class="our-services-list-business">
+                                <img src="../../asset/img/top/our-services6.png" alt="コンサルティング事業">
+                                <h3>コンサルティング事業</h3>
+                            </a>
+                        </div>
+
+                        <div class="our-services-icn">
+                            <a href="#" class="c-link">
+                                <p>Our Services</p>
+                                <div class="c-link-icn"></div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="recruit c-wrapper">
+                        <div class="recruit-explanation">
+                            <p class="recruit-explanation-section c-inter">Recruit</p>
+                            <h2 class="recruit-explanation-title c-explanation-title">
+                                <p>テクロスは</p>
+                                <p>医療業界の発展を</p>
+                                <p>一緒に目指す仲間を</p>
+                                <p>募集しています</p>
+                            </h2>
+                            <div class="recruit-explanation-text c-explanation-text">
+                                <p>テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。</p>
+                                <p>営業やマーケティングの領域にサイエンスの視点を取り入れ、</p>
+                                <p>医療産業の持続的な発展に寄与することを目指しています。</p>
+                            </div>
+                            <a href="#" class="c-link">
+                                <p>Recruit</p>
+                                <div class="c-link-icn"></div>
+                            </a>
+                        </div>
+                        <div class="recruit-image">
+                            <img src="../../asset/img/top/recruit.png" alt="recruit">
+                        </div>
+                    </section>
+                    <%- include('/common/_contact') %>
+                        <%- include('/common/_footer', { meta }) %>
+                            <script src="<%= meta.basePath %>asset/js/main.js"></script>
+            </body>
+
+        </html>

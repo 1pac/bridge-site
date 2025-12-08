@@ -1,0 +1,116 @@
+<% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+  ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../" ,
+  selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" }; %>
+  <%- include('/common/_metaCreate', { meta }) %>
+    <!DOCTYPE html>
+    <html lang="ja">
+    <%- include('/common/_headContent', { meta }) %>
+
+      <body data-page="../en">
+        <%- include('/common/_header', { meta }) %>
+          <section class="top-hero c-wrapper">
+            <div class="top-hero-heading">
+              <h2 class="top-hero-heading-title c-heading-title">
+                <p>医療領域の</p>
+                <p>コミュニケーションに</p>
+                <p>変革を</p>
+              </h2>
+              <div class="top-hero-heading-text c-heading-text">
+                <p>テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。</p>
+                <p>営業やマーケティングの領域にサイエンスの視点を取り入れ、</p>
+                <p>医療産業の持続的な発展に寄与することを目指しています。</p>
+              </div>
+              <a href="#" class="c-link">
+                <p>Who we are</p>
+                <div class="c-link-icn"></div>
+              </a>
+            </div>
+          </section>
+
+          <section class="top-features c-wrapper">
+            <div class="top-features-news">
+              <p class="top-features-news-title">Features</p>
+              <div class="top-features-news-text">
+                <p>2025 .12.28</p>
+                <p>新規導入薬を最初に処方する医師（アーリーアダプター）の特定を可能にするInsighTCROSS®<br />EarlyScriptersを発表します</p>
+              </div>
+              <div class="top-features-news-text">
+                <p>2025 .12.28</p>
+                <p>希少疾患領域においてInsighTCROSS®のトライアルでデータドリブンな<br />新しい営業戦略の可能性を実証しました</a>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="our-services c-wrapper">
+            <h2 class="our-services-title c-inter"><span>Our</span> Services</h2>
+            <div class="our-services-list">
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services1.png" alt="データサイエンス事業"></div>
+                <h3>データサイエンス事業</h3>
+              </div>
+
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services2.png" alt="臨床研究サポート事業"></div>
+                <h3>臨床研究サポート事業</h3>
+              </div>
+
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services3.png" alt="イベントコーディネート事業"></div>
+                <h3>イベントコーディネート事業</h3>
+              </div>
+
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services4.png" alt="WEB マーケティング事業"></div>
+                <h3>WEB マーケティング事業</h3>
+              </div>
+
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services5.png" alt="メディアコミュニケーション事業"></div>
+                <h3>メディアコミュニケーション事業</h3>
+              </div>
+
+              <div class="our-services-list-busines">
+                <div><img src="../../asset/img/top/our-services6.png" alt="コンサルティング事業"></div>
+                <h3>コンサルティング事業</h3>
+              </div>
+            </div>
+
+            <div class="our-services-link">
+              <a href="#" class="c-link-long c-inter">
+                <p>Our Services</p>
+              </a>
+            </div>
+
+          </section>
+
+          <section class="recruit">
+            <div class="recruit-explanation">
+              <p class="recruit-explanation-section c-inter">Recruit</p>
+              <h2 class="c-explanation-title">
+                <p>テクロスは</p>
+                <p>医療業界の発展を</p>
+                <p>一緒に目指す仲間を</p>
+                <p>募集しています</p>
+              </h2>
+              <div class="recruit-explanation-text c-explanation-text">
+                <p>テクロスでは、ニュートラルな視点と深い専門性、そして情熱を共有し、 <br />
+                  循環器医療に持続的な価値を創出していく仲間を求めています。</p>
+              </div>
+              <div class="recruit-link">
+                <a href="#" class="c-link-long c-inter">
+                  <p>Recruit</p>
+                </a>
+              </div>
+              <div class="recruit-explanation-image">
+                <img src="../../asset/img/top/recruit.jpg" alt="recruit">
+              </div>
+            </div>
+
+          </section>
+          <%- include('/common/_contact') %>
+            <%- include('/common/_footer', { meta }) %>
+              <script src="<%= meta.basePath %>asset/js/main.js"></script>
+      </body>
+
+    </html>

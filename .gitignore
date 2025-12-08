@@ -1,0 +1,11 @@
+#macOS
+.DS_Store
+
+
+# Ignore all environment files.
+node_modules/
+
+# Compiled files
+/dist
+*.css
+*.map

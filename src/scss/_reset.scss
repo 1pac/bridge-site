@@ -1,0 +1,49 @@
+// reset.scss
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: none;
+  background: transparent;
+  outline: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+

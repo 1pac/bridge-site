@@ -1,0 +1,102 @@
+@use "sass:map";
+@use 'common.vars';
+
+/*! =====================
+    footer_section
+    ===================== */
+.footer {
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 97px;
+    padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+    max-width: 1424px;
+    margin: 0 auto;
+    .footer-logo {
+        width: fit-content;
+        transition: opacity 0.3s;
+
+        &-img {
+            width: 168px;
+            height: auto;
+            margin-bottom: 34.5px;
+            display: block;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .footer-nav {
+        display: flex;
+        margin-bottom: calc((28 / 1600) * 100vw);
+
+        ul {
+            display: flex;
+            gap: calc((32 / 1600) * 100vw);
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+
+            li:nth-of-type(6) {
+                color: map.get(common.$colors, black400);
+            }
+
+            li {
+                transition: color 0.3s ease;
+            }
+
+            li:hover {
+                cursor: pointer;
+                color: map.get(common.$colors, t-green);
+            }
+        }
+
+        &-facebook {
+            width: 24px;
+            height: auto;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &-x {
+            width: 24px;
+            height: auto;
+            max-width: 24px;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .footer-Terms {
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+
+        a:nth-of-type(2) {
+            padding-left: calc((24 / 1600) * 100vw);
+        }
+
+        p {
+            position: absolute;
+            right: 0;
+        }
+
+        a {
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: map.get(common.$colors, t-green);
+        }
+    }
+
+}

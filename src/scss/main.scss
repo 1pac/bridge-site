@@ -1,0 +1,491 @@
+@use "sass:map";
+@use 'reset';
+@use 'common.vars';
+@use 'header';
+@use 'footer';
+
+/*! =====================
+    top_section(トップページ)
+    ===================== */
+
+.top-hero {
+    width: 100%;
+
+    height: auto;
+    background-image: url('../img/top/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 160px;
+    padding-top: 202px;
+
+    &-heading {
+        width: 783px;
+
+        &-title {
+            margin-bottom: 40px;
+        }
+
+        &-text {
+            line-height: 1.5;
+            margin-bottom: 94px;
+
+            p:nth-of-type(1) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+}
+
+.top-features {
+    width: 100%;
+    padding-block: 80px;
+
+    &-news {
+        width: 100%;
+
+        &-title {
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        &-text {
+            font-size: 16px;
+            display: flex;
+            margin-bottom: 32px;
+            flex-direction: column;
+            row-gap: 8px;
+            line-height: 1.5;
+
+            p:nth-of-type(1) {
+                color: map.get(common.$colors, t-green-500);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+.our-services {
+    width: 100%;
+    margin-bottom: 160px;
+    padding-top: 32px;
+
+    &-title {
+        font-size: 88px;
+        font-weight: 600;
+        margin-bottom: 80px;
+
+        span {
+            color: map.get(common.$colors, t-green);
+        }
+    }
+
+    &-list {
+        width: 100%;
+        display: flex;
+        gap: min(calc(64 / 1600) * 100vw, 64px);
+        flex-wrap: wrap;
+
+        &-busines {
+
+            // イメージスケールアップ
+            div {
+                width: min(calc((430 / 1600) * 100vw), 430px);
+                height: min(calc((320 / 1600) * 100vw), 320px);
+                position: relative;
+                overflow: hidden;
+                border-radius: 40px;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: scale 0.3s ease;
+
+                }
+
+                &:hover img {
+                    scale: 1.08;
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                margin-top: 24px 64px;
+            }
+
+            &:last-child {
+                h3 {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+
+    &-link {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.recruit {
+    padding-block: 128px 88px;
+    position: relative;
+
+    &-explanation {
+        font-weight: 600;
+        font-size: 18px;
+        background-color: map.get(common.$colors, black30);
+        // padding: 63.5px 0 103.5px 80px;
+        padding: 63.5px 0 90.5px 80px;
+        position: relative;
+
+        &-section {
+            // margin-bottom: 56px;
+            margin-bottom: 48px;
+        }
+
+        &-text {
+            // margin-top: 48px;
+            margin-top: 38px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &-image {
+            margin: 0 auto;
+            width: min(calc((928 / 1600) * 100vw) ,928px);
+            height: auto;
+            position: absolute;
+            top: 38.5px;
+            right: 88px;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+
+    &-link {
+        position: absolute;
+        bottom: -15px;
+    }
+}
+
+/*! ====================
+    about_section(会社概要ページ)
+    ==================== */
+.about-hero {
+    width: 100%;
+    height: auto;
+    background-image: url('../img/about/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-block: 100px;
+    display: flex;
+    column-gap: 125px;
+
+    &-title {
+        flex-shrink: 0;
+    }
+
+    &-text {
+        width: 100%;
+        line-height: 2.6;
+
+        p {
+            margin-top: 50px;
+        }
+
+        p:nth-of-type(1) {
+            margin-top: 0;
+        }
+    }
+}
+
+.about-philosophy {
+    width: 100%;
+    display: flex;
+    column-gap: 70px;
+    align-items: center;
+    margin-top: 150px;
+
+    &-line {
+        width: 1px;
+        height: 215px;
+        background: #000;
+    }
+
+    &-item {
+        width: 30%;
+
+        &-title {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+    }
+}
+
+.about-strengths {
+    margin-top: 150px;
+
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    &-list {
+        margin-top: 50px;
+        display: flex;
+        column-gap: 35px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 29%;
+
+            h4 {
+                margin-top: 20px;
+                font-size: 26px;
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+.about-company {
+    margin: 150px 0 54px;
+
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    &-list {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            column-gap: 100px;
+
+            &:last-of-type {
+                align-items: flex-start;
+
+                h4 {
+                    margin-top: 15px;
+                }
+            }
+
+            h4 {
+                font-size: 20px;
+                min-width: 85px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 2.5;
+            }
+        }
+    }
+}
+
+
+/*! ====================
+    event_section(イベントコーディネート事業ページ)
+    ==================== */
+.event-hero {
+    h2 {
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    &-content {
+        display: flex;
+        column-gap: 58px;
+        margin-top: 100px;
+
+        p {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 2.5;
+        }
+
+        div:last-of-type {
+            width: 42%;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.event-clause {
+    margin-top: 150px !important;
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+
+    &-list {
+        margin-top: 30px;
+        display: flex;
+        column-gap: 110px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+
+        li {
+            width: 41.5%;
+
+            h4 {
+                font-size: 26px;
+                line-height: 1.5;
+            }
+
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/*! ====================
+    marketing_section(Webマーケティング事業ページ)
+    ==================== */
+
+.marketing-hero {
+    h2 {
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    &-content {
+        display: flex;
+        column-gap: 33px;
+        margin-top: 100px;
+
+        p {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 2.5;
+        }
+
+        div:last-of-type {
+            width: 42%;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.marketing-clause {
+    margin-top: 150px !important;
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+
+    &-list {
+        margin-top: 30px;
+        display: flex;
+        column-gap: 110px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+
+        li {
+            width: 41.5%;
+
+            h4 {
+                font-size: 26px;
+                line-height: 1.5;
+            }
+
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/*! ====================
+    clinical_section(臨床研究サポート事業ページ)
+    ==================== */
+
+.clinical-hero {
+    h2 {
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    &-content {
+        display: flex;
+        column-gap: 33px;
+        margin-top: 100px;
+
+        p {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 2.5;
+        }
+
+        div:last-of-type {
+            width: 42%;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.clinical-suuport {
+    margin-top: 150px !important;
+
+    &-headline {
+        margin-block: 30px;
+    }
+
+    &-step {
+        display: flex;
+        column-gap: 98px;
+        justify-content: center;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+
+            h5 {
+                font-size: 20px;
+            }
+        }
+
+        &-img {
+            width: 155px;
+            height: 155px;
+        }
+    }
+}
