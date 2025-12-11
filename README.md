@@ -23,7 +23,7 @@ npm install chokidar --save-dev
 
 
 ###開発方法
-* 一度scssのコンパイルを行うだけなら以下を実行
+* ejs,scssの一括コンパイルをする場合は以下を実行
 
 ```
 npm run build
@@ -43,6 +43,13 @@ npm run ejs
 
 ```
 npm run ejs-watch
+```
+
+* ejsでhtmlを出力後インデントが崩れてしまうためjs-beautifyを使用
+* インデントを調節したいタイミングで以下を実行
+
+```
+npm run beautify
 ```
 
 ###ファイル構造

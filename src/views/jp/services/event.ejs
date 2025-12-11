@@ -1,6 +1,6 @@
 <% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
     ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
-    basePath: "../../../" , selected: "" , optionJp: "日本語", optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針"}; %>
+    basePath: "../../../" , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
@@ -19,22 +19,16 @@
 
                     <div class="c-modal">
                         <div class="c-modal-case">
-                            <h4>循環器治療の主要領域を網羅した、包括的ライブイベントの実現</h4>
-                            <h5>豊橋ライブデモンストレーションコース</h5>
-                            <div class="c-modal-case-img"><img src="../../../asset/img/about/strengths1.png"></div>
+                            <h4 class="c-modal-case-title"></h4>
+                            <h5 class="c-modal-case-subtitle"></h5>
+                            <div class="c-modal-case-img"><img class="c-modal-img-src" src=""></div>
                             <h6>成果</h6>
-                            <ul>
-                                <li>2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施</li>
-                                <li>参加者数2,447名（前年比＋399名）／有料参加者前年比150％増</li>
-                                <li>学術イベントの持続的成長モデルとして定着</li>
-                                <li>多様なステークホルダーが共に価値を創出するイベントの新たな形を提示</li>
+                            <ul class="modal-case-list">
                             </ul>
                             <h6>背景</h6>
-                            <p>2011年の初開催以来、豊橋ライブは日本の循環器治療分野における代表的なライブデモンストレーションとして発展。
-                                虚血・EVT・SHD・不整脈・薬物治療など、多岐にわたる分野を横断的に学べるプログラム構成を設計し、 臨床・教育・産業が交差する場として進化を続けてきました。</p>
+                            <p class="modal-case-text-1"></p>
                             <h6>取り組み</h6>
-                            <p>テクロスは、企画立案から運営・配信設計・広報戦略までを包括的にサポート。 自社メディアやSNSを活用したオンラインプロモーションを展開し、
-                                有料会員層の拡大と新規参加者の獲得を推進しました。 また、早割制度の導入やオンデマンド配信設計により、 利便性と満足度の両面で最適化を図りました。</p>
+                            <p class="modal-case-text-2"></p>
                             <div class="c-modal-case-close" id="modal-close-btn"></div>
                         </div>
                     </div>
@@ -163,7 +157,7 @@
                                     <h5>Japanese Bifurcation Club（JBC）</h5>
                                     <p>・EBC／KBC／ABCなど世界主要学会との連携による国際展開<br />・分岐部治療に特化した継続的学術コミュニティの構築<br />・症例を通じた臨床知の共有・議論の促進<br />・日本の知見を世界へ届けるライブプラットフォームの確立
                                     </p>
-                                    <p class="c-example-list-more js-modal" data-modal-id="1">もっと詳しく</p>
+                                    <p class="c-example-list-more js-modal" data-modal="1">もっと詳しく</p>
                                 </div>
                             </li>
                             <li>
@@ -175,7 +169,7 @@
                                     <h5>豊橋ライブデモンストレーションコース</h5>
                                     <p>・2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施<br />・参加者数2,447名（前年比＋399名）／有料参加者前年比150％増<br />・学術イベントの持続的成長モデルとして定着<br />・多様なステークホルダーが共に価値を創出するイベントの新たな形を提示
                                     </p>
-                                    <p class="c-example-list-more js-modal" data-modal-id="2">もっと詳しく</p>
+                                    <p class="c-example-list-more js-modal" data-modal="2">もっと詳しく</p>
                                 </div>
                             </li>
                         </ul>

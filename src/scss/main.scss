@@ -3,6 +3,7 @@
 @use 'common.vars';
 @use 'header';
 @use 'footer';
+@use 'mixins';
 
 /*! =====================
     top_section(トップページ)
@@ -92,6 +93,9 @@
         flex-wrap: wrap;
 
         &-busines {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
 
             // イメージスケールアップ
             div {
@@ -161,7 +165,7 @@
 
         &-image {
             margin: 0 auto;
-            width: min(calc((928 / 1600) * 100vw) ,928px);
+            width: min(calc((928 / 1600) * 100vw), 928px);
             height: auto;
             position: absolute;
             top: 38.5px;

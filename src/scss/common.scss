@@ -1,9 +1,10 @@
 @use "sass:map";
 @use 'common.vars';
+@use 'mixins';
 
 body {
     width: 100%;
-    font-family: "Yu Gothic", "Noto Sans JP", "sans-serif";
+    font-family: "Noto Sans JP", "sans-serif";
 }
 
 img {
@@ -103,16 +104,18 @@ img {
     padding: 20px 85px 20px 32px;
     transition: background-color 0.3s;
     cursor: pointer;
+
     &::before {
         content: "";
         width: 10px;
         height: 10px;
         border-right: solid 1.5px #fff;
         border-bottom: solid 1.5px #fff;
-        position:absolute;
+        position: absolute;
         right: 40px;
         transform: rotate(-45deg);
     }
+
     &::after {
         content: "";
         width: 27.2px;
@@ -121,6 +124,7 @@ img {
         position: absolute;
         background-color: #fff;
     }
+
     &:hover {
         background-color: map.get(common.$colors, t-green);
     }
@@ -130,7 +134,6 @@ img {
     max-width: 1600px;
     margin: 0 auto;
     padding-inline: min(calc((88 / 1600) * 100vw), 88px);
-    ;
 }
 
 .contact {
@@ -214,27 +217,38 @@ img {
 }
 
 .c-modal {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
 
     &-case {
         width: calc((1177 / 1600) * 100vw);
-        // width: 100%;
-        // max-width: 1177px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         background-color: #fff;
         padding: calc((85 / 1600) * 100vw) calc((122 / 1600) * 100vw) calc((112 / 1600) * 100vw) calc((120 / 1600) * 100vw);
         max-height: 80vh;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        transition: transform .3s ease, opacity .3s ease;
         overflow-y: auto;
+
+        &.show {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
 
         &-img {
             width: 57.3%;
@@ -285,10 +299,15 @@ img {
             font-size: 26px;
             font-weight: 700;
             cursor: pointer;
+            transition: opacity 0.3s ease;
+            &:hover {
+                opacity: 0.5;
+            }
 
             &::before {
                 content: "×";
             }
+
         }
     }
 
@@ -367,6 +386,7 @@ img {
     margin-top: 150px;
 
     &-list {
+        width: fit-content;
         margin-top: 30px;
         display: flex;
         flex-direction: column;
@@ -405,11 +425,16 @@ img {
 
 
         &-more {
+            width: fit-content;
             line-height: 2.6;
             margin-top: 10px !important;
+            margin-left: auto;
             text-decoration: underline;
-            text-align: end;
             cursor: pointer;
+            transition: opacity 0.3s ease;
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
 }
