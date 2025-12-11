@@ -4,6 +4,7 @@
 
 # Ignore all environment files.
 node_modules/
+.env
 
 # Compiled files
 /dist/**/*.html

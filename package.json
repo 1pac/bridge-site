@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "sass-watch":  "sass --watch src/scss/main.scss:dist/asset/css/main.bundle.css src/scss/common.scss:dist/asset/css/common.css",
+    "sass-watch": "sass --watch src/scss/main.scss:dist/asset/css/main.bundle.css src/scss/common.scss:dist/asset/css/common.css",
     "sass": "sass src/scss/main.scss dist/asset/css/main.bundle.css --style=compressed && sass src/scss/common.scss dist/asset/css/common.css --style=compressed",
     "build": "npm run ejs && npm run sass && npm run beautify",
     "ejs": "node build-ejs.js",
@@ -9,6 +9,7 @@
     "beautify": "js-beautify -r dist/**/*.html --indent-size 2 --max-preserve-newlines 1"
   },
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "js-beautify": "^1.15.4",
     "sass": "^1.94.0"

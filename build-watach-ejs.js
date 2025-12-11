@@ -6,10 +6,17 @@ import path from "path";
 import ejs from "ejs";
 //ejsのwatch用にchokidarを読み込む
 import chokidar from "chokidar";
+import 'dotenv/config'; 
 
 // 入力フォルダと出力フォルダを指定
 const inputDir = "src/views";
 const outputDir = "./dist";
+
+// 環境変数 ENV を取得 ('local' か 'amplify')
+const env = process.env.ENV || "local";
+console.log(process.env.ENV);
+// ASSET_PATH を環境ごとに設定
+const ASSET_PATH = env === "amplify" ? "" : "dist/";
 
 // EJSをコンパイルしてHTMLを出力する関数
 function compileEjs(src, out) {
@@ -18,7 +25,7 @@ function compileEjs(src, out) {
 
     // EJSの render() 関数を使ってHTMLに変換
     // (変数を使っていないため第二引数は空のオブジェクト、第三引数はheader.ejsなどのパーツを相対で探すのでejsファイルのパスを渡す)
-    const html = ejs.render(content, {}, {
+    const html = ejs.render(content, { ASSET_PATH }, {
         filename: src,
         root: path.resolve("src/views") // ルートディレクトリを指定
     });
@@ -30,8 +37,8 @@ function compileEjs(src, out) {
 
 // ejsファイル変更を監視して自動出力
 const watcher = chokidar.watch("src/views", {
-  ignored: /(^|[\/\\])\../, // .隠しファイルを無視
-  persistent: true
+    ignored: /(^|[\/\\])\../, // .隠しファイルを無視
+    persistent: true
 });
 
 //views配下の変更を検知したら以下実行

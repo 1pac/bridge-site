@@ -4,6 +4,14 @@ import fs from "fs";
 import path from "path";
 //EJS テンプレートエンジン本体を読み込む
 import ejs from "ejs";
+import 'dotenv/config'; 
+
+
+// 環境変数 ENV を取得 ('local' か 'amplify')
+const env = process.env.ENV || "local";
+console.log(process.env.ENV);
+// ASSET_PATH を環境ごとに設定
+const ASSET_PATH = env === "amplify" ? "" : "dist/";
 
 // 入力フォルダと出力フォルダを指定
 const inputDir = "src/views/jp";
@@ -95,7 +103,7 @@ function compileEjs(src, out) {
 
     // EJSの render() 関数を使ってHTMLに変換
     // (変数を使っていないため第二引数は空のオブジェクト、第三引数はheader.ejsなどのパーツを相対で探すのでejsファイルのパスを渡す)
-    const html = ejs.render(content, {}, {
+    const html = ejs.render(content, { ASSET_PATH }, {
         filename: src,
         root: path.resolve("src/views") // ルートディレクトリを指定
     });
