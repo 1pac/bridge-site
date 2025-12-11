@@ -14,7 +14,6 @@ const outputDir = "./dist";
 
 // 環境変数 ENV を取得 ('local' か 'amplify')
 const env = process.env.ENV || "local";
-console.log(process.env.ENV);
 // ASSET_PATH を環境ごとに設定
 const ASSET_PATH = env === "amplify" ? "" : "dist/";
 
