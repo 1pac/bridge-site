@@ -1,8 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "sass-watch":  "sass --watch src/scss/main.scss:asset/css/main.bundle.css src/scss/common.scss:asset/css/common.css",
-    "sass": "sass src/scss/main.scss asset/css/main.bundle.css --style=compressed && sass src/scss/common.scss asset/css/common.css --style=compressed",
+    "sass-watch":  "sass --watch src/scss/main.scss:dist/asset/css/main.bundle.css src/scss/common.scss:dist/asset/css/common.css",
+    "sass": "sass src/scss/main.scss dist/asset/css/main.bundle.css --style=compressed && sass src/scss/common.scss dist/asset/css/common.css --style=compressed",
     "build": "npm run ejs && npm run sass && npm run beautify",
     "ejs": "node build-ejs.js",
     "ejs-watch": "node build-watach-ejs.js --watch",
