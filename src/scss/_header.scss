@@ -56,7 +56,7 @@
 
     .header-nav {
         width: 100%;
-        background-image: url('../img/common/header_bg.jpg');
+        background-color: #fff;
         background-size: 100% 100%;
 
         padding-block: 16px;
@@ -74,8 +74,6 @@
         }
 
         &-menu {
-            background-color: #fff;
-            border-radius: 48px;
             padding: 10px 32px;
         }
 
@@ -111,36 +109,32 @@
                     }
                 }
 
-                &._is-contact a {
+                &._is-contact {
                     position: relative;
                     display: inline-block;
                     padding: 7px 16px;
                     border-radius: 80px;
                     border: 1px solid #4b5157;
-                    overflow: hidden;
-                    transition: border-color .3s ease;
-                    z-index: 1;
+                    transition: background-color .5s ease;
+                    transition: color .2s ease;
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 0;
-                        border-radius: inherit;
-                        border: 1px solid map.get(common.$colors, t-green);
-                        transition: height 0.5s ease;
-                        box-sizing: border-box;
-                        z-index: -1;
-                    }
-
-                    &:hover {
+                    &:hover,& a:hover {
                         border-color: transparent;
                         color: #fff;
+                        background-color: map.get(common.$colors, t-green);
 
                         &::after {
-                            height: 100%;
+                            display: none;
+                        }
+                    }
+
+                    & a:hover {
+                        border-color: transparent;
+                        color: #fff;
+                        background-color: map.get(common.$colors, t-green);
+
+                        &::after {
+                            display: none;
                         }
                     }
                 }

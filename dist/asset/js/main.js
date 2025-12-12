@@ -46,6 +46,73 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', onScroll);
 
     /*  =====================
+        スライダー処理
+        ===================== */
+    const paginationContainer =
+        document.querySelector(".top-hero-swiper-controlsPagination");
+
+    // バー生成(指定可能)
+    const TOTAL_SLIDES = 6;
+    let items = [];
+
+    for (let i = 0; i < TOTAL_SLIDES; i++) {
+        const bar = document.createElement("div");
+        bar.className =
+            "top-hero-swiper-controlsPaginationItem inactive";
+        paginationContainer.appendChild(bar);
+        items.push(bar);
+    }
+
+    const swiper = new Swiper(".top-hero-swiper", {
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        wrapperClass: "top-hero-swiper-wrapper",
+        slideClass: "top-hero-swiper-wrapperSlide",
+    });
+
+    /* アクティブバーを更新する関数 */
+    function updatePagination() {
+        const index = swiper.realIndex % TOTAL_SLIDES;
+
+        items.forEach((bar, i) => {
+            if (i === index) {
+                bar.classList.remove("inactive");
+                bar.classList.add("active");
+            } else {
+                bar.classList.remove("active");
+                bar.classList.add("inactive");
+            }
+        });
+    }
+
+
+    /* Swiper イベント */
+    swiper.on("slideChange", updatePagination);
+
+    /* 初回反映 */
+    updatePagination();
+
+    /* 再生停止ボタン */
+    const togglePlay = document.getElementById("toggle-play");
+    let isPlaying = true;
+
+    togglePlay.addEventListener("click", () => {
+        if (isPlaying) {
+            swiper.autoplay.stop();
+            togglePlay.classList.add("is-paused");
+        } else {
+            swiper.autoplay.start();
+            togglePlay.classList.remove("is-paused");
+        }
+        isPlaying = !isPlaying;
+    });
+
+
+
+    /*  =====================
         services配下共通モーダル
         ===================== */
 

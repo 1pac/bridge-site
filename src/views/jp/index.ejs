@@ -6,82 +6,122 @@
     <html lang="ja">
     <%- include('/common/_headContent', { meta }) %>
 
-      <body data-page="../en">
+      <body class="top" data-page="../en">
         <%- include('/common/_header', { meta }) %>
-          <section class="top-hero c-wrapper">
-            <div class="top-hero-heading">
-              <h2 class="top-hero-heading-title c-heading-title">
-                <p>医療領域の</p>
-                <p>コミュニケーションに</p>
-                <p>変革を</p>
-              </h2>
-              <div class="top-hero-heading-text c-heading-text">
-                <p>テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。</p>
-                <p>営業やマーケティングの領域にサイエンスの視点を取り入れ、</p>
-                <p>医療産業の持続的な発展に寄与することを目指しています。</p>
+          <section class="top-hero">
+            <div class="top-hero-swiper">
+              <div class="top-hero-swiper-wrapper">
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 1"></div>
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 2"></div>
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 3"></div>
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 4"></div>
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 5"></div>
+                <div class="top-hero-swiper-wrapperSlide"><img src="../../<%= ASSET_PATH %>asset/img/top/hero.jpg"
+                    alt="スライド 6"></div>
               </div>
-              <a href="#" class="c-link">
-                <p>Who we are</p>
-                <div class="c-link-icn"></div>
-              </a>
+
+              <div class="top-hero-swiper-controls">
+                <div id="toggle-play" class="top-hero-swiper-controlsTogglePlay"></div>
+                <div class="top-hero-swiper-controlsPagination"></div>
+              </div>
+
+
+              <div class="top-hero-swiper-heading">
+                <h2 class="top-hero-heading-title c-heading-title">
+                  <p>持続可能な<br />医療へと変革する<br />プロフェッショナル</p>
+                </h2>
+                <div class="top-hero-swiper-headingText c-heading-text">
+                  <p>テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。</p>
+                  <p>営業やマーケティングの領域にサイエンスの視点を取り入れ、</p>
+                  <p>医療産業の持続的な発展に寄与することを目指しています。</p>
+                </div>
+              </div>
+              <div class="top-hero-swiper-link">
+                <a href="#" class="c-link-long c-inter">
+                  <p>Who We Are</p>
+                </a>
+              </div>
+
             </div>
           </section>
 
           <section class="top-features c-wrapper">
             <div class="top-features-news">
-              <p class="top-features-news-title">Features</p>
-              <div class="top-features-news-text">
-                <p>2025 .12.28</p>
-                <p>新規導入薬を最初に処方する医師（アーリーアダプター）の特定を可能にするInsighTCROSS®<br />EarlyScriptersを発表します</p>
+              <div class="top-features-news-wrapper">
+                <p class="top-features-news-wrapperTitle">Features</p>
+                <div class="top-features-news-wrapperText">
+                  <p>2025 .12.28</p>
+                  <a href="#">新規導入薬を最初に処方する医師（アーリーアダプター）の特定を可能にするInsighTCROSS® EarlyScriptersを発表します</a>
+                </div>
+                <div class="top-features-news-wrapperText">
+                  <p>2025 .12.28</p>
+                  <a href="#">希少疾患領域においてInsighTCROSS®のトライアルでデータドリブンな新しい営業戦略の可能性を実証しました</a>
+                </div>
               </div>
-              <div class="top-features-news-text">
-                <p>2025 .12.28</p>
-                <p>希少疾患領域においてInsighTCROSS®のトライアルでデータドリブンな<br />新しい営業戦略の可能性を実証しました</a>
-              </div>
-
             </div>
           </section>
 
-          <section class="our-services c-wrapper">
-            <h2 class="our-services-title c-inter"><span>Our</span> Services</h2>
-            <div class="our-services-list">
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services1.png" alt="データサイエンス事業"></div>
-                <h3>データサイエンス事業</h3>
+          <section class="our-services">
+            <div class="our-services-wrapper">
+              <h2 class="our-services-wrapper-title c-inter"><span>Our</span> Services</h2>
+              <p>医療の基盤を支えるEvidenceを、未来へつながる医療の力へ。<br />その変革に必要な専門領域を揃えています。</p>
+              <div class="our-services-wrapper-list">
+                <div class="our-services-wrapper-list-busines">
+                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services1.jpg" alt="データサイエンス事業"></a>
+                  <h3>データサイエンス事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                </div>
+
+                <div class="our-services-wrapper-list-busines">
+                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services2.jpg" alt="臨床研究サポート事業"></a>
+                  <h3>臨床研究サポート事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                </div>
+
+                <div class="our-services-wrapper-list-busines">
+                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services3.jpg" alt="イベントコーディネート事業"></a>
+                  <h3>イベントコーディネート事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                </div>
+
+                <div class="our-services-wrapper-list-busines">
+                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services4.jpg" alt="WEB マーケティング事業"></a>
+                  <h3>WEB マーケティング事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                </div>
+
+                <div class="our-services-wrapper-list-busines">
+                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services5.jpg"
+                      alt="メディアコミュニケーション事業"></a>
+                  <h3>メディアコミュニケーション事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+
+                </div>
+
+                <div class="our-services-wrapper-list-busines">
+                  <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services6.jpg" alt="コンサルティング事業"></div>
+                  <h3>コンサルティング事業</h3>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
+                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                </div>
               </div>
 
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services2.png" alt="臨床研究サポート事業"></div>
-                <h3>臨床研究サポート事業</h3>
-              </div>
-
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services3.png" alt="イベントコーディネート事業"></div>
-                <h3>イベントコーディネート事業</h3>
-              </div>
-
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services4.png" alt="WEB マーケティング事業"></div>
-                <h3>WEB マーケティング事業</h3>
-              </div>
-
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services5.png" alt="メディアコミュニケーション事業"></div>
-                <h3>メディアコミュニケーション事業</h3>
-              </div>
-
-              <div class="our-services-list-busines">
-                <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services6.png" alt="コンサルティング事業"></div>
-                <h3>コンサルティング事業</h3>
+              <div class="our-services-wrapper-link">
+                <a href="#" class="c-link-long c-inter">
+                  <p>Our Services</p>
+                </a>
               </div>
             </div>
-
-            <div class="our-services-link">
-              <a href="#" class="c-link-long c-inter">
-                <p>Our Services</p>
-              </a>
-            </div>
-
           </section>
 
           <section class="recruit">
@@ -106,8 +146,28 @@
                 <img src="../../<%= ASSET_PATH %>asset/img/top/recruit.jpg" alt="recruit">
               </div>
             </div>
-
           </section>
+
+          <section class="news c-wrapper">
+            <div class="news-wrapper">
+              <p class="news-wrapper-title">News</p>
+              <div class="news-wrapper-text">
+                <p>2025 .12.25</p>
+                <a href="#">MEDICA 2025にてInsighTCROSS®およびデータサイエンス事業について展示いたします</a>
+              </div>
+              <div class="news-wrapper-text">
+                <p>2025 .11.16</p>
+                <a href="#">InsighTCROSS®が、ものづくり補助金〈グローバル展開型〉に採択されました</a>
+              </div>
+              <div class="news-wrapper-text">
+                <p>2025 .10.01</p>
+                <a href="#">
+                  あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎら<br />ひかる草の波。あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、<br />郊外のぎらぎらひかる草の波。
+                </a>
+              </div>
+            </div>
+          </section>
+
           <%- include('/common/_contact') %>
             <%- include('/common/_footer', { meta }) %>
               <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
