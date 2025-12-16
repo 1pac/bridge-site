@@ -1,8 +1,9 @@
 <footer class="footer">
   <div class="footer-logo">
-    <a href="#" class="footer-logo-img"><img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal_footer.svg" alt="TCROSS"></a>
+    <a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html" class="footer-logo-img"><img
+        src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal_footer.svg" alt="TCROSS"></a>
   </div>
-  <div class="footer-nav">
+  <div class="footer-nav c-inter">
     <nav>
       <ul>
         <li><a href="#">Who we are</a></li>
@@ -10,15 +11,35 @@
         <li><a href="#">Recruit</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Contact</a></li>
-        <li>|</li>
-        <a href="#"><img class="footer-nav-facebook" src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/facebook.svg" alt="faceBook"></a>
-        <a href="#"><img class="footer-nav-x" src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/x.svg" alt="X"></a>
+        <li class="_pc">|</li>
+        <a href="#" class="_pc"><img class="footer-nav-facebook"
+            src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/facebook.svg" alt="faceBook"></a>
+        <a href="#" class="_pc"><img class="footer-nav-x"
+            src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/x.svg" alt="X"></a>
       </ul>
     </nav>
   </div>
-  <div class="footer-Terms">
-    <a href="#"><%= meta.terms %></a>
-    <a href="#"><%= meta.privacy %></a>
-    <p>Copyright © TCROSS</p>
+  <div class="footer-sns _sp">
+    <img class="footer-nav-facebook" src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/facebook.svg"
+      alt="faceBook">
+    <img class="footer-nav-x" src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/x.svg" alt="X">
+  </div>
+  <div class="footer-Terms _pc">
+    <a href="#">
+      <%= meta.terms %>
+    </a>
+    <a href="#">
+      <%= meta.privacy %>
+    </a>
+    <p class="c-inter">Copyright © TCROSS</p>
+  </div>
+  <div class="footer-Terms _sp">
+    <a href="#">
+      <%= meta.terms %>
+    </a>
+    <a href="#">
+      <%= meta.privacy %>
+    </a>
+    <p class="c-inter">Copyright © TCROSS</p>
   </div>
 </footer>

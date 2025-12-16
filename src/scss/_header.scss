@@ -1,5 +1,6 @@
 @use "sass:map";
 @use 'common.vars';
+@use 'mixins';
 
 /*! =====================
     header_section
@@ -62,6 +63,10 @@
         padding-block: 16px;
         padding-inline: min(calc((88 / 1600) * 100vw), 88px);
 
+        @include mixins.mediaquery-md {
+            padding: 12px 16px;
+        }
+
         &-logo {
             width: 138px;
             height: auto;
@@ -71,10 +76,6 @@
             &:hover {
                 opacity: 0.5;
             }
-        }
-
-        &-menu {
-            padding: 10px 32px;
         }
 
         ul {
@@ -107,38 +108,30 @@
                     &:hover::after {
                         transform: scale(1, 1);
                     }
-                }
 
-                &._is-contact {
-                    position: relative;
-                    display: inline-block;
-                    padding: 7px 16px;
-                    border-radius: 80px;
-                    border: 1px solid #4b5157;
-                    transition: background-color .5s ease;
-                    transition: color .2s ease;
+                    &._is-contact {
+                        position: relative;
+                        display: inline-block;
+                        padding: 7px 16px;
+                        border-radius: 80px;
+                        border: 1px solid #4b5157;
+                        transition: color .2s ease, background-color .2s ease, border-color .2s ease;
 
-                    &:hover,& a:hover {
-                        border-color: transparent;
-                        color: #fff;
-                        background-color: map.get(common.$colors, t-green);
+                        &:hover {
+                            border-color: transparent;
+                            color: #fff;
+                            background-color: map.get(common.$colors, t-green);
 
-                        &::after {
-                            display: none;
+                            &::after {
+                                display: none;
+                            }
                         }
-                    }
-
-                    & a:hover {
-                        border-color: transparent;
-                        color: #fff;
-                        background-color: map.get(common.$colors, t-green);
 
                         &::after {
                             display: none;
                         }
                     }
                 }
-
 
             }
 
@@ -227,4 +220,12 @@
         pointer-events: none;
     }
 
+    .header-nav-hamburger {
+        cursor: pointer;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }

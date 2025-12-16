@@ -1,12 +1,12 @@
 <% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
   ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../" ,
-  selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" }; %>
+  selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針", lang: "jp/" }; %>
   <%- include('/common/_metaCreate', { meta }) %>
     <!DOCTYPE html>
     <html lang="ja">
     <%- include('/common/_headContent', { meta }) %>
 
-      <body class="top" data-page="../en">
+      <body class="page-top" data-page="../en">
         <%- include('/common/_header', { meta }) %>
           <section class="top-hero">
             <div class="top-hero-swiper">
@@ -26,7 +26,7 @@
               </div>
 
               <div class="top-hero-swiper-controls">
-                <div id="toggle-play" class="top-hero-swiper-controlsTogglePlay"></div>
+                <div id="toggle-play" class="top-hero-swiper-controlsTogglePlay is-play"></div>
                 <div class="top-hero-swiper-controlsPagination"></div>
               </div>
 
@@ -68,51 +68,50 @@
 
           <section class="our-services">
             <div class="our-services-wrapper">
-              <h2 class="our-services-wrapper-title c-inter"><span>Our</span> Services</h2>
-              <p>医療の基盤を支えるEvidenceを、未来へつながる医療の力へ。<br />その変革に必要な専門領域を揃えています。</p>
+              <h2 class="our-services-wrapper-title c-inter"><span class="c-title-color">Our</span> Services</h2>
+              <p>医療の基盤を支えるEvidenceを、未来へつながる医療の力へ。その変革に必要な専門領域を揃えています。</p>
               <div class="our-services-wrapper-list">
                 <div class="our-services-wrapper-list-busines">
                   <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services1.jpg" alt="データサイエンス事業"></a>
                   <h3>データサイエンス事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
 
                 <div class="our-services-wrapper-list-busines">
-                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services2.jpg" alt="臨床研究サポート事業"></a>
+                  <a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>services/clinical.html"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services2.jpg" alt="臨床研究サポート事業"></a>
                   <h3>臨床研究サポート事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
 
                 <div class="our-services-wrapper-list-busines">
-                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services3.jpg" alt="イベントコーディネート事業"></a>
+                  <a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>services/event.html"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services3.jpg" alt="イベントコーディネート事業"></a>
                   <h3>イベントコーディネート事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
 
                 <div class="our-services-wrapper-list-busines">
-                  <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services4.jpg" alt="WEB マーケティング事業"></a>
+                  <a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>services/marketing.html"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services4.jpg" alt="WEB マーケティング事業"></a>
                   <h3>WEB マーケティング事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
 
                 <div class="our-services-wrapper-list-busines">
                   <a href="#"><img src="../../<%= ASSET_PATH %>asset/img/top/our-services5.jpg"
                       alt="メディアコミュニケーション事業"></a>
                   <h3>メディアコミュニケーション事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
-
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
 
                 <div class="our-services-wrapper-list-busines">
                   <div><img src="../../<%= ASSET_PATH %>asset/img/top/our-services6.jpg" alt="コンサルティング事業"></div>
                   <h3>コンサルティング事業</h3>
-                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営<br />し、最新情報の提供を行っています。
-                    国内外におけ<br />る医学領域の学術集会や講演会の取材やインタ<br />ビューなどから、専門性の高い記事を制作します。</p>
+                  <p>循環器領域の専門サイト「TCROSS NEWS®」を運営し、最新情報の提供を行っています。
+                    国内外における医学領域の学術集会や講演会の取材やインタビューなどから、専門性の高い記事を制作します。</p>
                 </div>
               </div>
 
@@ -124,17 +123,15 @@
             </div>
           </section>
 
-          <section class="recruit">
+          <section class="recruit c-wrapper">
+            <div class="recruit-bg"></div>
             <div class="recruit-explanation">
               <p class="recruit-explanation-section c-inter">Recruit</p>
               <h2 class="c-explanation-title">
-                <p>テクロスは</p>
-                <p>医療業界の発展を</p>
-                <p>一緒に目指す仲間を</p>
-                <p>募集しています</p>
+                テクロスは<br class="_pc" />医療業界の発展を<br />一緒に目指す仲間を<br class="_pc" />募集しています
               </h2>
               <div class="recruit-explanation-text c-explanation-text">
-                <p>テクロスでは、ニュートラルな視点と深い専門性、そして情熱を共有し、 <br />
+                <p>テクロスでは、ニュートラルな視点と深い専門性、そして情熱を共有し、 <br class="_pc" />
                   循環器医療に持続的な価値を創出していく仲間を求めています。</p>
               </div>
               <div class="recruit-link">

@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    const element = document.querySelector('body');
 
     /*  =====================
         言語別ページ切り替え処理
@@ -46,71 +47,90 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', onScroll);
 
     /*  =====================
-        スライダー処理
-        ===================== */
-    const paginationContainer =
-        document.querySelector(".top-hero-swiper-controlsPagination");
+     スライダー処理
+     ===================== */
+    if (element.classList.contains('page-top')) {
 
-    // バー生成(指定可能)
-    const TOTAL_SLIDES = 6;
-    let items = [];
+        const paginationContainer =
+            document.querySelector(".top-hero-swiper-controlsPagination");
 
-    for (let i = 0; i < TOTAL_SLIDES; i++) {
-        const bar = document.createElement("div");
-        bar.className =
-            "top-hero-swiper-controlsPaginationItem inactive";
-        paginationContainer.appendChild(bar);
-        items.push(bar);
-    }
+        // バー生成(指定可能)
+        const TOTAL_SLIDES = 6;
+        let items = [];
 
-    const swiper = new Swiper(".top-hero-swiper", {
-        loop: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        wrapperClass: "top-hero-swiper-wrapper",
-        slideClass: "top-hero-swiper-wrapperSlide",
-    });
+        for (let i = 0; i < TOTAL_SLIDES; i++) {
+            const bar = document.createElement("div");
+            bar.className =
+                "top-hero-swiper-controlsPaginationItem inactive";
+            paginationContainer.appendChild(bar);
+            items.push(bar);
+        }
 
-    /* アクティブバーを更新する関数 */
-    function updatePagination() {
-        const index = swiper.realIndex % TOTAL_SLIDES;
+        const swiper = new Swiper(".top-hero-swiper", {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            wrapperClass: "top-hero-swiper-wrapper",
+            slideClass: "top-hero-swiper-wrapperSlide",
+        });
 
-        items.forEach((bar, i) => {
-            if (i === index) {
-                bar.classList.remove("inactive");
-                bar.classList.add("active");
+        /* アクティブバーを更新する関数 */
+        function updatePagination() {
+            const index = swiper.realIndex % TOTAL_SLIDES;
+
+            items.forEach((bar, i) => {
+                if (i === index) {
+                    bar.classList.remove("inactive");
+                    bar.classList.add("active");
+                } else {
+                    bar.classList.remove("active");
+                    bar.classList.add("inactive");
+                }
+            });
+        }
+
+
+        /* Swiper イベント */
+        swiper.on("slideChange", updatePagination);
+
+        /* 初回反映 */
+        updatePagination();
+
+        /* 再生停止ボタン */
+        const togglePlay = document.getElementById("toggle-play");
+
+        // 初期状態
+        togglePlay.classList.add("is-play");
+        swiper.autoplay.start();
+
+        togglePlay.addEventListener("click", () => {
+            if (togglePlay.classList.contains("is-play")) {
+                // 再生 → 停止
+                togglePlay.classList.remove("is-play");
+                togglePlay.classList.add("is-paused");
+                swiper.autoplay.stop();
             } else {
-                bar.classList.remove("active");
-                bar.classList.add("inactive");
+                // 停止 → 再生
+                togglePlay.classList.remove("is-paused");
+                togglePlay.classList.add("is-play");
+                swiper.autoplay.start();
             }
         });
+
+        items.forEach((bar, index) => {
+            bar.addEventListener("click", () => {
+                swiper.slideToLoop(index);
+
+                if (!isPlaying) {
+                    swiper.autoplay.start();
+                    togglePlay.classList.remove("is-paused");
+                    isPlaying = true;
+                }
+            });
+        });
     }
-
-
-    /* Swiper イベント */
-    swiper.on("slideChange", updatePagination);
-
-    /* 初回反映 */
-    updatePagination();
-
-    /* 再生停止ボタン */
-    const togglePlay = document.getElementById("toggle-play");
-    let isPlaying = true;
-
-    togglePlay.addEventListener("click", () => {
-        if (isPlaying) {
-            swiper.autoplay.stop();
-            togglePlay.classList.add("is-paused");
-        } else {
-            swiper.autoplay.start();
-            togglePlay.classList.remove("is-paused");
-        }
-        isPlaying = !isPlaying;
-    });
-
-
 
     /*  =====================
         services配下共通モーダル
@@ -214,8 +234,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /*  =====================
+          会社概要img透過処理
+        ===================== */
+    if (element.classList.contains('page-about')) {
+        const heroImg = document.querySelector(".about-hero-content-sticky-img");
+        const triggerText = document.querySelector(".about-hero-content-textTrigger");
 
+        let triggerTextBottom = 0;
 
+        // 各座標取得関数
+        const updateContent = () => {
+            triggerTextBottom = triggerText.getBoundingClientRect().bottom + window.scrollY;
+        };
+        // 初期化（画像読み込み後）
+        window.addEventListener("load", updateContent);
+        // 幅変更時変更対策
+        window.addEventListener("resize", updateContent);
+
+        // スクロール判定
+        window.addEventListener("scroll", () => {
+            const viewporttop = window.scrollY;
+            const viewportBottom = window.scrollY + window.innerHeight;
+
+            // triggerTextの高さ以下になったらabout-hero-imgにopacity付与
+            heroImg.classList.toggle("_opacity", viewporttop >= triggerTextBottom);
+
+        });
+    }
+
+    /*  =====================
+          イベントページ
+        ===================== */
+    if (element.classList.contains('page-event')) {
+        function scrollExplanation() {
+            const scroll = window.scrollY + window.innerHeight;
+            const target = document.querySelector(".c-explanation-content");
+            const overlay = document.querySelector(".c-explanation-bg-overlay");
+            if (scroll > target.offsetTop) {
+                overlay.classList.add('_active');
+            }
+            else {
+                overlay.classList.remove('_active');
+            }
+        }
+        scrollExplanation();
+
+        window.addEventListener('scroll', function () {
+            scrollExplanation();
+        });
+    }
 });
 
 

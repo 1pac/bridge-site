@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="header-info">
+  <!-- <div class="header-info">
     <div class="header-info-wrapper">
       <div class="header-info-icn"><span></span></div>
       <div class="header-info-txt">
@@ -7,26 +7,36 @@
         <p class="header-info-txt-sub">サーバーメンテナンスについて</p>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="header-nav">
     <div class="header-nav-wapper">
-      <h1><a href="#" class="header-nav-logo"><img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS"></a></h1>
-      <nav class="header-nav-menu">
+      <h1><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html" class="header-nav-logo"><img
+            src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS"></a></h1>
+      <nav class="header-nav-menu c-inter _pc">
         <ul>
-          <li><a href="#">Who we are</a></li>
+          <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>about.html">Who we are</a></li>
           <li><a href="#">Our services</a></li>
           <li><a href="#">Recruit</a></li>
           <li><a href="#">News</a></li>
-          <li class="_is-contact"><a href="#">Contact</a></li>
+          <li><a href="#" class="_is-contact">Contact</a></li>
           <li>|</li>
           <li class="header-nav-lang">
             <select id="header-nav-select">
-              <option value="jp"><%= meta.optionJp %></option>
-              <option value="en"<%= meta.selected %>><%= meta.optionEn %></option>
+              <option value="jp">
+                <%= meta.optionJp %>
+              </option>
+              <option value="en" <%=meta.selected %>><%= meta.optionEn %>
+              </option>
             </select>
           </li>
         </ul>
       </nav>
+      <nav class="_sp">
+        <div class="header-nav-hamburger" id="sp-menu">
+          <img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/menu.svg" alt="menu">
+        </div>
+      </nav>
+
     </div>
   </div>
 </header>
