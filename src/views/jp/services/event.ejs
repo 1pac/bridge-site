@@ -1,18 +1,19 @@
-<% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
-    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
-    basePath: "../../../" , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/"}; %>
+<% let meta={ title: "イベントコーディネート事業｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル"
+    , ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
+    basePath: "../../../" , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" ,
+    lang: "jp/" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
         <%- include('/common/_headContent', { meta }) %>
 
-            <body data-page="../../en/services" class="page-event">
+            <body data-page="../../en/services" class="page-services">
                 <%- include('/common/_header', {meta}) %>
 
                     <ul class="c-breadcrumbs c-wrapper">
                         <li><a href="/">Top</a></li>
                         <li>＞</li>
-                        <li><a href="../">イベントコーディネート事業</a></li>
+                        <li>イベントコーディネート事業</li>
                     </ul>
 
                     <div class="c-modal">
@@ -41,8 +42,9 @@
                                     研究会・講演会・セミナーを通じて新たな価値を生み出してきました。<br />学会運営の経験と、データ分析・広報設計のノウハウを活かし、現場の声やトレンドを捉えながら、医療の未来を動かすイベントを創出しています。
                                 </p>
                             </div>
-                            <div class="js-scale">
-                                <img src="../../../<%= ASSET_PATH %>asset/img/services/event-mv.jpg" alt="医療の知を結び、ユーザーの「見たい」をカタチに。">
+                            <div>
+                                <img src="../../../<%= ASSET_PATH %>asset/img/services/event-mv.jpg"
+                                    alt="医療の知を結び、ユーザーの「見たい」をカタチに。">
                             </div>
                         </div>
                     </section>
@@ -57,23 +59,23 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <h4>専門領域への<br />深い理解</h4>
+                                        <h4>専門領域への<br class="_pc" />深い理解</h4>
                                         <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>信頼関係に<br />基づく共創体制</h4>
+                                        <h4>信頼関係に<br class="_pc" />基づく共創体制</h4>
                                         <p>医療従事者・企業・関係団体との長年の信頼関係を基盤に、
                                             目的や立場を問わず「共に創る」体制を確立。依頼内容に応えるだけでなく、より効果的な構成・運営を提案し、
                                             プロジェクト全体を統合的にディレクションします。</p>
                                     </li>
                                     <li>
-                                        <h4>トレンドを<br />捉える企画力</h4>
+                                        <h4>トレンドを<br class="_pc" />捉える企画力</h4>
                                         <p>自社メディアでの情報発信や取材活動、学会参加を通じて現場や企業のリアルな情報を収集。業界の変化や次の潮流を先読みし、参加者が「今、知りたい」と思うテーマをいち早く企画に落とし込みます。
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>データと<br />経験を融合した<br />改善サイクル</h4>
+                                        <h4>データと<br class="_pc" />経験を融合した<br class="_pc" />改善サイクル</h4>
                                         <p>イベント後のアンケートや視聴データを分析し、 参加者の反応・満足度・再参加傾向を可視化。数値的な裏付けと経験知を組み合わせ、次の企画へ確実に反映します。
                                         </p>
                                     </li>
@@ -98,23 +100,23 @@
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue2.png" alt="高度な専門人材">
                                 </div>
                                 <h4>企画・コンテンツ</h4>
-                                <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
+                                <p>最新の知見や手技を効果的に伝えられるよう、演者への依頼や、座長との進行・内容のすり合わせに手間がかかりすぎる
                                 </p>
                             </li>
                             <li>
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue3.png" alt="高度な専門人材">
                                 </div>
-                                <h4>集客・参加率</h4>
-                                <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
+                                <h4>法規制・倫理</h4>
+                                <p>医療広告ガイドラインや関連法規・業界ルールに遵守したイベント運営ができているか不安が拭えない
                                 </p>
                             </li>
                             <li>
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue4.png" alt="高度な専門人材">
                                 </div>
-                                <h4>集客・参加率</h4>
-                                <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
+                                <h4>多忙な医師への対応</h4>
+                                <p>登壇される医師の先生方のタイトなスケジュール調整や、煩雑な交通・宿泊の手配、資料作成サポートまで手が回らない
                                 </p>
                             </li>
                         </ul>
@@ -186,11 +188,13 @@
                                     <p>豊橋ライブデモンストレーションコース</p>
                                     <p>・EBC／KBC／ABCなど世界主要学会との連携による国際展開<br />・分岐部治療に特化した継続的学術コミュニティの構築<br />・症例を通じた臨床知の共有・議論の促進<br />・日本の知見を世界へ届けるライブプラットフォームの確立
                                     </p>
-                                    <p class="c-case-list-more js-modal" data-modal="1">more</p>
+                                    <p class="c-case-list-more js-modal _pc" data-modal="1">more</p>
                                 </div>
                                 <div>
-                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/case1.jpg" alt="高度な専門人材">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case1.jpg" alt="高度な専門人材">
                                 </div>
+                                <p class="c-case-list-more js-modal _sp" data-modal="1">more</p>
+
                             </li>
                             <li>
                                 <div>
@@ -199,11 +203,13 @@
                                     <p>Japanese Bifurcation Club（JBC）</p>
                                     <p>・2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施<br />・参加者数2,447名（前年比＋399名）／有料参加者前年比150％増<br />・学術イベントの持続的成長モデルとして定着<br />・多様なステークホルダーが共に価値を創出するイベントの新たな形を提示
                                     </p>
-                                    <p class="c-case-list-more js-modal" data-modal="2">more</p>
+                                    <p class="c-case-list-more js-modal _pc" data-modal="2">more</p>
                                 </div>
                                 <div>
-                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/case2.jpg" alt="高度な専門人材">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case2.jpg" alt="高度な専門人材">
                                 </div>
+                                <p class="c-case-list-more js-modal _sp" data-modal="2">more</p>
+
                             </li>
                         </ul>
                     </section>
@@ -215,7 +221,7 @@
                             <li>
                                 <div>
                                     <h4>01</h4>
-                                    <h5>明確で持続的な<br />ビジョン</h5>
+                                    <h5>明確で持続的な<br class="_pc" />ビジョン</h5>
                                 </div>
                                 <p>
                                     開催するイベントに、社会的意義や将来像を明確に描いたビジョンが存在し、その実現に向けた一貫した方針をお持ちであること。

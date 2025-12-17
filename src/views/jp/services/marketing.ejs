@@ -1,60 +1,79 @@
-<% let meta={ title: "indexTitleテスト" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
-  ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../../"
-  , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/"}; %>
+<% let meta={ title: "Webマーケティング事業｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル"
+  , ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
+  basePath: "../../../" , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" ,
+  lang: "jp/" }; %>
   <%- include('/common/_metaCreate', { meta }) %>
     <!DOCTYPE html>
     <html lang="ja">
     <%- include('/common/_headContent', { meta }) %>
 
-      <body>
+      <body data-page="../../en/services" class="page-services">
         <%- include('/common/_header', {meta}) %>
 
           <ul class="c-breadcrumbs c-wrapper">
-            <li><a href="/">トップ</a></li>
+            <li><a href="/">Top</a></li>
             <li>＞</li>
-            <li><a href="../">事業紹介</a></li>
-            <li>＞</li>
-            <li class="_active">Webマーケティング事業</li>
+            <li><a href="../">Webマーケティング事業</a></li>
           </ul>
 
-          <section class="marketing-hero c-wrapper">
+          <div class="c-modal">
+            <div class="c-modal-case">
+              <h4 class="c-modal-case-title"></h4>
+              <h5 class="c-modal-case-subtitle"></h5>
+              <div class="c-modal-case-img"><img class="c-modal-img-src" src=""></div>
+              <h6>成果</h6>
+              <ul class="modal-case-list">
+              </ul>
+              <h6>背景</h6>
+              <p class="modal-case-text-1"></p>
+              <h6>取り組み</h6>
+              <p class="modal-case-text-2"></p>
+              <div class="c-modal-case-close" id="modal-close-btn"></div>
+            </div>
+          </div>
+
+          <section class="c-hero c-wrapper">
+            <p>Web Marketing</p>
             <h2>Webマーケティング事業</h2>
-            <div class="marketing-hero-content">
+            <div class="c-hero-content">
               <div>
-                <h3 class="c-headline">TCROSS NEWS活用で成果を加速<br />最短で現場に届ける</h3>
-                <p>「TCROSS NEWS®」を活用し、医薬品・医療機器のプロモー<br />ション成果を加速。Web広告から学術集会・製品関連サイトの<br />制作・運用まで、最短で現場に情報を届けます。
+                <h3 class="c-headline">循環器特化チームが実現する、<br />現場に届くマーケティング</h3>
+                <p>循環器専門の情報プラットフォーム「TCROSS NEWS」を運営するテクロスが、循環器医師の“今”を捉えた知見をもとに、企画・制作・配信・調査まで一貫して支援します。
                 </p>
               </div>
               <div>
-                <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_mv.jpg" alt="循環器特化チームが実現する、現場に届くマーケティング">
               </div>
             </div>
           </section>
 
-          <section class="c-explanation c-wrapper">
-            <h3 class="c-headline">第一線の循環器内科医が広く活用するプラットフォーム</h3>
-            <div class="c-explanation-content">
+          <section class="c-explanation">
+            <div class="c-explanation-bg">
+              <img src="../../../<%= ASSET_PATH %>asset/img/services/explanation.jpg" alt="高度な専門人材">
+              <div class="c-explanation-bg-overlay"></div>
+            </div>
+            <div class="c-explanation-content c-wrapper">
+              <h3>第一線の循環器内科医に<br />選ばれ続ける「TCROSS NEWS」</h3>
               <div>
-                <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                <ul>
+                  <li>
+                    <h4>現場での圧倒的なカバレッジ</h4>
+                    <p>TCROSS
+                      NEWSの登録医師は9,000名以上にのぼり、そのうち約7,500名が病院勤務の循環器内科医です。これは、全国に約11,000名いる病院勤務の循環器内科医のおよそ7割に相当し、第一線で活躍する医師から高い支持を得ているプラットフォームです。
+                    </p>
+                  </li>
+                  <li>
+                    <h4>専門コンテンツによる高いエン<br class="_pc" />ゲージメント</h4>
+                    <p>年間1,300本の循環器専門コンテンツを配信し、有料会員の満足度は97%、メールマガジンの開封率も約40%と高水準を維持しています。さらに、施設単位での有料利用も拡大しています。</p>
+                  </li>
+                  <li>
+                    <h4>独自のセグメンテーションによ<br class="_pc" />る精密なターゲティング</h4>
+                    <p>
+                      循環器領域のトレンドやデータ、現場での知見をもとに、循環器内科医を5つの層に定量的に分類する独自分析を実施。専門分野、関心領域、情報への反応傾向、臨床フェーズなどを多角的に捉え、各層に最適化された精緻なターゲティングとメッセージ設計を実現します。
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <ul>
-                <li>
-                  <h4>全国の循環器内科医から支持される医師会員サービス</h4>
-                  <p>TCROSS
-                    NEWSは循環器内科医を中心に約9,000名の医師が登録しています。そのうち約7,500名は病院勤務の循環器内科医であり、全国に約11,000名いる病院勤務の循環器内科医のうち、およそ7割が本サービスを利用しています。
-                  </p>
-                </li>
-                <li>
-                  <h4>循環器領域に特化した確かな配信実績</h4>
-                  <p>最新エビデンス紹介から、KOLインタビュー、手技動画まで、 臨床現場の視点に立った専門性の高いコンテンツを年間1,300本以上配信しています。</p>
-                </li>
-                <li>
-                  <h4>臨床の現場で選ばれる確かな信頼</h4>
-                  <p>
-                    有料コンテンツの利用者のうち、97％が「満足している」と回答しており、高い評価を得ています。また、医師向けメールマガジンの開封率は常に約40％と安定しており、近年では施設単位での有料利用も増加しており、組織的な活用が広がっています。
-                  </p>
-                </li>
-              </ul>
             </div>
           </section>
 
@@ -62,90 +81,120 @@
             <h3 class="c-headline">こんなお悩みありませんか？</h3>
             <ul class="c-task-list">
               <li>
-                <p>課題01：新しい薬剤への医師の興味喚起が難しい</p>
-              </li>
-              <li>
-                <p>課題02：忙しい医師に対して十分な接触機会を確保できない</p>
-              </li>
-              <li>
-                <p>課題03：制作したデジタルコンテンツがターゲット医師に届かない</p>
-              </li>
-              <li>
-                <p>課題04：閲覧はあっても、処方・導入への効果が見えにくい</p>
-              </li>
-            </ul>
-
-            <h4>企画から運営・分析まで柔軟にサポート</h4>
-            <ul class="c-task-support">
-              <li>
-                <h5>マーケティング企画</h5>
                 <div>
-                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/issue1.png" alt="高度な専門人材">
                 </div>
-                <p>
-                  TCROSS NEWS利用データを<br />もとに、最適なマーケティン<br />グ企画をご提案
+                <h4>新しい薬剤への医師の興味喚起が難しい</h4>
+                <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
                 </p>
               </li>
               <li>
-                <h5>コンテンツ制作</h5>
                 <div>
-                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/issue2.png" alt="高度な専門人材">
                 </div>
-                <p>
-                  専門のライターチームにより<br />各種ガイドラインを遵守した<br />信頼性の高い記事や動画制作<br />が可能
+                <h4>忙しい医師に対して十分な接触機会を確保できない</h4>
+                <p>最新の知見や手技を効果的に伝えられるよう、演者への依頼や、座長との進行・内容のすり合わせに手間がかかりすぎる
                 </p>
               </li>
               <li>
-                <h5>プロモーション</h5>
                 <div>
-                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/issue3.png" alt="高度な専門人材">
                 </div>
-                <p>
-                  虚血、心不全、不整脈など各<br />専門の医師が最も興味を持つ<br />切り口でコンテンツのプロ<br />モーションをサポート
+                <h4>制作したデジタルコンテンツがターゲット医師に届かない</h4>
+                <p>医療広告ガイドラインや関連法規・業界ルールに遵守したイベント運営ができているか不安が拭えない
                 </p>
               </li>
               <li>
-                <h5>アンケート調査</h5>
                 <div>
-                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/issue4.png" alt="高度な専門人材">
                 </div>
-                <p>
-                  アンケート項目の設計から<br />ターゲット医師への調査配<br />信、結果分析まで次につなが<br />る調査をご提供
+                <h4>閲覧はあっても、処方・導入への効果が見えにくい</h4>
+                <p>登壇される医師の先生方のタイトなスケジュール調整や、煩雑な交通・宿泊の手配、資料作成サポートまで手が回らない
                 </p>
               </li>
             </ul>
           </section>
 
-          <section class="c-example c-wrapper">
-            <h3 class="c-headline">ケーススタディ</h3>
-            <ul class="c-example-list">
+          <section class="c-support c-wrapper">
+            <h3 class="c-headline">企画から運営・分析まで、 <br />必要なフェーズを柔軟にサポート</h3>
+            <ul class="c-support-list">
               <li>
+                <h5>Phase 01</h5>
+                <h4>マーケティング企画</h4>
                 <div>
                   <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
                 </div>
+                <p>
+                  TCROSS NEWS利用データをもとに、最適なマーケティング企画をご提案
+                </p>
+              </li>
+              <li>
+                <h5>Phase 02</h5>
+                <h4>コンテンツ制作</h4>
                 <div>
-                  <h4>CASE 1 --- 事例名を掲載</h4>
-                  <h5>Japanese Bifurcation Club（JBC）</h5>
-                  <p>
-                    リード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキスト
-                    リード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキスト
-                  </p>
-                  <p class="c-example-list-more">もっと詳しく</p>
+                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
                 </div>
+                <p>
+                  専門のライターチームにより各種ガイドラインを遵守した信頼性の高い記事や動画制作が可能
+                </p>
+              </li>
+              <li>
+                <h5>Phase 03</h5>
+                <h4>プロモーション</h4>
+                <div>
+                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                </div>
+                <p>
+                  虚血、心不全、不整脈など各専門の医師が最も興味を持つ切り口でコンテンツのプロモーションをサポート
+                </p>
+              </li>
+              <li>
+                <h5>Phase 04</h5>
+                <h4>アンケート調査</h4>
+                <div>
+                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                </div>
+                <p>
+                  アンケート項目の設計からターゲット医師への調査配信、結果分析まで次につながる調査をご提供
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="c-case c-wrapper">
+            <h3 class="c-title"><span>Case</span> Study</h3>
+            <ul class="c-case-list">
+              <li>
+                <div>
+                  <h5>Case <span>01</span></h5>
+                  <h4>ターゲットへの到達精度を高めるデータドリブン施策</h4>
+                  <p>循環器領域のトレンドやデータ、現場での知見をもとに行った独自セグメンテーションに基づき、配信コンテンツがどのセグメントの医師に、どの程度到達しているかを可視化・検証します。</p>
+                  <p>
+                    想定していたターゲット層との間に乖離が見られた場合は、メッセージの切り口や表現、テーマ設計を再構築し、よりターゲットに刺さる内容へ最適化。これを継続的に繰り返すことで、無駄のない高精度なコミュニケーション設計と費用対効果の最大化を実現しています。
+                  </p>
+                  <p class="c-case-list-more js-modal _pc" data-modal="1">more</p>
+                </div>
+                <div>
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_case1.jpg" alt="高度な専門人材">
+                </div>
+                <p class="c-case-list-more js-modal _sp" data-modal="3">more</p>
+
               </li>
               <li>
                 <div>
-                  <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="高度な専門人材">
+                  <h5>Case <span>02</span></h5>
+                  <h4>日本発の分岐部治療研究会として、世界の潮流と歩む</h4>
+                  <p>Japanese Bifurcation Club（JBC）</p>
+                  <p>
+                    ・2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施<br />・参加者数2,447名（前年比＋399名）／有料参加者前年比150％増<br />・学術イベントの持続的成長モデルとして定着<br />・多様なステークホルダーが共に価値を創出するイベントの新たな形を提示
+                  </p>
+                  <p class="c-case-list-more js-modal _pc" data-modal="2">more</p>
                 </div>
                 <div>
-                  <h4>CASE 2 --- 事例名を掲載</h4>
-                  <h5>豊橋ライブデモンストレーションコース</h5>
-                  <p>
-                    リード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキスト
-                    リード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキスト
-                  </p>
-                  <p class="c-example-list-more">もっと詳しく</p>
+                  <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_case1.jpg" alt="高度な専門人材">
                 </div>
+                <p class="c-case-list-more js-modal _sp" data-modal="4">more</p>
+
               </li>
             </ul>
           </section>

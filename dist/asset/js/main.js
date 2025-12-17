@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             title: "循環器治療の主要領域を網羅した、包括的ライブイベントの実現",
             subtitle: "豊橋ライブデモンストレーションコース",
-            img: "../../../asset/img/about/strengths1.png",
+            img: "../../../dist/asset/img/about/strengths1.png",
             list: [
                 "2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施",
                 "参加者数2,447名（前年比＋399名）／有料参加者前年比150％増",
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             title: "別プロジェクトタイトル",
             subtitle: "別サブタイトル",
-            img: "../../../asset/img/about/strengths2.png",
+            img: "../../../dist/asset/img/about/strengths2.png",
             list: ["内容A", "内容B"],
             text1: "別説明",
             text2: "別説明2"
@@ -264,9 +264,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*  =====================
-          イベントページ
+          事業詳細ページ
         ===================== */
-    if (element.classList.contains('page-event')) {
+    if (element.classList.contains('page-services')) {
         function scrollExplanation() {
             const scroll = window.scrollY + window.innerHeight;
             const target = document.querySelector(".c-explanation-content");

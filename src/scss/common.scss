@@ -12,12 +12,25 @@ img {
     height: auto;
 }
 
+// ._sm {
+//     display: none !important;
+
+//     @include mixins.mediaquery-md {
+//         display: none !important;
+//     }
+
+//     @include mixins.mediaquery-sm {
+//         display: block !important;
+//     }
+// }
+
 ._sp {
     display: none !important;
 
     @include mixins.mediaquery-md {
         display: block !important;
     }
+
 }
 
 ._pc {
@@ -64,6 +77,7 @@ img {
 
     @include mixins.mediaquery-md {
         font-size: 16px;
+        width: 78%;
     }
 }
 
@@ -84,34 +98,40 @@ img {
     transition: color 0.3s;
 
     &-icn {
-        width: 48px;
-        height: 48px;
+        width: 96px;
+        height: 64px;
         background: #141414;
-        border-radius: 50%;
+        border-radius: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         transition: background 0.3s;
 
-        &::before {
-            content: "";
-            width: 18px;
-            height: 2px;
-            background: #fff;
-            position: absolute;
-            left: 10px;
+        @include mixins.mediaquery-md {
+            width: 70px;
+            height: 42px;
         }
 
-        &::after {
+        &::before {
             content: "";
-            width: 10px;
-            height: 10px;
-            border-right: 2px solid #fff;
-            border-bottom: 2px solid #fff;
+            background-image: url("../../asset/img/common/arrow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
             position: absolute;
-            right: 14px;
-            transform: rotate(-45deg);
+            top: 16px;
+            left: 32px;
+            display: block;
+            width: 32px;
+            height: 32px;
+
+            @include mixins.mediaquery-md {
+                width: 26px;
+                height: 26px;
+                top: 8px;
+                left: 22px;
+            }
         }
     }
 
@@ -166,8 +186,8 @@ img {
     &::after {
         content: "";
         width: 22.2px;
-        height: 1px;
-        right: 30px;
+        height: 1.5px;
+        right: 29px;
         position: absolute;
         background-color: #fff;
 
@@ -227,8 +247,13 @@ img {
         }
 
         &-text {
+            font-size: 20px;
+            line-height: 2;
+
             @include mixins.mediaquery-md {
+                font-size: 18px;
                 text-align: center;
+                width: 100%;
             }
         }
 
@@ -257,6 +282,10 @@ img {
             text-decoration: underline;
         }
     }
+
+    li:nth-of-type(1) {
+        color: map.get(common.$colors, black400);
+    }
 }
 
 // 下層タイトル
@@ -274,6 +303,10 @@ img {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.5;
+
+    @include mixins.mediaquery-md {
+        font-size: 32px;
+    }
 }
 
 // 下層MV
@@ -284,25 +317,38 @@ img {
         font-size: 32px;
         font-weight: 700;
         line-height: 1.5;
+
+        @include mixins.mediaquery-md {
+            font-size: 20px;
+        }
     }
 
     h2 {
         font-size: 60px;
         font-weight: 700;
         line-height: 1.5;
+
+        @include mixins.mediaquery-md {
+            font-size: 32px;
+        }
     }
 
     &-content {
         display: flex;
         column-gap: min(calc((64 / 1600) * 100vw), 64px);
-        margin-top: 100px;
+        margin-top: 133px;
+
+        @include mixins.mediaquery-md {
+            flex-direction: column;
+            margin-top: 48px;
+        }
 
         .c-headline {
             font-size: clamp(30px, calc((40 / 1600) * 100vw), 40px);
         }
 
         p {
-            margin-top: 20px;
+            margin-top: 32px;
             font-size: 18px;
             line-height: 2;
         }
@@ -310,10 +356,21 @@ img {
         div:first-of-type {
             width: 36.8%;
             flex-shrink: 0;
+            margin-top: 97px;
+
+            @include mixins.mediaquery-md {
+                width: 92%;
+                margin-top: 0;
+            }
         }
 
         div:last-of-type {
             width: 59%;
+
+            @include mixins.mediaquery-md {
+                width: 96.8%;
+                margin-top: 48px;
+            }
         }
     }
 }
@@ -321,8 +378,13 @@ img {
 // 下層説明セクション
 .c-explanation {
     margin-top: 130px;
-    max-width: 1600px;
+    // max-width: 1600px;
     margin-inline: auto;
+
+    @include mixins.mediaquery-md {
+        margin-top: 64px;
+    }
+
     &-bg {
         position: sticky;
         top: 0;
@@ -357,6 +419,10 @@ img {
         h3 {
             font-size: 64px;
             line-height: 1.5;
+
+            @include mixins.mediaquery-md {
+                font-size: 40px;
+            }
         }
 
         div {
@@ -364,6 +430,11 @@ img {
             padding-bottom: 160px;
             display: flex;
             justify-content: flex-end;
+
+            @include mixins.mediaquery-md {
+                margin-top: 80px;
+                justify-content: start;
+            }
         }
 
         ul {
@@ -372,9 +443,17 @@ img {
             flex-direction: column;
             row-gap: 80px;
 
+            @include mixins.mediaquery-md {
+                width: 100%;
+            }
+
             h4 {
                 font-size: 40px;
                 line-height: 1.5;
+
+                @include mixins.mediaquery-md {
+                    font-size: 28px;
+                }
             }
 
             p {
@@ -396,6 +475,7 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    backdrop-filter: blur(8px);
 
     &.show {
         opacity: 1;
@@ -409,11 +489,17 @@ img {
         left: 50%;
         background-color: #fff;
         padding: calc((85 / 1600) * 100vw) calc((122 / 1600) * 100vw) calc((112 / 1600) * 100vw) calc((120 / 1600) * 100vw);
-        max-height: 80vh;
+        max-height: 90vh;
         transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
         transition: transform .3s ease, opacity .3s ease;
         overflow-y: auto;
+
+        @include mixins.mediaquery-md {
+            width: calc((1477 / 1600) * 100vw);
+            height: 80vh;
+            padding-top: 85px;
+        }
 
         &.show {
             transform: translate(-50%, -50%) scale(1);
@@ -426,22 +512,27 @@ img {
             margin: 0 auto;
             padding-top: calc((30 / 1600) * 100vw);
             padding-bottom: calc((30 / 1600) * 100vw);
+
+            @include mixins.mediaquery-sm {
+                width: 83.3%;
+            }
         }
 
         h4 {
-            font-size: calc((26 / 1600) * 100vw);
+            font-size: max(calc((26 / 1600) * 100vw), 18px);
             font-weight: 700;
             line-height: 1.5;
         }
 
         h5 {
-            font-size: calc((20 / 1600) * 100vw);
+            // font-size: calc((20 / 1600) * 100vw);
+            font-size: max(calc((20 / 1600) * 100vw), 14px);
             font-weight: 400;
             line-height: 1.5;
         }
 
         h6 {
-            font-size: calc((16 / 1600) * 100vw);
+            font-size: max(calc((16 / 1600) * 100vw), 12px);
             font-weight: 700;
             margin-bottom: calc((11 / 1600) * 100vw);
         }
@@ -450,11 +541,12 @@ img {
             margin-bottom: 30px;
             list-style-type: circle;
             padding-left: 1.5em;
-            font-size: calc((16 / 1600) * 100vw);
+            font-size: max(calc((16 / 1600) * 100vw), 12px);
+
         }
 
         p {
-            font-size: calc((16 / 1600) * 100vw);
+            font-size: max(calc((16 / 1600) * 100vw), 12px);
             margin-bottom: calc((30 / 1600) * 100vw);
         }
 
@@ -489,6 +581,10 @@ img {
 .c-task {
     padding-block: 120px;
 
+    @include mixins.mediaquery-md {
+        padding-block: 80px;
+    }
+
     .c-headline {
         text-align: center;
     }
@@ -496,7 +592,7 @@ img {
     &-list {
         margin-top: 80px;
         display: flex;
-        gap: 64px;
+        gap: clamp(24px, calc((64 / 1600) * 100vw), 64px);
         flex-wrap: wrap;
         justify-content: center;
 
@@ -514,6 +610,10 @@ img {
                 font-size: 28px;
                 font-weight: 700;
                 line-height: 1.5;
+
+                @include mixins.mediaquery-md {
+                    font-size: 20px;
+                }
             }
 
             p {
@@ -528,6 +628,10 @@ img {
 .c-support {
     padding-block: 120px;
     background-color: #F7F7F8 !important;
+
+    @include mixins.mediaquery-md {
+        padding-block: 80px;
+    }
 
     .c-headline {
         text-align: center;
@@ -552,6 +656,10 @@ img {
             flex-direction: column;
             align-items: center;
             row-gap: 16px;
+
+            @include mixins.mediaquery-sm {
+                width: 279px;
+            }
 
             h5 {
                 font-size: 14px;
@@ -581,21 +689,29 @@ img {
     padding-block: 120px;
 
     &-list {
-        padding-left: 248px;
+        padding-left: calc((248 / 1600) * 100vw);
         margin-top: 64px;
         display: flex;
         flex-direction: column;
         row-gap: 50px;
         flex-wrap: wrap;
 
+        @include mixins.mediaquery-md {
+            padding-left: 0;
+        }
+
         li {
             display: flex;
             justify-content: flex-end;
-            column-gap: 64px;
+            column-gap: clamp(24px, calc((64 / 1600) * 100vw), 64px);
             line-height: 1.5;
 
+            @include mixins.mediaquery-md {
+                flex-direction: column;
+            }
+
             h5 {
-                font-size: 32px;
+                font-size: clamp(28px, calc((32 / 1600) * 100vw), 32px);
 
                 span {
                     color: #AACE45;
@@ -603,19 +719,20 @@ img {
             }
 
             h4 {
-                font-size: 40px;
+                font-size: clamp(28px, calc((40 / 1600) * 100vw), 40px);
                 line-height: 1.5;
                 margin-top: 16px;
             }
 
 
             p {
-                font-size: 18px;
+                font-size: clamp(16px, calc((18 / 1600) * 100vw), 18px);
                 margin-top: 16px;
 
                 &:nth-of-type(2) {
-                    font-size: 16px;
+                    font-size: clamp(12px, calc((16 / 1600) * 100vw), 16px);
                     margin-top: 24px;
+                    line-height: 2.5;
                 }
             }
 
@@ -624,6 +741,11 @@ img {
             div:last-of-type {
                 width: 47%;
                 flex-shrink: 0;
+                margin: 16px auto 0;
+
+                @include mixins.mediaquery-md {
+                    width: 100%;
+                }
             }
         }
 
@@ -633,15 +755,49 @@ img {
             background-color: #000;
             color: #fff;
             font-size: 16px;
-            line-height: 1;
+            line-height: 1.1;
             width: 120px;
             padding: 14px 24px 18px;
             border-radius: 100px;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: background-color 0.3s ease;
+            position: relative;
 
             &:hover {
-                opacity: 0.5;
+                background-color: map.get(common.$colors, t-green);
+            }
+
+            @include mixins.mediaquery-md {
+                width: 240px;
+                margin: 40px auto 0 !important;
+                padding: 14px 90px 18px;
+            }
+
+            &::before {
+                content: "";
+                background-image: url("../../asset/img/common/more.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                position: absolute;
+                top: 18.08px;
+                right: 19px;
+                width: 26px;
+                height: 13.85px;
+            }
+
+            &::after {
+                content: "";
+                background-image: url("../../asset/img/common/lnk-icon.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                position: absolute;
+                top: 18.08px;
+                right: 28px;
+                width: 32px;
+                height: 32px;
+                display: none;
             }
         }
     }
@@ -651,6 +807,10 @@ img {
 .c-member {
     padding-block: 120px 112px;
     background-color: #F7F7F8 !important;
+
+    @include mixins.mediaquery-md {
+        padding-block: 80px 72px;
+    }
 
     &-list {
         margin-top: 64px;

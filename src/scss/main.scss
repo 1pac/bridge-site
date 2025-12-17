@@ -19,12 +19,8 @@
     position: relative;
 
     @include mixins.mediaquery-md {
-        height: calc((614 / 767) * 100vw);
+        height: 625px;
     }
-
-    // @include mixins.mediaquery-sm {
-    //     width: 20%;
-    // }
 
     &-swiper {
         width: 100%;
@@ -47,16 +43,29 @@
                 left: calc((56 / 767) * 100vw);
             }
 
-            &-title {
-                font-weight: 900 !important;
-            }
-
-            &Text {
-                line-height: 2;
-                margin-top: calc((32 / 1600) * 100vw);
+            &Title {
+                font-size: min(calc((64 /1600) * 100vw), 64px);
+                font-weight: 700;
 
                 @include mixins.mediaquery-md {
+                    font-size: 32px;
+                }
+            }
+
+
+            &Text {
+                margin-top: calc((32 / 1600) * 100vw);
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 2;
+
+                @include mixins.mediaquery-md {
+                    font-size: 16px;
                     margin-top: calc((32 / 767) * 100vw);
+                }
+
+                @include mixins.mediaquery-sm {
+                    width: 80%;
                 }
             }
         }
@@ -69,8 +78,9 @@
             @include mixins.mediaquery-md {
                 right: unset;
                 left: calc((56 / 767) * 100vw);
-                bottom: calc((128 / 767) * 100vw);
+                bottom: 128px;
             }
+
         }
 
         &-wrapper {
@@ -119,6 +129,7 @@
         }
 
         &.is-play {
+
             /* 停止ボタン */
             &::before {
                 content: "";
@@ -133,6 +144,7 @@
         }
 
         &.is-paused {
+
             // 再生ボタン
             &::before {
                 content: "";
@@ -253,14 +265,15 @@
     &-wrapper {
         max-width: 1600px;
         margin: 0 auto;
-        padding-inline: min(calc((88 / 1600) * 100vw), 88px);
 
         >p:first-of-type {
+            width: 82%;
             display: block;
             font-size: 24px;
             font-weight: 700;
             line-height: 1.5;
             margin-top: 32px;
+            padding-left: min(calc((88 / 1600) * 100vw), 88px);
 
             @include mixins.mediaquery-md {
                 font-size: 18px;
@@ -272,49 +285,62 @@
         &-title {
             font-size: 88px;
             font-weight: 700;
+            padding-inline: min(calc((88 / 1600) * 100vw), 88px);
 
             @include mixins.mediaquery-md {
                 font-size: 72px;
             }
-
         }
 
         &-list {
             width: 100%;
             display: flex;
-            gap: min(calc(64 / 1600) * 100vw, 64px);
-            margin-top: 80px;
+            // gap: min(calc(64 / 1600) * 100vw, 64px);
+            gap: clamp(24px, (calc((64 / 1600) * 100vw)), 64px);
+            margin-top: 160px;
             flex-wrap: wrap;
-            justify-content: flex-end;
+            justify-content: center;
 
             @include mixins.mediaquery-md {
                 gap: calc(24 / 767) * 100vw;
-                margin-top: 64px;
+                margin-top: 40px;
                 justify-content: center;
+            }
+
+            @include mixins.mediaquery-sm {
+                padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+                justify-content: space-between;
             }
 
             &-busines {
                 display: flex;
                 flex-direction: column;
                 row-gap: 20px;
-                width: 24.5%;
+                width: 34.5%;
 
                 @include mixins.mediaquery-md {
                     row-gap: 16px;
-                    width: 48%;
+                    width: 45%;
                 }
+
+
 
                 // イメージスケールアップ
                 a,
                 div {
-                    width: min(calc((349 / 1600) * 100vw), 349px);
-                    height: min(calc((262 / 1600) * 100vw), 262px);
+                    width: min(calc((556 / 1600) * 100vw), 556px);
+                    height: min(calc((430 / 1600) * 100vw), 430px);
                     position: relative;
                     overflow: hidden;
 
                     @include mixins.mediaquery-md {
                         width: calc((347 / 767) * 100vw);
                         height: calc((260 / 767) * 100vw);
+                    }
+
+                    @include mixins.mediaquery-sm {
+                        width: calc((151 / 375) * 100vw);
+                        height: calc((110 / 375) * 100vw);
                     }
 
                     img {
@@ -338,8 +364,7 @@
                 }
 
                 h3 {
-                    font-size: 32px;
-                    // font-size: max(calc((26 / 1600) * 100vw), 22px);
+                    font-size: clamp(20px, (calc((26 / 1600) * 100vw)), 32px);
                     font-weight: 700;
                 }
 
@@ -354,6 +379,92 @@
             @include mixins.mediaquery-md {
                 justify-content: center;
                 margin-top: 64px;
+            }
+        }
+
+        &-pickup {
+            display: flex;
+            flex-direction: column;
+            margin-top: 160px;
+            row-gap: 120px;
+
+            @include mixins.mediaquery-md {
+                margin-top: 64px;
+                row-gap: 24px;
+            }
+
+            &Content {
+                display: flex;
+                column-gap: calc((64 / 1600) * 100vw);
+                padding-left: min(calc((88 / 1600) * 100vw), 88px);
+
+                @include mixins.mediaquery-md {
+                    flex-direction: column-reverse;
+                    padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
+                }
+
+                &Text {
+                    margin-top: 131px;
+
+                    @include mixins.mediaquery-md {
+                        margin-top: 24px;
+                    }
+
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 700;
+
+                        @include mixins.mediaquery-md {
+                            font-size: 20px;
+                        }
+                    }
+
+                    p {
+                        width: 100%;
+                        font-size: 18px;
+                        line-height: 2;
+                        margin-top: 24px;
+
+                        @include mixins.mediaquery-md {
+                            margin-top: 16px;
+                            font-size: 16px;
+                        }
+                    }
+
+                }
+
+                div {
+                    img {
+                        width: calc((935 / 1600) * 100vw);
+
+                        @include mixins.mediaquery-md {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &._reverse {
+                    flex-direction: row-reverse;
+                    padding-left: 0;
+                    padding-right: min(calc((88 / 1600) * 100vw), 88px);
+
+                    @include mixins.mediaquery-md {
+                        flex-direction: column-reverse;
+                    }
+                }
+
+                &More {
+                    width: 196px !important;
+                    padding: 14px 72px 14px 32px !important;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:after {
+                        display: block !important;
+                    }
+                }
             }
         }
     }
@@ -390,6 +501,10 @@
         font-size: 18px;
         position: relative;
 
+        @include mixins.mediaquery-md {
+            width: 95%;
+        }
+
         .c-explanation-title {
             margin-top: 56px;
 
@@ -402,6 +517,11 @@
             margin-top: 48px;
             position: relative;
             z-index: 1;
+
+            p {
+                font-weight: 400;
+                line-height: 2;
+            }
         }
 
         &-image {
@@ -540,7 +660,18 @@
         font-size: 32px;
         line-height: 2;
         font-weight: 700;
-        padding-left: calc((88 / 1600) * 100vw);
+        padding-left: calc((124 / 1600) * 100vw);
+
+        @include mixins.mediaquery-md {
+            padding-left: calc((22 / 767) * 100vw);
+            font-weight: 500;
+
+        }
+
+        @include mixins.mediaquery-sm {
+            padding-left: calc((124 / 1600) * 100vw);
+        }
+
         display: flex;
         margin-top: 64px;
         position: relative;
@@ -603,9 +734,17 @@
     margin-top: 150px;
     padding-bottom: 120px;
 
+    @include mixins.mediaquery-md {
+        padding-bottom: 64px;
+    }
+
     h3 {
         font-size: 40px;
         font-weight: 600;
+
+        @include mixins.mediaquery-md {
+            font-size: 20px;
+        }
     }
 
     &-list {
@@ -637,7 +776,6 @@
 .about-company {
     display: flex;
     justify-content: center;
-    padding-top: 80px;
     background-color: #F7F7F8;
     position: relative;
 
@@ -659,10 +797,16 @@
         }
 
         &-list {
-            margin-block: 64px 88px;
+            margin-block: 80px 88px;
             display: flex;
             flex-direction: column;
             row-gap: 32px;
+
+            @include mixins.mediaquery-md {
+                flex-direction: column;
+                align-items: start;
+                margin-block: 64px;
+            }
 
             &-item {
                 display: flex;
@@ -707,6 +851,10 @@
 
 .page-about .contact {
     margin-top: 80px;
+
+    @include mixins.mediaquery-md {
+        margin-top: 23px;
+    }
 }
 
 /*! ====================
@@ -717,10 +865,27 @@
     background-color: #F7F7F8 !important;
 
     >p {
-        width: 805px;
+        width: 56.6%;
         font-size: 18px;
         line-height: 1.5;
         margin-top: 32px;
+
+        @include mixins.mediaquery-md {
+            font-size: 16px;
+            width: 80%;
+        }
+
+        @include mixins.mediaquery-sm {
+            width: 100%;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    @include mixins.mediaquery-md {
+        padding-top: 80px;
     }
 
     &-list {
@@ -728,6 +893,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: min(calc((8 / 1600) * 100vw), 8px);
+
+        @include mixins.mediaquery-sm {
+            justify-content: center;
+            row-gap: 8px;
+        }
 
         li {
             display: flex;
@@ -739,10 +909,25 @@
             background-color: #fff;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
+            @include mixins.mediaquery-md {
+                width: 49.4%;
+                justify-content: unset;
+                min-height: 0;
+                padding: 24px;
+            }
+
+            @include mixins.mediaquery-sm {
+                width: 327px;
+            }
+
             h4 {
                 font-size: 40px;
                 color: #AACE45;
                 font-weight: 400;
+
+                @include mixins.mediaquery-md {
+                    font-size: 32px;
+                }
             }
 
             h5 {
@@ -750,79 +935,41 @@
                 line-height: 1.5;
                 margin-top: 10px;
 
+                @include mixins.mediaquery-md {
+                    font-size: 20px;
+                }
             }
 
             p {
                 font-size: 16px;
                 line-height: 1.8;
+
+                @include mixins.mediaquery-md {
+                    font-size: 14px;
+                    margin-top: 16px;
+                }
             }
         }
     }
 }
 
-.page-event .contact,
-.page-event .footer {
+.page-services .contact {
     background-color: #F7F7F8 !important;
+    padding-bottom: 80px;
+
+    @include mixins.mediaquery-md {
+        padding-bottom: 40px;
+    }
+}
+
+.page-services .footer {
+    background-color: #F7F7F8 !important;
+    margin-top: 0;
 }
 
 /*! ====================
     marketing_section(Webマーケティング事業ページ)
     ==================== */
-
-.marketing-hero {
-    h2 {
-        font-size: 60px;
-        font-weight: 700;
-    }
-
-    &-content {
-        display: flex;
-        column-gap: 33px;
-        margin-top: 100px;
-
-        p {
-            margin-top: 20px;
-            font-size: 20px;
-            line-height: 2.5;
-        }
-
-        div:last-of-type {
-            width: 42%;
-            flex-shrink: 0;
-        }
-    }
-}
-
-.marketing-clause {
-    margin-top: 150px !important;
-
-    p {
-        font-size: 20px;
-        line-height: 1.5;
-        margin-top: 30px;
-    }
-
-    &-list {
-        margin-top: 30px;
-        display: flex;
-        column-gap: 110px;
-        row-gap: 30px;
-        flex-wrap: wrap;
-
-        li {
-            width: 41.5%;
-
-            h4 {
-                font-size: 26px;
-                line-height: 1.5;
-            }
-
-            p {
-                margin-top: 10px;
-            }
-        }
-    }
-}
 
 /*! ====================
     clinical_section(臨床研究サポート事業ページ)

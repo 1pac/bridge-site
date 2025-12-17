@@ -11,7 +11,15 @@
     padding-bottom: 97px;
     padding-inline: min(calc((88 / 1600) * 100vw), 88px);
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 80px auto 0;
+    background-color: map.get(common.$colors, black30);
+
+    @include mixins.mediaquery-md {
+        margin: 23px auto 0;
+        padding-top: 40px;
+        padding-bottom: 32px;
+
+    }
 
     .footer-logo {
         width: fit-content;
@@ -101,7 +109,7 @@
             column-gap: 24px;
             justify-content: center;
             position: relative;
-            margin-block: 49px;
+            margin-block: 64px 48px;
 
             &::before {
                 content: "";
