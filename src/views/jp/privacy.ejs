@@ -1,0 +1,16 @@
+<% let meta={ title: "会社概要｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
+    , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="ja">
+        <%- include('/common/_headContent', { meta }) %>
+            <body data-page="../en" class="page-privacy">
+                <%- include('/common/_header', { meta }) %>
+                
+                    <%- include('/common/_contact') %>
+                        <%- include('/common/_footer', { meta }) %>
+                            <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
+            </body>
+
+        </html>

@@ -12,7 +12,7 @@
 
           <ul class="c-breadcrumbs c-wrapper">
             <li><a href="/">Top</a></li>
-            <li>＞</li>
+            <li>▶︎</li>
             <li><a href="../">Webマーケティング事業</a></li>
           </ul>
 
@@ -42,7 +42,8 @@
                 </p>
               </div>
               <div>
-                <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_mv.jpg" alt="循環器特化チームが実現する、現場に届くマーケティング">
+                <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_mv.jpg"
+                  alt="循環器特化チームが実現する、現場に届くマーケティング">
               </div>
             </div>
           </section>
@@ -201,6 +202,11 @@
 
           <%- include('/common/_contact') %>
             <%- include('/common/_footer', { meta }) %>
+              <script>
+                window.__ENV__ = {
+                  ENV: "<%= ASSET_PATH %>",
+                };
+              </script>
               <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
 
       </body>

@@ -12,7 +12,7 @@
 
                     <ul class="c-breadcrumbs c-wrapper">
                         <li><a href="/">Top</a></li>
-                        <li>＞</li>
+                        <li>▶︎</li>
                         <li>イベントコーディネート事業</li>
                     </ul>
 
@@ -191,7 +191,8 @@
                                     <p class="c-case-list-more js-modal _pc" data-modal="1">more</p>
                                 </div>
                                 <div>
-                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case1.jpg" alt="高度な専門人材">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case1.jpg"
+                                        alt="高度な専門人材">
                                 </div>
                                 <p class="c-case-list-more js-modal _sp" data-modal="1">more</p>
 
@@ -206,7 +207,8 @@
                                     <p class="c-case-list-more js-modal _pc" data-modal="2">more</p>
                                 </div>
                                 <div>
-                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case2.jpg" alt="高度な専門人材">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event_case2.jpg"
+                                        alt="高度な専門人材">
                                 </div>
                                 <p class="c-case-list-more js-modal _sp" data-modal="2">more</p>
 
@@ -305,6 +307,11 @@
 
                     <%- include('/common/_contact') %>
                         <%- include('/common/_footer', { meta }) %>
+                            <script>
+                                window.__ENV__ = {
+                                    ENV: "<%= ASSET_PATH %>",
+                                };
+                            </script>
                             <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
 
             </body>

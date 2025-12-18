@@ -1,9 +1,9 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+    const env = window.__ENV__ ? window.__ENV__ : '';
     const element = document.querySelector('body');
 
     /*  =====================
-        言語別ページ切り替え処理
+        共通:言語別ページ切り替え処理
         ===================== */
     const select = document.getElementById('header-nav-select');
     const body = document.body;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /*  =====================
-        共通フェードイン処理(.js-fadein)
+        共通:フェードイン処理(.js-fadein)
         ===================== */
     const fadeEl = document.querySelectorAll('.js-fadein');
 
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', onScroll);
 
     /*  =====================
-     スライダー処理
-     ===================== */
+        トップ:スライダー処理
+        ===================== */
     if (element.classList.contains('page-top')) {
 
         const paginationContainer =
@@ -133,16 +133,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*  =====================
-        services配下共通モーダル
+        services:共通モーダル
         ===================== */
 
     //モーダルコンテンツ配列
+
     const modalData = [
         {
             id: 1,
             title: "循環器治療の主要領域を網羅した、包括的ライブイベントの実現",
             subtitle: "豊橋ライブデモンストレーションコース",
-            img: "../../../dist/asset/img/about/strengths1.png",
+            img: `../../../${env.ENV}asset/img/about/strengths1.png`,
             list: [
                 "2025年の開催では、5日間・6配信ルーム・100を超えるプログラムを実施",
                 "参加者数2,447名（前年比＋399名）／有料参加者前年比150％増",
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             title: "別プロジェクトタイトル",
             subtitle: "別サブタイトル",
-            img: "../../../dist/asset/img/about/strengths2.png",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
             list: ["内容A", "内容B"],
             text1: "別説明",
             text2: "別説明2"
@@ -235,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*  =====================
-          会社概要img透過処理
+          会社概要:img透過処理
         ===================== */
     if (element.classList.contains('page-about')) {
         const heroImg = document.querySelector(".about-hero-content-sticky-img");
@@ -264,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*  =====================
-          事業詳細ページ
+          事業詳細:オーバーレイ処理
         ===================== */
     if (element.classList.contains('page-services')) {
         function scrollExplanation() {

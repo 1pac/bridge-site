@@ -286,6 +286,13 @@ img {
     li:nth-of-type(1) {
         color: map.get(common.$colors, black400);
     }
+
+    li:nth-of-type(2) {
+        color: map.get(common.$colors, t-gray);
+        font-size: 5px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 // 下層タイトル
@@ -445,6 +452,7 @@ img {
 
             @include mixins.mediaquery-md {
                 width: 100%;
+                row-gap: 64px;
             }
 
             h4 {
