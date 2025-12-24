@@ -1,20 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     const env = window.__ENV__ ? window.__ENV__ : '';
     const element = document.querySelector('body');
+    const Topbody = document.body;
 
     /*  =====================
-        共通:言語別ページ切り替え処理
+        共通:SPハンバーガーメニュー表示/非表示切り替え
         ===================== */
-    const select = document.getElementById('header-nav-select');
-    const body = document.body;
-
-    select.addEventListener('change', () => {
-        const path = window.location.pathname;
-        const fileName = path.substring(path.lastIndexOf('/') + 1);
-        const targetUrl = body.dataset.page + '/' + fileName;
-        window.location.href = targetUrl;
+    const menu = document.querySelector('.menu');
+    const openBtn = document.getElementById('menu-open-btn');
+    const closeBtn = document.getElementById('menu-close-btn');
+    openBtn.addEventListener('click', () => {
+        menu.classList.add('is-open');
+        Topbody.style.overflow = 'hidden';
     });
 
+    closeBtn.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        Topbody.style.overflow = '';
+    });
+
+    /*  =====================
+        共通:静的言語別ページ切り替え処理
+        ===================== */
+    const selects = document.querySelectorAll('.js-lang-select');
+    const body = document.body;
+
+    selects.forEach(select => {
+        select.addEventListener('change', () => {
+            const path = window.location.pathname;
+            const fileName = path.substring(path.lastIndexOf('/') + 1);
+            const targetUrl = body.dataset.page + '/' + fileName;
+            window.location.href = targetUrl;
+        });
+    });
 
     /*  =====================
         共通:フェードイン処理(.js-fadein)
@@ -122,14 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach((bar, index) => {
             bar.addEventListener("click", () => {
                 swiper.slideToLoop(index);
-
-                if (!isPlaying) {
-                    swiper.autoplay.start();
-                    togglePlay.classList.remove("is-paused");
-                    isPlaying = true;
-                }
             });
         });
+        
     }
 
     /*  =====================
@@ -161,8 +174,52 @@ document.addEventListener('DOMContentLoaded', () => {
             list: ["内容A", "内容B"],
             text1: "別説明",
             text2: "別説明2"
+        },
+        {
+            id: 3,
+            title: "ダミータイトルタイトル",
+            subtitle: "ダミーサブタイトル",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
+            list: ["ダミーリスト1", "ダミーリスト2"],
+            text1: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+            text2: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト"
+        },
+        {
+            id: 4,
+            title: "ダミータイトルタイトル",
+            subtitle: "ダミーサブタイトル",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
+            list: ["ダミーリスト1", "ダミーリスト2"],
+            text1: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+            text2: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト"
+        },
+        {
+            id: 5,
+            title: "ダミータイトルタイトル",
+            subtitle: "ダミーサブタイトル",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
+            list: ["ダミーリスト1", "ダミーリスト2"],
+            text1: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+            text2: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト"
+        },
+        {
+            id: 6,
+            title: "ダミータイトルタイトル",
+            subtitle: "ダミーサブタイトル",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
+            list: ["ダミーリスト1", "ダミーリスト2"],
+            text1: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+            text2: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト"
+        },
+        {
+            id: 7,
+            title: "ダミータイトルタイトル",
+            subtitle: "ダミーサブタイトル",
+            img: `../../../${env.ENV}asset/img/about/strengths2.png`,
+            list: ["ダミーリスト1", "ダミーリスト2"],
+            text1: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+            text2: "ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト"
         }
-
     ];
 
     // ---- モーダル本体のDOM ----
@@ -239,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
           会社概要:img透過処理
         ===================== */
     if (element.classList.contains('page-about')) {
+        const herobody = document.querySelector(".about-hero");
         const heroImg = document.querySelector(".about-hero-content-sticky-img");
         const triggerText = document.querySelector(".about-hero-content-textTrigger");
 
@@ -260,6 +318,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // triggerTextの高さ以下になったらabout-hero-imgにopacity付与
             heroImg.classList.toggle("_opacity", viewporttop >= triggerTextBottom);
+            // triggerTextの高さ以下になったら背景を付与
+            herobody.classList.toggle("_bg", viewporttop >= triggerTextBottom);
 
         });
     }

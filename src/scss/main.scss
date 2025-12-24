@@ -5,12 +5,25 @@
 @use 'footer';
 @use 'mixins';
 
+
 /*! =====================
     top_section(トップページ)
     ===================== */
 .page-top {
     background-color: map.get(common.$colors, black30);
 }
+
+.top-hero-swiper-wrapperSlide picture,
+.top-hero-swiper-wrapperSlide img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-hero-swiper-wrapperSlide img {
+    display: block;
+    object-fit: cover;
+}
+
 
 .top-hero {
     width: 100%;
@@ -62,6 +75,7 @@
                 @include mixins.mediaquery-md {
                     font-size: 16px;
                     margin-top: calc((32 / 767) * 100vw);
+                    max-width: 400px;
                 }
 
                 @include mixins.mediaquery-sm {
@@ -101,91 +115,109 @@
                 display: block;
             }
         }
-    }
 
-    &-swiper-controls {
-        position: absolute;
-        bottom: calc((24 / 1600) * 100vw);
-        left: calc((88 / 1600) * 100vw);
-        display: flex;
-        align-items: center;
-        gap: calc((16 / 1600) * 100vw);
-    }
+        &-controls {
+            position: absolute;
+            bottom: calc((24 / 1600) * 100vw);
+            left: calc((88 / 1600) * 100vw);
+            display: flex;
+            align-items: center;
+            column-gap: calc((16 / 1600) * 100vw);
 
-    &-swiper-controlsTogglePlay {
-        width: max(calc((50 / 1600) * 100vw), 32px);
-        height: max(calc((50 / 1600) * 100vw), 32px);
-        border-radius: 50%;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s, transform 0.2s;
-
-        &:hover {
-            transform: scale(1.1);
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        &.is-play {
-
-            /* 停止ボタン */
-            &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background-image: url("../../asset/img/top/pause_stop.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                display: block;
-            }
-        }
-
-        &.is-paused {
-
-            // 再生ボタン
-            &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background-image: url("../../asset/img/top/pause_start.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                display: block;
-            }
-        }
-
-    }
-
-    &-swiper-controlsPagination {
-        display: flex;
-        align-items: center;
-        gap: calc((10 / 1600) * 100vw);
-        background: rgba(0, 0, 0, 0.45);
-        padding: 8px 12px;
-        border-radius: 20px;
-        height: 20px;
-        cursor: pointer;
-
-        .top-hero-swiper-controlsPaginationItem {
-            height: 4px;
-            border-radius: 20px;
-            transition: width 0.2s linear, background 0.2s linear;
-
-            &.inactive {
-                width: 20px;
-                background: #bfbfbf;
+            @include mixins.mediaquery-md {
+                column-gap: 16px;
             }
 
-            &.active {
-                width: 80px;
-                background: #fff;
+            @include mixins.mediaquery-md {
+                bottom: 16px;
+
+            }
+
+            &TogglePlay {
+                width: max(calc((50 / 1600) * 100vw), 32px);
+                height: max(calc((50 / 1600) * 100vw), 32px);
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background-color 0.3s, transform 0.2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                &.is-play {
+
+                    /* 停止ボタン */
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background-image: url("../../asset/img/top/pause_stop.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        display: block;
+                    }
+                }
+
+                &.is-paused {
+
+                    // 再生ボタン
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background-image: url("../../asset/img/top/pause_start.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        display: block;
+                    }
+                }
+
+            }
+
+            &Pagination {
+                display: flex;
+                align-items: center;
+                // gap: calc((10 / 1600) * 100vw);
+                column-gap: 16px;
+                background: rgba(0, 0, 0, 0.45);
+                padding: 8px 12px;
+                border-radius: 20px;
+                height: 20px;
+                cursor: pointer;
+
+                .top-hero-swiper-controlsPaginationItem {
+                    height: 4px;
+                    border-radius: 20px;
+                    transition: width 0.2s linear, background 0.2s linear;
+
+                    &.inactive {
+                        width: 20px;
+                        background: #bfbfbf;
+                    }
+
+                    &.active {
+                        width: 80px;
+                        background: #fff;
+
+                        @include mixins.mediaquery-md {
+                            width: 64px;
+                        }
+                    }
+                }
             }
         }
     }
+
+
+
+
 
     &-link {
         position: absolute;
@@ -247,7 +279,6 @@
             }
         }
 
-
     }
 }
 
@@ -302,7 +333,7 @@
             justify-content: center;
 
             @include mixins.mediaquery-md {
-                gap: calc(24 / 767) * 100vw;
+                row-gap: 64px;
                 margin-top: 40px;
                 justify-content: center;
             }
@@ -323,7 +354,9 @@
                     width: 45%;
                 }
 
-
+                @include mixins.mediaquery-sm {
+                    width: 100%;
+                }
 
                 // イメージスケールアップ
                 a,
@@ -339,8 +372,8 @@
                     }
 
                     @include mixins.mediaquery-sm {
-                        width: calc((151 / 375) * 100vw);
-                        height: calc((110 / 375) * 100vw);
+                        width: calc((333 / 375) * 100vw);
+                        height: calc((232 / 375) * 100vw);
                     }
 
                     img {
@@ -349,23 +382,76 @@
                         height: 100%;
                         object-fit: cover;
                         transition: scale 0.3s ease;
-
                     }
 
-                    &:hover img {
-                        scale: 1.08;
-                    }
                 }
 
                 p {
                     font-size: 16px;
-                    // font-size: max(calc((14 / 1600) * 100vw), 16px);
                     line-height: 1.8;
+                    transition: color 0.3s ease;
+                    margin-top: 16px;
+                    cursor: pointer;
                 }
 
                 h3 {
                     font-size: clamp(20px, (calc((26 / 1600) * 100vw)), 32px);
                     font-weight: 700;
+                    transition: color 0.3s ease;
+                    cursor: pointer;
+
+                }
+
+                &Line {
+                    display: flex;
+                    font-size: 20px !important;
+                    column-gap: 12px;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    @include mixins.mediaquery-md {
+                        font-size: 16px !important;
+                    }
+                }
+
+                &:last-child {
+
+                    h3,
+                    p {
+                        cursor: default;
+                    }
+                }
+
+                &:not(:last-child):hover {
+                    img {
+                        scale: 1.08;
+                    }
+
+                    .our-services-wrapper-list-businesLine {
+                        color: map.get(common.$colors, t-green);
+                    }
+
+                    .c-link-short-arrow,
+                    .c-link-short-transition {
+                        border-color: map.get(common.$colors, t-green);
+                    }
+
+                    .c-link-short-arrow::before {
+                        opacity: 0;
+                    }
+
+                    .c-link-short-arrow::after {
+                        opacity: 1;
+                    }
+
+                    .c-link-short-transition::before {
+                        opacity: 0;
+                    }
+
+                    .c-link-short-transition::after {
+                        opacity: 1;
+                    }
+
                 }
 
             }
@@ -390,21 +476,62 @@
 
             @include mixins.mediaquery-md {
                 margin-top: 64px;
-                row-gap: 24px;
+                row-gap: 64px;
             }
 
             &Content {
                 display: flex;
                 column-gap: calc((64 / 1600) * 100vw);
                 padding-left: min(calc((88 / 1600) * 100vw), 88px);
+                cursor: pointer;
 
                 @include mixins.mediaquery-md {
                     flex-direction: column-reverse;
                     padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
                 }
 
+
+                &:hover {
+
+                    img {
+                        scale: 1.08;
+                    }
+
+                    .our-services-wrapper-pickupContentTextLine {
+                        color: map.get(common.$colors, t-green);
+                    }
+
+                    .c-transition-list-more,
+                    .c-case-list-more {
+                        background-color: map.get(common.$colors, t-green);
+                    }
+
+                    .c-link-short-arrow,
+                    .c-link-short-transition {
+                        border-color: map.get(common.$colors, t-green);
+                    }
+
+                    .c-link-short-arrow::before {
+                        opacity: 0;
+                    }
+
+                    .c-link-short-arrow::after {
+                        opacity: 1;
+                    }
+
+                    .c-link-short-transition::before {
+                        opacity: 0;
+                    }
+
+                    .c-link-short-transition::after {
+                        opacity: 1;
+                    }
+                }
+
                 &Text {
-                    margin-top: 131px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
 
                     @include mixins.mediaquery-md {
                         margin-top: 24px;
@@ -413,6 +540,7 @@
                     h3 {
                         font-size: 40px;
                         font-weight: 700;
+                        transition: color 0.3s ease;
 
                         @include mixins.mediaquery-md {
                             font-size: 20px;
@@ -424,6 +552,7 @@
                         font-size: 18px;
                         line-height: 2;
                         margin-top: 24px;
+                        transition: color 0.3s ease, background-color 0.3s ease;
 
                         @include mixins.mediaquery-md {
                             margin-top: 16px;
@@ -431,16 +560,39 @@
                         }
                     }
 
+                    &Line {
+                        display: none;
+
+                        @include mixins.mediaquery-md {
+                            width: 100%;
+                            display: flex;
+                            column-gap: 12px;
+                            flex-wrap: wrap;
+                            justify-content: flex-end;
+                            align-items: center;
+                        }
+
+                    }
+
                 }
 
-                div {
+                div:nth-of-type(2) {
+
+                    position: relative;
+                    overflow: hidden;
+                    flex-shrink: 0;
+
                     img {
-                        width: calc((935 / 1600) * 100vw);
+                        // position: absolute;
+                        object-fit: cover;
+                        transition: scale 0.3s ease;
+                        width: min(calc((935 / 1600) * 100vw), 935px);
 
                         @include mixins.mediaquery-md {
                             width: 100%;
                         }
                     }
+
                 }
 
                 &._reverse {
@@ -451,6 +603,7 @@
                     @include mixins.mediaquery-md {
                         flex-direction: column-reverse;
                     }
+
                 }
 
                 &More {
@@ -464,7 +617,14 @@
                     &:after {
                         display: block !important;
                     }
+
                 }
+
+                a {
+                    display: block;
+                    width: fit-content;
+                }
+
             }
         }
     }
@@ -477,6 +637,7 @@
 
     @include mixins.mediaquery-md {
         padding-top: 80px;
+        overflow: hidden;
     }
 
     &-bg {
@@ -518,6 +679,10 @@
             position: relative;
             z-index: 1;
 
+            @include mixins.mediaquery-sm {
+                margin-top: 32px;
+            }
+
             p {
                 font-weight: 400;
                 line-height: 2;
@@ -526,19 +691,24 @@
 
         &-image {
             margin: 0 auto;
-            width: min(calc((928 / 1600) * 100vw), 928px);
+            // width: min(calc((928 / 1600) * 100vw), 928px);
+            width: min(calc((908 / 1600) * 100vw), 928px);
             height: auto;
             position: absolute;
             top: 98.5px;
-            right: -248px;
+            right: -228px;
 
             @include mixins.mediaquery-md {
                 position: relative;
-                width: 100vw;
+                width: 120%;
                 top: 0;
                 right: unset;
-                left: calc((-24 / 767) * 100vw);
+                left: -53px;
                 margin-top: 64px;
+            }
+
+            @include mixins.mediaquery-sm {
+                left: calc((-45 / 767) * 100vw);
             }
 
             img {
@@ -627,6 +797,16 @@
                 opacity: 0.5;
             }
         }
+
+        &-link {
+            margin-top: 64px;
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                width: fit-content;
+            }
+        }
     }
 
 }
@@ -638,8 +818,17 @@
     width: 100%;
     height: auto;
     position: relative;
-    // padding-block: 120px 160px;
-    padding-block: min(calc((120 / 1600) * 100vw), 120px) min(calc((160 / 1600) * 100vw), 160px);
+    padding-bottom: min(calc((160 / 1600) * 100vw), 160px);
+    transition: background-color 0.5s ease;
+    z-index: -1;
+
+    @include mixins.mediaquery-md {
+        padding-block: min(calc((120 / 1600) * 100vw), 120px) min(calc((160 / 1600) * 100vw), 160px);
+    }
+
+    &._bg {
+        background-color: map.get(common.$colors, black30);
+    }
 
     &-title {
         font-size: 120px;
@@ -661,6 +850,9 @@
         line-height: 2;
         font-weight: 700;
         padding-left: calc((124 / 1600) * 100vw);
+        display: flex;
+        margin-top: 64px;
+        position: relative;
 
         @include mixins.mediaquery-md {
             padding-left: calc((22 / 767) * 100vw);
@@ -669,12 +861,9 @@
         }
 
         @include mixins.mediaquery-sm {
-            padding-left: calc((124 / 1600) * 100vw);
+            padding-top: 361px;
+            margin-top: 30px;
         }
-
-        display: flex;
-        margin-top: 64px;
-        position: relative;
 
         &-text {
             font-size: clamp(18px, calc((32 / 1600) * 100vw), 32px);
@@ -684,6 +873,19 @@
                 color: map.get(common.$colors, black600);
                 line-height: 1;
                 margin-top: 280px;
+
+                @include mixins.mediaquery-sm {
+                    margin-top: 128px;
+                }
+            }
+
+            &-mvv:nth-of-type(2),
+            &-mvv:nth-of-type(3) {
+                margin-top: 160px;
+
+                @include mixins.mediaquery-sm {
+                    margin-top: 48px;
+                }
             }
 
             &-explanation {
@@ -693,10 +895,18 @@
 
         p:nth-of-type(2) {
             margin-top: 95px;
+
+            @include mixins.mediaquery-sm {
+                margin-top: 45px;
+            }
         }
 
         p:nth-of-type(3) {
             margin-top: 95px;
+
+            @include mixins.mediaquery-sm {
+                margin-top: 45px;
+            }
         }
 
         &-sticky {
@@ -710,10 +920,10 @@
                 width: min(calc((772 / 1600) * 100vw), 772px);
                 transition: opacity 0.5s ease;
                 position: sticky;
-                top: 0;
+                top: 13px;
                 height: fit-content;
                 right: 0;
-                z-index: -1;
+                z-index: -2;
 
                 @include mixins.mediaquery-sm {
                     width: 100%;
@@ -732,10 +942,10 @@
 
 .about-strengths {
     margin-top: 150px;
-    padding-bottom: 120px;
+    padding-block: 120px;
 
     @include mixins.mediaquery-md {
-        padding-bottom: 64px;
+        padding-block: 64px;
     }
 
     h3 {
@@ -851,21 +1061,39 @@
 
 .page-about .contact {
     margin-top: 80px;
+    margin-bottom: 80px;
 
     @include mixins.mediaquery-md {
         margin-top: 23px;
+        margin-bottom: 23px;
     }
 }
 
 /*! ====================
     event_section(イベントコーディネート事業ページ)
     ==================== */
+.page-services-event .c-support-list li {
+    width: 220px;
+
+    @include mixins.mediaquery-sm {
+        width: 279px;
+    }
+}
+
+.page-services-event .c-member {
+    padding-bottom: 120px;
+
+    @include mixins.mediaquery-sm {
+        padding-bottom: 80px;
+    }
+}
+
 .event-clause {
     padding-top: 120px;
     background-color: #F7F7F8 !important;
 
-    >p {
-        width: 56.6%;
+    &-lead {
+        width: 61.6%;
         font-size: 18px;
         line-height: 1.5;
         margin-top: 32px;
@@ -881,7 +1109,11 @@
     }
 
     h3 {
-        text-align: center;
+        text-align: start;
+
+        @include mixins.mediaquery-md {
+            text-align: center;
+        }
     }
 
     @include mixins.mediaquery-md {
@@ -953,27 +1185,42 @@
     }
 }
 
-.page-services .contact {
-    background-color: #F7F7F8 !important;
-    padding-bottom: 80px;
-
-    @include mixins.mediaquery-md {
-        padding-bottom: 40px;
-    }
-}
-
-.page-services .footer {
-    background-color: #F7F7F8 !important;
-    margin-top: 0;
-}
-
-/*! ====================
-    marketing_section(Webマーケティング事業ページ)
-    ==================== */
-
 /*! ====================
     clinical_section(臨床研究サポート事業ページ)
     ==================== */
+
+.page-services-clinical .c-support-list {
+    flex-wrap: wrap;
+}
+
+.page-services-clinical .c-support-list li {
+    width: 296px;
+}
+
+.page-services-clinical .c-support-list._process li {
+    width: 19.1%;
+
+    h4 {
+        min-height: 12.4%;
+
+        @include mixins.mediaquery-sm {
+            min-height: unset;
+        }
+    }
+
+    @include mixins.mediaquery-md {
+        width: 296px;
+    }
+
+}
+
+.page-services-clinical .c-support-list._process {
+    column-gap: min(calc((12 / 1600) * 100vw), 16px);
+
+    @include mixins.mediaquery-md {
+        column-gap: clamp(12px, 3.75vw, 80px);
+    }
+}
 
 .clinical-hero {
     h2 {
@@ -1025,6 +1272,278 @@
         &-img {
             width: 155px;
             height: 155px;
+        }
+    }
+}
+
+.achievements {
+    line-height: 2.1;
+    background-color: #F7F7F8 !important;
+    padding-block: 80px;
+
+    @include mixins.mediaquery-md {
+        padding-block: 64px;
+    }
+
+    &-company {
+        margin: 0 auto;
+        width: 90%;
+
+        @include mixins.mediaquery-md {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        >p:nth-of-type(1) {
+            font-size: 18px;
+            line-height: 2;
+            margin-top: 16px;
+        }
+
+        &-list {
+            width: 80%;
+            margin-top: 48px;
+
+            span {
+                font-size: 16px;
+                white-space: nowrap;
+                display: inline-block;
+
+                @include mixins.mediaquery-sm {
+                    font-size: 15px;
+                }
+            }
+
+            @include mixins.mediaquery-md {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*! ====================
+    事業詳細ページ共通
+    ==================== */
+
+.page-services .contact {
+    background-color: #F7F7F8 !important;
+    padding-bottom: 80px;
+
+    @include mixins.mediaquery-md {
+        padding-bottom: 40px;
+    }
+}
+
+.page-services .footer {
+    background-color: #F7F7F8 !important;
+    margin-top: 0;
+}
+
+/*! ====================
+    ニュース詳細ページ(news-detail)
+    ==================== */
+.news-title {
+    width: 100%;
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 32px;
+
+        @include mixins.mediaquery-md {
+            margin-top: 64px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.news-detail {
+    width: 100%;
+    margin-top: 120px !important;
+    padding-inline: 212px !important;
+
+    @include mixins.mediaquery-md {
+        margin-top: 80px !important;
+        padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-top: 48px;
+        line-height: 1.5;
+    }
+
+    ol {
+        list-style: disc;
+        margin-top: 16px;
+        line-height: 1.8;
+        padding-left: 23px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+    &-point {
+        margin-top: 54px;
+    }
+
+}
+
+.news-bottom {
+    width: 100%;
+    position: relative;
+    margin-top: 120px !important;
+    padding-inline: 212px !important;
+
+    @include mixins.mediaquery-md {
+        padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
+    }
+
+    &-bg {
+        background-color: map.get(common.$colors, black30);
+        padding: 40px 48px;
+        margin-top: 128px;
+
+        @include mixins.mediaquery-md {
+            margin-top: 112px;
+        }
+
+        h3 {
+            font-size: 28px;
+            line-height: 1.5;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-block: 16px;
+            line-height: 1.5;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        &-point {
+            margin-top: 15px;
+        }
+
+        &-link {
+            &-button {
+                display: flex;
+                width: 144px;
+                font-size: 20px;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 24px;
+                background-color: #000;
+                color: #fff;
+                border-radius: 80px;
+                font-size: 12px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                margin: 80px auto 113px;
+
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("../../asset/img/common/arrow_reverse.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    top: 4px;
+                    left: -3px;
+                }
+
+                &:hover {
+                    background-color: map.get(common.$colors, t-green);
+                }
+            }
+        }
+
+    }
+
+    &::before {
+        content: "";
+        // width: 73.5%;
+        width: min(calc((1176 / 1600) * 100vw), 1176px);
+        height: 1px;
+        background-color: map.get(common.$colors, black200);
+        position: absolute;
+        top: -64px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*! =====================
+    エラーページ
+    ===================== */
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+    &-code {
+        font-size: 120px;
+        font-weight: 600;
+        color: map.get(common.$colors, black600);
+        margin: 0;
+
+        @include mixins.mediaquery-md {
+            font-size: 80px;
+        }
+    }
+
+    &-title {
+        margin: 8px 0 48px;
+        font-size: 18px;
+        letter-spacing: 0.08em;
+    }
+
+    &-text {
+        font-size: 20px;
+        margin-bottom: 48px;
+        line-height: 2;
+    }
+
+    &-button {
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 80px;
+        font-size: 12px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-image: url("../../asset/img/common/arrow_reverse.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 4px;
+            left: -3px;
+        }
+
+        &:hover {
+            background-color: map.get(common.$colors, t-green);
         }
     }
 }

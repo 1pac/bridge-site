@@ -1,5 +1,5 @@
 $screen-md: 961px;
-$screen-sm: 450px;
+$screen-sm: 451px;
 
 @mixin mediaquery-md() {
   @media screen and (max-width: #{ $screen-md - 1px }) {

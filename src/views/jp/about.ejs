@@ -1,6 +1,6 @@
 <% let meta={ title: "会社概要｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
     ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
-    , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
+    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
@@ -8,42 +8,53 @@
 
             <body data-page="../en" class="page-about">
                 <%- include('/common/_header', { meta }) %>
-                    <section class="about-hero c-wrapper">
-                        <h2 class="about-hero-title c-inter"><span class="c-title-color">Who</span>
-                            <sapn class="about-hero-color"> we are</sapn>
-                        </h2>
+                    <ul class="c-breadcrumbs c-wrapper">
+                        <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html">Top</a></li>
+                        <li>▶︎</li>
+                        <li>Who We Are</li>
+                    </ul>
 
-                        <div class="about-hero-content">
-                            <div class="about-hero-content-text">
-                                <p>株式会社テクロスは、<br />20年以上にわたり培ってきた<br />医療分野での経験を基盤に、<br />データサイエンスを核とした<br />新たな挑戦を続ける企業です。
-                                </p>
-                                <p class="about-hero-content-textTrigger">
-                                    従来の循環器領域における<br />ニュースの配信、<br>イベント企画、情報発信、<br />コンサルティングの実績を礎に、<br />独自開発した「InsighTCROSS®」<br />をはじめとする<br />革新的なソリューションを展開し、<br />全ての診療科における<br />医薬品企業・医療機器企業・<br />医療機関など、<br />多様なステークホルダーに向けて<br />サービスを提供しています。
-                                </p>
-                                <p>
-                                    弊社は既存の枠組みにとらわれず、<br />国内外の医療業界に<br />新しい価値をもたらすことに挑み続け、<br />次世代の医療を支える変革を<br />牽引してまいります。
-                                </p>
-                                <h2 class="about-hero-content-text-mvv"><span class="c-title-color">M</span>ission</h2>
-                                <p class="about-hero-content-text-explanation">
-                                    定性的な観点を超え、<br />医療分野にエビデンスベースの活動をもたらし、<br />持続可能な医療に貢献すること。</p>
-                                <h2 class="about-hero-content-text-mvv"><span class="c-title-color">V</span>ision</h2>
-                                <p class="about-hero-content-text-explanation">
-                                    10年後、医療分野における<br />エビデンスベースのソリューションプロバイダーとして、<br />リーダー企業となること。</p>
-                                <h2 class="about-hero-content-text-mvv"><span class="c-title-color">V</span>alue</h2>
-                                <p class="about-hero-content-text-explanation">過去の成功を超える革新を起こす挑戦を続けること。</p>
-                            </div>
-                            <div class="about-hero-content-sticky">
-                                <div class="about-hero-content-sticky-img">
-                                    <img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/about/header-item.png"
-                                        alt="">
+                    <section class="about-hero">
+                        <div class="c-wrapper">
+                            <h2 class="about-hero-title c-inter"><span class="c-title-color">Who</span>
+                                <sapn class="about-hero-color"> we are</sapn>
+                            </h2>
+
+                            <div class="about-hero-content">
+                                <div class="about-hero-content-text">
+                                    <p>株式会社テクロスは、<br />20年以上にわたり培ってきた<br />医療分野での経験を基盤に、<br />データサイエンスを核とした<br />新たな挑戦を続ける企業です。
+                                    </p>
+                                    <p class="about-hero-content-textTrigger">
+                                        従来の循環器領域における<br />ニュースの配信、<br>イベント企画、情報発信、<br />コンサルティングの実績を礎に、<br />独自開発した「InsighTCROSS®」<br />をはじめとする<br />革新的なソリューションを展開し、<br />全ての診療科における<br />医薬品企業・医療機器企業・<br />医療機関など、<br />多様なステークホルダーに向けて<br />サービスを提供しています。
+                                    </p>
+                                    <p>
+                                        弊社は既存の枠組みにとらわれず、<br />国内外の医療業界に<br />新しい価値をもたらすことに挑み続け、<br />次世代の医療を支える変革を<br />牽引してまいります。
+                                    </p>
+                                    <h2 class="about-hero-content-text-mvv"><span class="c-title-color">M</span>ission
+                                    </h2>
+                                    <p class="about-hero-content-text-explanation">
+                                        定性的な観点を超え、<br />医療分野にエビデンスベースの活動をもたらし、<br />持続可能な医療に貢献すること。</p>
+                                    <h2 class="about-hero-content-text-mvv"><span class="c-title-color">V</span>ision
+                                    </h2>
+                                    <p class="about-hero-content-text-explanation">
+                                        10年後、医療分野における<br />エビデンスベースのソリューションプロバイダーとして、<br />リーダー企業となること。</p>
+                                    <h2 class="about-hero-content-text-mvv"><span class="c-title-color">V</span>alue
+                                    </h2>
+                                    <p class="about-hero-content-text-explanation">過去の成功を超える革新を起こす挑戦を続けること。</p>
+                                </div>
+                                <div class="about-hero-content-sticky">
+                                    <div class="about-hero-content-sticky-img">
+                                        <img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/about/header-item.png"
+                                            alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section class="about-strengths c-wrapper">
-                        <h3>独自性と価値</h3>
+                        <h3 class="js-fadein">独自性と価値</h3>
                         <ul class="about-strengths-list">
-                            <li class="about-strengths-list-item">
+                            <li class="about-strengths-list-item js-fadein">
                                 <div>
                                     <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img1.png"
                                         alt="高度な専門人材">
@@ -51,7 +62,7 @@
                                 <h4>高度な専門人材</h4>
                                 <p>博士・修士保有者、医師、看護師など、高度な専門資格を持つ人材による体制</p>
                             </li>
-                            <li class="about-strengths-list-item">
+                            <li class="about-strengths-list-item js-fadein">
                                 <div>
                                     <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img2.png"
                                         alt="高度な専門人材">
@@ -59,7 +70,7 @@
                                 <h4>専門性と展開力</h4>
                                 <p>循環器領域で培った専門性と幅広い医療分野への展開力</p>
                             </li>
-                            <li class="about-strengths-list-item">
+                            <li class="about-strengths-list-item js-fadein">
                                 <div>
                                     <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img3.png"
                                         alt="高度な専門人材">
@@ -67,7 +78,7 @@
                                 <h4>豊富な実績</h4>
                                 <p>国内外の製薬・医療機器企業との豊富な実績</p>
                             </li>
-                            <li class="about-strengths-list-item">
+                            <li class="about-strengths-list-item js-fadein">
                                 <div>
                                     <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img4.png"
                                         alt="高度な専門人材">
@@ -75,7 +86,7 @@
                                 <h4>高度なデータ活用力</h4>
                                 <p>独自開発ソリューション「InsighTCROSS®」を含む高度なデータ活用力</p>
                             </li>
-                            <li class="about-strengths-list-item">
+                            <li class="about-strengths-list-item js-fadein">
                                 <div>
                                     <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img5.png"
                                         alt="高度な専門人材">
@@ -88,7 +99,7 @@
 
                     <section class="about-company">
                         <div class="about-company-wrapper">
-                            <ul class="about-company-wrapper-list">
+                            <ul class="about-company-wrapper-list js-fadein">
                                 <li>
                                     <h3>会社概要</h3>
                                 </li>

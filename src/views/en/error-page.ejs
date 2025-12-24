@@ -1,0 +1,27 @@
+<% let meta={ title: "株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
+    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "en/" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="en">
+        <%- include('/common/_headContent', { meta }) %>
+
+            <body data-page="../jp" class="page-error">
+                <%- include('/common/_header', {meta}) %>
+
+                    <main class="error">
+                        <h2 class="error-code c-inter">404</h2>
+                        <p class="error-title c-inter">Not Found</p>
+                        <p class="error-text">お探しのページは見つかりませんでした。</p>
+
+                        <a href="/" class="error-button c-inter">
+                            <span>TOP</span>
+                        </a>
+                    </main>
+
+                    <%- include('/common/_footer', { meta }) %>
+                        </script>
+                        <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
+            </body>
+
+        </html>

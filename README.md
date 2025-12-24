@@ -68,17 +68,22 @@ root/
 │   │   └── privacy.html         （個人情報保護方針）
 │   │   
 │   │
-│   └── en/                      （英語版 / 多言語 HTML）
-│       ├── index.html           （トップページ）
-│       ├── company.html         （会社概要）
-│       ├── service.html         （事業紹介ページ）
-│       ├── service/
-│       │   ├── marketing.html   （Webマーケティング事業）
-│       │   ├── event.html       （イベントコーディネート事業）
-│       │   └── clinical.html    （臨床研究サポート事業）
-│       ├── terms.html           （利用規約）
-│       └── privacy.html         （個人情報保護方針）
-│       
+│   │── en/                      （英語版 / 多言語 HTML）
+│   │   ├── index.html           （トップページ）
+│   │   ├── company.html         （会社概要）
+│   │   ├── service.html         （事業紹介ページ）
+│   │   ├── service/
+│   │   │   ├── marketing.html   （Webマーケティング事業）
+│   │   │   ├── event.html       （イベントコーディネート事業）
+│   │   │   └── clinical.html    （臨床研究サポート事業）
+│   │   ├── terms.html           （利用規約）
+│   │   └── privacy.html         （個人情報保護方針）
+│   │ 
+│   └── asset/                       （静的ファイル）
+│		  ├── css/                       (scss出力先)
+│		  ├── js/                                       
+│		  └── img/                  
+│     
 │
 │
 │
@@ -123,10 +128,6 @@ root/
 │       ├── _reset.scss         （リセットcss）                   
 │       └── common.vars.scss     (共通変数格納ファイル)
 │       
-└── asset/                       （静的ファイル）
-   ├── css/                       (scss出力先)
-   ├── js/                                       
-   └── img/                  
 
 ```
 

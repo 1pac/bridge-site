@@ -1,16 +1,118 @@
-<% let meta={ title: "会社概要｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+<% let meta={ title: "個人情報保護方針｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
     ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
-    , selected: "" , optionJp: "日本語" , optionEn: "英語" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
+    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
         <%- include('/common/_headContent', { meta }) %>
-            <body data-page="../en" class="page-privacy">
+
+            <body class="page-terms-policy" data-page="../en">
                 <%- include('/common/_header', { meta }) %>
-                
-                    <%- include('/common/_contact') %>
-                        <%- include('/common/_footer', { meta }) %>
-                            <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
+
+                    <ul class="c-breadcrumbs c-wrapper">
+                        <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html">Top</a></li>
+                        <li>▶︎</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                    <section class="c-terms-policy c-wrapper">
+                        <h2>Privacy Policy</h2>
+                        <p>株式会社テクロス及び株式会社テクロスコミュニケーション（以下「当社」といいます。）は、当社の提供する各種サービス（TCROSS
+                            NEWS、クリニカル事業、イベント事業、コンサルティング事業、SaaS型サービス、その他当社が提供するサービスを含み、以下「本サービス」といいます。）における、ユーザーについての個人情報を含む利用者情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+                        </p>
+                    </section>
+                    <section class="c-policy c-wrapper">
+                        <div class="c-policy-section">
+                            <h3>1. 収集する利用者情報及び収集方法</h3>
+                            <p>本ポリシーにおいて「利用者情報」とは、ユーザーの識別に係る情報、サービス利用に関連して生成または蓄積される情報であって、当社が収集するものをいいます。
+                            </p>
+                            <p><b>（1）お客様から提供される情報</b></p>
+                            <ul>
+                                <li>氏名（フリガナを含む）、性別、生年月日</li>
+                                <li>電子メールアドレス、会社名団体名、所属部署、勤務先所在地、役職、電話番号、その他連絡先</li>
+                                <li>サービス利用のためのログインIDパスワード等の認証情報</li>
+                                <li>契約申込書、アンケート、面談等を通じてご提供いただく情報</li>
+                                <li>委託研究の遂行に必要な技術資料実験データ研究参加者の属性情報（年齢性別等）</li>
+                                <li><b>（2）サービス利用に伴い取得される情報</b></li>
+                                <li>クリニカル関連サービス利用の履歴記録</li>
+                                <li>イベント参加登録出欠情報決済情報</li>
+                                <li>コンサルティング業務における契約書業務記録に付随する情報</li>
+                                <li>TCROSS NEWSの利用ログ（アクセス履歴、操作履歴、利用時間、IPアドレス、利用環境等）</li>
+                                <li>本サービスに関するお問合せやり取りに関する記録</li>
+                                <li>当社ウェブサイト利用時に自動的に取得されるアクセス情報（アクセス日時、閲覧ページ、IPアドレス、利用端末情報、Cookie等）</li>
+                            </ul>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>2. 利用目的</h3>
+                            <p>利用者情報は、以下の目的で利用します。</p>
+                            <p><b>（1）本サービスの提供運営のため</b></p>
+                            <ul>
+                                <li>登録受付、本人確認、契約の履行、料金請求決済処理のため</li>
+                                <li>クリニカル、イベント、コンサルティング、SaaS型各事業におけるサービス提供品質改善のため</li>
+                                <li>SaaS型サービスにおけるアカウント管理、セキュリティ確保、利用状況の分析のため</li>
+                                <li>お問合せ対応やサポート対応のため</li>
+                                <li>契約やポリシーに違反する行為への対応のため</li>
+                            </ul>
+                            <p><b>（2）その他の目的</b></p>
+                            <ul>
+                                <li>サービス改善のための統計データ作成分析</li>
+                                <li>イベントセミナー研究会キャンペーン等のご案内</li>
+                                <li>新サービス、研究活動、事業活動に関する情報提供</li>
+                                <li>契約業務に必要な連絡、資料送付、調査依頼のため</li>
+                                <li>研究成果の創出検証成果報告のため</li>
+                            </ul>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>3. 利用者情報の管理</h3>
+                            <p>当社は、利用目的の達成に必要な範囲内において、正確かつ最新の状態で利用者情報を管理します。保有の必要がなくなった個人情報は、速やかに廃棄または消去します。<br>
+                                SaaS型サービスにおけるデータについても、ユーザーや企業の退会や契約終了後には当社所定の方法で消去いたします。
+                            </p>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>4. 安全管理対策</h3>
+                            <p>当社は、利用者情報を保護するため、以下の安全管理措置を講じます。</p>
+                            <ul>
+                                <li>不正アクセス防止のためのセキュリティ対策</li>
+                                <li>不要な複製や持ち出しの禁止</li>
+                                <li>SSL等による通信の暗号化</li>
+                                <li>SaaS型サービスにおけるアクセス制御、ログ監視、定期的なセキュリティテスト</li>
+                                <li>定期的な内部監査と改善</li>
+                            </ul>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>5. 委託第三者提供</h3>
+                            <p>当社は、業務委託先に利用者情報の取扱いを委託する場合があります。その際は適切な監督を行います。<br>
+                                また、法令に基づく場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。
+                            </p>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>6. 共同利用</h3>
+                            <p>当社は、以下の範囲で共同利用を行うことがあります。</p>
+                            <ul>
+                                <li>共同利用する者：株式会社テクロス、株式会社テクロスコミュニケーション</li>
+                                <li>共同利用の目的：第2条に定める目的の範囲内</li>
+                            </ul>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>7. 個人情報の開示訂正利用停止等</h3>
+                            <p>ユーザーご本人から、個人情報の開示訂正削除利用停止を求められた場合は、法令に基づき遅滞なく対応いたします。なお、開示請求には所定の手数料を頂戴する場合があります。</p>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>8. お問い合わせ窓口</h3>
+                            <p>利用者情報の取扱いに関するお問い合わせは、下記窓口までお願いいたします。<br>
+                                〒160-0022<br>東京都新宿区新宿1-9-1 NEOX新宿ビル7F<br>株式会社テクロス<br>個人情報お問い合わせ担当窓口</p>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>9. 改訂</h3>
+                            <p>当社は、法令改正や事業内容の変更に応じて、本ポリシーを改訂する場合があります。重要な変更がある場合は、当社ウェブサイト等で告知いたします。</p>
+                        </div>
+                        <div class="c-policy-section">
+                            <h3>補足条項</h3>
+                            <p>TCROSS NEWSについてのプライバシーポリシーは、別途同サイトに掲載しております。</p>
+                        </div>
+                    </section>
+
+                    <%- include('/common/_footer', { meta }) %>
+                        <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
             </body>
 
         </html>

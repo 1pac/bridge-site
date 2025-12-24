@@ -1,0 +1,252 @@
+<% let meta={ title: "Webマーケティング事業" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
+    basePath: "../../../" , selected: "selected" , optionJp: "JP" , optionEn: "EN" , terms: "terms of service" ,
+    privacy: "privacy policy" , lang: "en/" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="en">
+        <%- include('/common/_headContent', { meta }) %>
+
+            <body data-page="../../jp/services" class="page-services page-services-marketing">
+                <%- include('/common/_header', {meta}) %>
+
+                    <ul class="c-breadcrumbs c-wrapper">
+                        <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html">Top</a></li>
+                        <li>▶︎</li>
+                        <li>Webマーケティング事業</li>
+                    </ul>
+
+                    <div class="c-modal">
+                        <div class="c-modal-case">
+                            <h4 class="c-modal-case-title"></h4>
+                            <h5 class="c-modal-case-subtitle"></h5>
+                            <div class="c-modal-case-img"><img class="c-modal-img-src" src=""></div>
+                            <h6>成果</h6>
+                            <ul class="modal-case-list">
+                            </ul>
+                            <h6>背景</h6>
+                            <p class="modal-case-text-1"></p>
+                            <h6>取り組み</h6>
+                            <p class="modal-case-text-2"></p>
+                            <div class="c-modal-case-close" id="modal-close-btn"></div>
+                        </div>
+                    </div>
+
+                    <section class="c-hero c-wrapper">
+                        <p class="js-fadein">Web Marketing</p>
+                        <h2 class="js-fadein">Webマーケティング事業</h2>
+                        <div class="c-hero-content js-fadein">
+                            <div>
+                                <h3 class="c-headline">循環器特化チームが実現する、<br />現場に届くマーケティング</h3>
+                                <p>循環器専門の情報プラットフォーム「TCROSS NEWS」を運営するテクロスが、循環器医師の“今”を捉えた知見をもとに、企画・制作・配信・調査まで一貫して支援します。
+                                </p>
+                            </div>
+                            <div>
+                                <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_mv.jpg"
+                                    alt="循環器特化チームが実現する、現場に届くマーケティング">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="c-explanation">
+                        <div class="c-explanation-bg">
+                            <img src="../../../<%= ASSET_PATH %>asset/img/services/explanation.jpg" alt="高度な専門人材">
+                            <div class="c-explanation-bg-overlay"></div>
+                        </div>
+                        <div class="c-explanation-content c-wrapper">
+                            <h3>第一線の<br class="_br-sp" />循環器内科医に<br />選ばれ続ける「TCROSS NEWS」</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <h4>現場での圧倒的なカバレッジ</h4>
+                                        <p>TCROSS
+                                            NEWSの登録医師は9,000名以上にのぼり、そのうち約7,500名が病院勤務の循環器内科医です。これは、全国に約11,000名いる病院勤務の循環器内科医のおよそ7割に相当し、第一線で活躍する医師から高い支持を得ているプラットフォームです。
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>専門コンテンツによる高いエン<br class="_pc" />ゲージメント</h4>
+                                        <p>年間1,300本の循環器専門コンテンツを配信し、有料会員の満足度は97%、メールマガジンの開封率も約40%と高水準を維持しています。さらに、施設単位での有料利用も拡大しています。
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>独自のセグメンテーションによ<br class="_pc" />る精密なターゲティング</h4>
+                                        <p>
+                                            循環器領域のトレンドやデータ、現場での知見をもとに、循環器内科医を5つの層に定量的に分類する独自分析を実施。専門分野、関心領域、情報への反応傾向、臨床フェーズなどを多角的に捉え、各層に最適化された精緻なターゲティングとメッセージ設計を実現します。
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="c-task c-wrapper">
+                        <h3 class="c-headline js-fadein">こんなお悩みありませんか？</h3>
+                        <ul class="c-task-list">
+                            <li class="js-fadein">
+                                <div>
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/issue1.png" alt="高度な専門人材">
+                                </div>
+                                <h4>新しい薬剤への医師の興味喚起が難しい</h4>
+                                <p>循環器領域に特化した知見と経験をもとに、医療現場の課題や最新動向を的確に捉えた企画を設計します。臨床と産業の双方に寄り添い、医療従事者・企業の双方に価値を届けます。
+                                </p>
+                            </li>
+                            <li class="js-fadein">
+                                <div>
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/issue2.png" alt="高度な専門人材">
+                                </div>
+                                <h4>忙しい医師に対して十分な接触機会を確保できない</h4>
+                                <p>最新の知見や手技を効果的に伝えられるよう、演者への依頼や、座長との進行・内容のすり合わせに手間がかかりすぎる
+                                </p>
+                            </li>
+                            <li class="js-fadein">
+                                <div>
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/issue3.png" alt="高度な専門人材">
+                                </div>
+                                <h4>制作したデジタルコンテンツがターゲット医師に届かない</h4>
+                                <p>医療広告ガイドラインや関連法規・業界ルールに遵守したイベント運営ができているか不安が拭えない
+                                </p>
+                            </li>
+                            <li class="js-fadein">
+                                <div>
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/issue4.png" alt="高度な専門人材">
+                                </div>
+                                <h4>閲覧はあっても、処方・導入への効果が見えにくい</h4>
+                                <p>登壇される医師の先生方のタイトなスケジュール調整や、煩雑な交通・宿泊の手配、資料作成サポートまで手が回らない
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="c-support">
+                        <div class="c-wrapper">
+                            <h3 class="c-headline js-fadein">企画から運営・分析まで、 <br class="_br-pc" />必要なフェーズを柔軟にサポート</h3>
+                            <ul class="c-support-list">
+                                <li class="js-fadein">
+                                    <h5>Phase 01</h5>
+                                    <h4>マーケティング企画</h4>
+                                    <div>
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                            alt="高度な専門人材">
+                                    </div>
+                                    <p>
+                                        TCROSS NEWS利用データをもとに、最適なマーケティング企画をご提案
+                                    </p>
+                                </li>
+                                <li class="js-fadein">
+                                    <h5>Phase 02</h5>
+                                    <h4>コンテンツ制作</h4>
+                                    <div>
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                            alt="高度な専門人材">
+                                    </div>
+                                    <p>
+                                        専門のライターチームにより各種ガイドラインを遵守した信頼性の高い記事や動画制作が可能
+                                    </p>
+                                </li>
+                                <li class="js-fadein">
+                                    <h5>Phase 03</h5>
+                                    <h4>プロモーション</h4>
+                                    <div>
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                            alt="高度な専門人材">
+                                    </div>
+                                    <p>
+                                        虚血、心不全、不整脈など各専門の医師が最も興味を持つ切り口でコンテンツのプロモーションをサポート
+                                    </p>
+                                </li>
+                                <li class="js-fadein">
+                                    <h5>Phase 04</h5>
+                                    <h4>アンケート調査</h4>
+                                    <div>
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                            alt="高度な専門人材">
+                                    </div>
+                                    <p>
+                                        アンケート項目の設計からターゲット医師への調査配信、結果分析まで次につながる調査をご提供
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="c-case c-wrapper">
+                        <h3 class="c-title js-fadein"><span>Case</span> Study</h3>
+                        <ul class="c-case-list">
+                            <li class="js-fadein">
+                                <div>
+                                    <h5>Case <span>01</span></h5>
+                                    <h4>ターゲットへの到達精度を高めるデータドリブン施策</h4>
+                                    <p>循環器領域のトレンドやデータ、現場での知見をもとに行った独自セグメンテーションに基づき、配信コンテンツがどのセグメントの医師に、どの程度到達しているかを可視化・検証します。
+                                    </p>
+                                    <p>
+                                        想定していたターゲット層との間に乖離が見られた場合は、メッセージの切り口や表現、テーマ設計を再構築し、よりターゲットに刺さる内容へ最適化。これを継続的に繰り返すことで、無駄のない高精度なコミュニケーション設計と費用対効果の最大化を実現しています。
+                                    </p>
+                                    <p class="c-case-list-more js-modal _pc" data-modal="3">ケーススタディ詳細</p>
+                                </div>
+                                <div class="js-modal" data-modal="3">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_case1.jpg"
+                                        alt="高度な専門人材">
+                                </div>
+                                <p class="c-case-list-more js-modal _sp" data-modal="3">ケーススタディ詳細</p>
+
+                            </li>
+                            <li class="js-fadein">
+                                <div>
+                                    <h5>Case <span>02</span></h5>
+                                    <h4>特設サイトを活用した認知・理解の継続的強化</h4>
+                                    <p>
+                                        有料会員を中心とするTCROSS NEWSユーザーは、新しい医療情報への関心が高いアクティブな医師層です。
+                                        特設サイトという常設導線を設けることで、単発的な接触にとどまらず、日常的に自然な形で情報に触れる機会を創出し、認知の定着と理解の深化、さらには記憶への定着を促進します。さらに、関連コンテンツを継続的に蓄積・整理することで、特設サイト自体が信頼性の高い情報ハブとして機能し、体系的に活用可能なアーカイブ資産としての長期的な価値を高めていきます。
+                                    </p>
+                                    <p class="c-case-list-more js-modal _pc" data-modal="4">ケーススタディ詳細</p>
+                                </div>
+                                <div class="js-modal" data-modal="4">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/marketing_case1.jpg"
+                                        alt="高度な専門人材">
+                                </div>
+                                <p class="c-case-list-more js-modal _sp" data-modal="4">ケーススタディ詳細</p>
+
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="achievements">
+                        <div class="c-wrapper">
+                            <div class="achievements-company js-fadein">
+                                <h2>これまでの実績</h2>
+                                <p>企業のパートナーとして様々なアンメットニーズにお応えしてきました。</p>
+                                <p class="achievements-company-list">
+                                    <span>アステラス製薬株式会社</span>
+                                    <span>アボットメディカルジャパン合同会社</span>
+                                    <span>株式会社カネカメディックス</span>
+                                    <span>株式会社島津製作所</span>
+                                    <span>ジョンソン・エンド・ジョンソン株式会社</span>
+                                    <span>ゼオンメディカル株式会社</span>
+                                    <span>第一三共株式会社</span>
+                                    <span>武田薬品工業株式会社</span>
+                                    <span>テルモ株式会社</span>
+                                    <span>ニプロ株式会社</span>
+                                    <span>日本バイオセンサーズ株式会社</span>
+                                    <span>日本ベーリンガーインゲルハイム株式会社</span>
+                                    <span>日本メドトロニック株式会社</span>
+                                    <span>ノバルティス ファーマ株式会社</span>
+                                    <span>ファイザー株式会社</span>
+                                    <span>ボストン・サイエンティフィック ジャパン株式会社</span>
+                                    <span>他</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <%- include('/common/_contact') %>
+                        <%- include('/common/_footer', { meta }) %>
+                            <script>
+                                window.__ENV__ = {
+                                    ENV: "<%= ASSET_PATH %>",
+                                };
+                            </script>
+                            <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
+
+            </body>
+
+        </html>

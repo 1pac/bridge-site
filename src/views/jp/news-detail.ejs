@@ -1,0 +1,74 @@
+<% let meta={ title: "株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
+    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
+    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
+    <%- include('/common/_metaCreate', { meta }) %>
+        <!DOCTYPE html>
+        <html lang="ja">
+        <%- include('/common/_headContent', { meta }) %>
+
+            <body class="page-news" data-page="../en">
+
+                <%- include('/common/_header', { meta }) %>
+                    <ul class="c-breadcrumbs c-wrapper">
+                        <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html">Top</a></li>
+                        <li class="c-breadcrumbs-arrow">▶︎</li>
+                        <li><a href="#">News</a></li>
+                        <li class="c-breadcrumbs-arrow">▶︎</li>
+                        <li>HIMSS 2026にて当社代表の講演が決定</li>
+                    </ul>
+
+                    <section class="news-title c-wrapper js-fadein">
+                        <p class="_sp">2025.12.15</p>
+                        <h2>
+                            HIMSS 2026にて当社代表の講演が決定
+                        </h2>
+                        <p class="_pc">2025.12.15</p>
+                    </section>
+                    <section class="news-detail c-wrapper js-fadein">
+                        <p>2026年3月9日から12日にラスベガスで開催される、世界最大級の医療IT展示会Healthcare Information and Management Systems
+                            Society（HIMSS） 2026において、当社代表である橋本悟が、製薬企業向けの最新AIソリューション、データドリブンな営業・マーケティング改革の未来について講演を行います。
+                        </p>
+                        <h3>
+                            講演情報
+                        </h3>
+                        <ol>
+                            <li>日時: 2026年3月10日（火）13:40-14:00</li>
+                            <li>会場: Business Operations Pavilion（ブースエリア）</li>
+                            <li>テーマ: AI-Powered Pharma Marketing: Eliminating Waste, Maximizing Impact</li>
+                        </ol>
+                        <p>当社が開発したAIベースの営業・マーケティング意思決定支援サービスInsighTCROSS®は、医薬品・医療機器企業の営業・マーケティング部門向けのソフトウェアであり、以下のような機能を有しています。
+                        </p>
+                        <p class="news-detail-point">顧客の層別化</p>
+                        <p>個々の顧客による製品選択確率の同定</p>
+                        <p>営業・マーケティング活動ごとの投資対効果（ROI）の定量化</p>
+                        <p>活動別の投資効果の可視化と最適配分</p>
+                        <p>本講演では、医薬品の新規導入時に「最初に処方する医師」を同定する新アルゴリズムEarlyScriptersを紹介します。</p>
+                    </section>
+
+                    <section class="news-bottom c-wrapper">
+                        <div class="news-bottom-bg js-fadein">
+                            <h3>抄録</h3>
+                            <h4>製薬マーケティング効率化の新基準 ～アーリーアダプターを特定し、非効率な投資を抑制～</h4>
+                            <p>世界の製薬業界における営業・マーケティング費用は年間数百億ドルに達しており、その最大30%のマーケティングコンテンツが適切なターゲット顧客に届いていないことが報告されています。このような非効率性は投資対効果を低下させ、患者が革新的治療へアクセスするまでの時間を遅らせる要因につながる可能性があります。
+                            </p>
+                            <p class="news-bottom-bg-point">
+                                InsighTCROSS®は、このような無駄を抑制し、製薬企業や医療機器企業の売上最大化を実現すべく開発されたAI駆動の意思決定支援ソフトウェアです。医師レベルの行動データと売上データを統合することで、効果の高い活動や最適な顧客セグメントを高精度で推定します。
+                            </p>
+                            <p class="news-bottom-bg-point">
+                                本セッションでは、従来は困難とされてきた製品の新規導入時に最初に採用（処方）する医師を高い確率で予測・特定する新機能を紹介します。実際のケースを通じて、AIによる最適化がマーケティング、及び営業戦略をどのように変革し、生産性、ROI、市場浸透スピードのいずれにおいても測定可能な改善をもたらすのかを提示します。
+                            </p>
+                        </div>
+                        <div class="news-bottom-bg-link js-fadein">
+                            <a href="#" class="news-bottom-bg-link-button c-inter">
+                                <span>News一覧へ</span>
+                            </a>
+                        </div>
+                    </section>
+                    <%- include('/common/_footer', { meta }) %>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+                        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+                        <script src="<%= meta.basePath %><%= ASSET_PATH %>asset/js/main.js"></script>
+            </body>
+
+        </html>

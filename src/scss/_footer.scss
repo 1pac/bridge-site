@@ -10,8 +10,7 @@
     padding-top: 48px;
     padding-bottom: 97px;
     padding-inline: min(calc((88 / 1600) * 100vw), 88px);
-    max-width: 1600px;
-    margin: 80px auto 0;
+    margin: 40px auto 0;
     background-color: map.get(common.$colors, black30);
 
     @include mixins.mediaquery-md {
