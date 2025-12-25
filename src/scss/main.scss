@@ -1430,15 +1430,14 @@
         &-link {
             &-button {
                 display: flex;
-                width: 144px;
+                width: 188px;
                 font-size: 20px;
                 align-items: center;
                 gap: 8px;
-                padding: 12px 24px;
+                padding: 17px 24px;
                 background-color: #000;
                 color: #fff;
                 border-radius: 80px;
-                font-size: 12px;
                 text-decoration: none;
                 transition: background-color 0.3s ease;
                 margin: 80px auto 113px;
@@ -1485,7 +1484,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: 70vh;
 
     &-code {
         font-size: 120px;
@@ -1515,11 +1514,10 @@
         font-size: 20px;
         align-items: center;
         gap: 8px;
-        padding: 12px 24px;
+        padding: 17px 24px;
         background-color: #000;
         color: #fff;
         border-radius: 80px;
-        font-size: 12px;
         text-decoration: none;
         transition: background-color 0.3s ease;
 
