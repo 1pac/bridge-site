@@ -1095,12 +1095,13 @@
     &-lead {
         width: 61.6%;
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 2;
         margin-top: 32px;
 
         @include mixins.mediaquery-md {
             font-size: 16px;
             width: 80%;
+            line-height: 1.8;
         }
 
         @include mixins.mediaquery-sm {
@@ -1125,6 +1126,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: min(calc((8 / 1600) * 100vw), 8px);
+        justify-content: center;
 
         @include mixins.mediaquery-sm {
             justify-content: center;
@@ -1136,7 +1138,7 @@
             flex-direction: column;
             justify-content: space-between;
             width: 32.9%;
-            min-height: 300px;
+            min-height: 215px;
             padding: 32px;
             background-color: #fff;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -1171,17 +1173,18 @@
                     font-size: 20px;
                 }
             }
-
-            p {
-                font-size: 16px;
-                line-height: 1.8;
-
-                @include mixins.mediaquery-md {
-                    font-size: 14px;
-                    margin-top: 16px;
-                }
-            }
         }
+    }
+}
+
+/*! ====================
+    marketing_section(webマーケティング事業ページ)
+    ==================== */
+.page-services-marketing .c-support {
+    padding-bottom: 120px;
+
+    @include mixins.mediaquery-sm {
+        padding-bottom: 80px;
     }
 }
 
@@ -1279,10 +1282,10 @@
 .achievements {
     line-height: 2.1;
     background-color: #F7F7F8 !important;
-    padding-block: 80px;
+    padding-bottom: 80px;
 
     @include mixins.mediaquery-md {
-        padding-block: 64px;
+        padding-bottom: 64px;
     }
 
     &-company {
@@ -1366,11 +1369,10 @@
 .news-detail {
     width: 100%;
     margin-top: 120px !important;
-    padding-inline: 212px !important;
+    max-width: 1176px !important;
 
     @include mixins.mediaquery-md {
         margin-top: 80px !important;
-        padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
     }
 
     h3 {
@@ -1400,20 +1402,11 @@
     width: 100%;
     position: relative;
     margin-top: 120px !important;
-    padding-inline: 212px !important;
-
-    @include mixins.mediaquery-md {
-        padding-inline: min(calc((88 / 1600) * 100vw), 88px) !important;
-    }
+    max-width: 1176px !important;
 
     &-bg {
         background-color: map.get(common.$colors, black30);
         padding: 40px 48px;
-        margin-top: 128px;
-
-        @include mixins.mediaquery-md {
-            margin-top: 112px;
-        }
 
         h3 {
             font-size: 28px;
@@ -1468,19 +1461,19 @@
             }
         }
 
+        &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: map.get(common.$colors, black200);
+            position: absolute;
+            top: -64px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
-    &::before {
-        content: "";
-        // width: 73.5%;
-        width: min(calc((1176 / 1600) * 100vw), 1176px);
-        height: 1px;
-        background-color: map.get(common.$colors, black200);
-        position: absolute;
-        top: -64px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+
 }
 
 /*! =====================

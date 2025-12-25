@@ -785,7 +785,8 @@ img {
 
 // 課題セクション
 .c-support {
-    padding-block: 120px;
+    // padding-block: 120px;
+    padding-top: 120px;
     background-color: #F7F7F8 !important;
 
     .c-support-lead {
@@ -795,7 +796,8 @@ img {
     }
 
     @include mixins.mediaquery-md {
-        padding-block: 80px;
+        // padding-block: 80px;
+        padding-top: 80px;
     }
 
     .c-headline {
@@ -1318,6 +1320,7 @@ img {
                 list-style: none;
                 counter-reset: num;
                 padding-left: 10px;
+
                 li {
                     counter-increment: num;
 
@@ -1383,11 +1386,13 @@ img {
 }
 
 .c-service-contact {
+    padding-top: 120px;
     padding-bottom: 80px;
     background-color: #F7F7F8;
 
     @include mixins.mediaquery-md {
         padding-bottom: 64px;
+        padding-top: 80px;
     }
 
     &-item {
@@ -1414,6 +1419,22 @@ img {
         height: 120px;
     }
 }
+
+// .page-services-event .c-service-contact {
+//     padding-top: 120px;
+
+//     @include mixins.mediaquery-md {
+//         padding-top: 80px;
+//     }
+// }
+
+// .page-services-clinical .c-service-contact {
+//     padding-top: 120px;
+
+//     @include mixins.mediaquery-md {
+//         padding-top: 80px;
+//     }
+// }
 
 /*! =====================
     js-animation-class
