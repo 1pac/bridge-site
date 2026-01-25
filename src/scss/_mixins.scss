@@ -1,5 +1,6 @@
 $screen-md: 961px;
 $screen-sm: 451px;
+$screen-xs: 400px;
 
 @mixin mediaquery-md() {
   @media screen and (max-width: #{ $screen-md - 1px }) {
@@ -7,6 +8,11 @@ $screen-sm: 451px;
   }
 }
 @mixin mediaquery-sm() {
+  @media screen and (max-width: #{ $screen-sm - 1px }) {
+    @content;
+  }
+}
+@mixin mediaquery-xs() {
   @media screen and (max-width: #{ $screen-sm - 1px }) {
     @content;
   }

@@ -12,6 +12,18 @@ img {
     height: auto;
 }
 
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 ._sp {
     display: none !important;
 
@@ -465,8 +477,8 @@ img {
         }
     }
 
-    h2 {
-        font-size: 60px;
+    h1 {
+        font-size: 56px;
         font-weight: 700;
         line-height: 1.5;
 
@@ -523,7 +535,6 @@ img {
 // 下層説明セクション
 .c-explanation {
     margin-top: 130px;
-    // max-width: 1600px;
     margin-inline: auto;
 
     @include mixins.mediaquery-md {
@@ -543,7 +554,7 @@ img {
         &-overlay {
             position: absolute;
             top: 0;
-            background-color: rgb(0 0 0 /0.6);
+            background-color: rgb(2 2 2 /0.6);
             width: 100%;
             height: 100%;
             opacity: 0;
@@ -561,8 +572,8 @@ img {
         background-color: transparent !important;
         color: #fff;
 
-        h3 {
-            font-size: 64px;
+        h2 {
+            font-size: 56px;
             line-height: 1.5;
 
             @include mixins.mediaquery-md {
@@ -594,7 +605,7 @@ img {
                 row-gap: 64px;
             }
 
-            h4 {
+            h3 {
                 font-size: 40px;
                 line-height: 1.5;
 
@@ -665,20 +676,20 @@ img {
             }
         }
 
-        h4 {
+        h3 {
             font-size: max(calc((26 / 1600) * 100vw), 18px);
             font-weight: 700;
             line-height: 1.5;
         }
 
-        h5 {
+        h4 {
             // font-size: calc((20 / 1600) * 100vw);
             font-size: max(calc((20 / 1600) * 100vw), 14px);
             font-weight: 400;
             line-height: 1.5;
         }
 
-        h6 {
+        h5 {
             font-size: max(calc((16 / 1600) * 100vw), 12px);
             font-weight: 700;
             margin-bottom: calc((11 / 1600) * 100vw);
@@ -765,7 +776,7 @@ img {
                 width: 70px;
             }
 
-            h4 {
+            h3 {
                 font-size: 28px;
                 font-weight: 700;
                 line-height: 1.5;
@@ -785,8 +796,7 @@ img {
 
 // 課題セクション
 .c-support {
-    // padding-block: 120px;
-    padding-top: 120px;
+    padding-block: 120px;
     background-color: #F7F7F8 !important;
 
     .c-support-lead {
@@ -796,8 +806,8 @@ img {
     }
 
     @include mixins.mediaquery-md {
-        // padding-block: 80px;
-        padding-top: 80px;
+        padding-block: 80px;
+        // padding-top: 80px;
     }
 
     .c-headline {
@@ -827,13 +837,13 @@ img {
                 width: 279px;
             }
 
-            h5 {
+            h4 {
                 font-size: 14px;
                 color: #87AB22;
                 font-weight: 900;
             }
 
-            h4 {
+            h3 {
                 font-size: clamp(14px, calc((20 / 1600) * 100vw), 20px);
 
                 @include mixins.mediaquery-sm {
@@ -889,7 +899,7 @@ img {
                 flex-direction: column;
             }
 
-            h5 {
+            h4 {
                 font-size: clamp(28px, calc((32 / 1600) * 100vw), 32px);
 
                 span {
@@ -897,7 +907,7 @@ img {
                 }
             }
 
-            h4 {
+            h3 {
                 font-size: clamp(28px, calc((40 / 1600) * 100vw), 40px);
                 line-height: 1.5;
                 margin-top: 16px;
@@ -1256,6 +1266,29 @@ img {
             }
         }
 
+        li:nth-of-type(2) {
+            height: 263px;
+
+            @include mixins.mediaquery-md {
+                width: 100%;
+                height: unset;
+                background-color: unset;
+                flex-direction: column;
+                row-gap: 48px;
+            }
+        }
+
+        li:nth-of-type(3) {
+            height: 300px;
+            @include mixins.mediaquery-md {
+                width: 100%;
+                height: unset;
+                background-color: unset;
+                flex-direction: column;
+                row-gap: 48px;
+            }
+        }
+
     }
 }
 
@@ -1267,7 +1300,7 @@ img {
         margin-top: 64px;
     }
 
-    h2 {
+    h1 {
         font-size: 40px;
         font-weight: 700;
         line-height: 1.5;
@@ -1299,7 +1332,7 @@ img {
     }
 
     &-section {
-        h3 {
+        h2 {
             font-size: 28px;
             font-weight: 700;
             line-height: 1.5;
@@ -1356,7 +1389,7 @@ img {
     }
 
     &-section {
-        h3 {
+        h2 {
             font-size: 28px;
             font-weight: 700;
             line-height: 1.5;
@@ -1419,22 +1452,6 @@ img {
         height: 120px;
     }
 }
-
-// .page-services-event .c-service-contact {
-//     padding-top: 120px;
-
-//     @include mixins.mediaquery-md {
-//         padding-top: 80px;
-//     }
-// }
-
-// .page-services-clinical .c-service-contact {
-//     padding-top: 120px;
-
-//     @include mixins.mediaquery-md {
-//         padding-top: 80px;
-//     }
-// }
 
 /*! =====================
     js-animation-class

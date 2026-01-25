@@ -1,7 +1,10 @@
-<% let meta={ title: "TCROSS Co., Ltd." , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
-    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
-    , selected: "selected" , optionJp: "JP" , optionEn: "EN" , terms: "terms of service" , privacy: "privacy policy" ,
-    lang: "en/" }; %>
+<% let meta={ title: "TCROSS Co., Ltd." ,
+    description: "Techcross is a company that supports all stakeholders in the medical industry." ,
+    keywords: "Cardiology, Cardiovascular Intervention, PCI, TCROSS" , ogTitle: "TCROSS Co., Ltd" ,
+    ogDescription: "Techcross is a company that supports all stakeholders in the medical industry." , ogType: "website"
+    , canonical: "/" , ogUrl: "/" , ogImage: "asset/img/ogp.png" , ogsiteName: "TCROSS Co., Ltd." , basePath: "../../" ,
+    selected: "selected" , optionJp: "JP" , optionEn: "EN" , terms: "terms of service" , privacy: "privacy policy" ,
+    lang: "en/" , infoTitle: "Important Notice" , infoText: "Server Maintenance Information" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="en">
@@ -9,8 +12,8 @@
 
             <body class="page-top" data-page="../jp">
                 <%- include('/common/_header', { meta }) %>
-
                     <section class="top-hero">
+                        <h1 class="is-hidden">TCROSS</h1>
                         <div class="top-hero-swiper">
                             <div class="top-hero-swiper-wrapper">
 
@@ -124,7 +127,7 @@
                                             <a href="https://insightcross.com/">
                                                 <h3>データサイエンス事業</h3>
                                                 <p>データサイエンスを用いて医薬品・医療機器企業に効率的なマーケティング活動を支援します。
-                                                    テクロスが開発した意思決定支援サービス「InsighTCROSS®」は、効率的な営業・マーケティングを実践するための意思決定支援ソフトウェアです。
+                                                    テクロスが開発した意思決定支援サービスInsighTCROSS®は、効率的な営業・マーケティングを実践するための意思決定支援ソフトウェアです。
                                                 </p>
                                                 <p class="our-services-wrapper-pickupContentMore c-case-list-more _pc">
                                                     もっと見る</p>
@@ -144,7 +147,7 @@
                                         <a
                                             href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>services/marketing.html">
                                             <h3>Webマーケティング事業</h3>
-                                            <p>循環器領域の専門サイト「TCROSS NEWS®」を通じて、医薬品・医療機器を対象とした広範囲のプロモーション活動をお手伝いします。
+                                            <p>循環器領域の専門サイトTCROSS NEWS®を通じて、医薬品・医療機器を対象とした広範囲のプロモーション活動をお手伝いします。
                                                 Web広告、学術集会や製品に関連するサイトの制作、管理を請け負います。</p>
                                             <p
                                                 class="our-services-wrapper-pickupContentMore c-transition-list-more _pc">

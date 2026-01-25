@@ -1,7 +1,12 @@
-<% let meta={ title: "イベントコーディネート事業｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル"
-    , ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
-    basePath: "../../../" , selected: "selected" , optionJp: "JP" , optionEn: "EN" , terms: "terms of service" ,
-    privacy: "privacy policy" , lang: "en/" }; %>
+<% let meta={ title: "Clinical research support ｜TCROSS Co., Ltd." ,
+    description: "Techcross is a company that supports all stakeholders in the medical industry." ,
+    keywords: "Cardiology, Cardiovascular Intervention, PCI, TCROSS" ,
+    ogTitle: "Clinical research support ｜TCROSS Co., Ltd." ,
+    ogDescription: "Techcross is a company that supports all stakeholders in the medical industry." , ogType: "website"
+    , canonical: "/services/clinical.html" , ogUrl: "/services/clinical.html" , ogImage: "asset/img/ogp.png" ,
+    ogsiteName: "TCROSS Co., Ltd." , basePath: "../../../" , selected: "selected" , optionJp: "JP" , optionEn: "EN" ,
+    terms: "terms of service" , privacy: "privacy policy" , lang: "en/" , infoTitle: "Important Notice" ,
+    infoText: "Server Maintenance Information" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="en">
@@ -17,16 +22,20 @@
                     </ul>
 
                     <section class="c-hero c-wrapper">
-                        <h2 class="js-fadein">臨床研究支援事業</h2>
+                        <h1 class="js-fadein">臨床研究支援事業</h1>
                         <div class="c-hero-content js-fadein">
                             <div>
-                                <h3 class="c-headline">循環器領域の専門性で、<br />価値ある臨床研究を共に創る</h3>
+                                <h2 class="c-headline">循環器領域の専門性で、<br />価値ある臨床研究を共に創る</h2>
                                 <p>リード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキストリード文テキスト
                                 </p>
                             </div>
                             <div>
-                                <img src="../../../<%= ASSET_PATH %>asset/img/services/clinical-mv.jpg"
-                                    alt="循環器領域の専門性で、価値ある臨床研究を共に創る">
+                                <picture>
+                                    <source srcset="../../../<%= ASSET_PATH %>asset/img/services/clinical-mv-sp.jpg"
+                                        media="(max-width: 960px)">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/clinical-mv.jpg"
+                                        alt="医療の知を結び、ユーザーの「見たい」をカタチに。">
+                                </picture>
                             </div>
                         </div>
                     </section>
@@ -38,25 +47,25 @@
                             <div class="c-explanation-bg-overlay"></div>
                         </div>
                         <div class="c-explanation-content c-wrapper">
-                            <h3>臨床研究支援事業における<br class="_pc">TCROSSの強み</h3>
+                            <h2>臨床研究支援事業における<br class="_pc">TCROSSの強み</h2>
                             <div>
                                 <ul>
                                     <li>
-                                        <h4>価値のある臨床研究の創出</h4>
+                                        <h3>価値のある臨床研究の創出</h3>
                                         <p>臨床研究を計画し、論文化を目指す先生方のニーズにお応えします。弊社の強みである循環器領域の高い専門性と最新の学術集会・文献情報を統合し、価値のある臨床研究を一緒に考え、実現のお手伝いをいたします。
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>研究費の獲得と<br class="_pc">実現可能な研究計画の相談</h4>
+                                        <h3>研究費の獲得と<br class="_pc">実現可能な研究計画の相談</h3>
                                         <p>「医師が求める研究」と「企業が求めるアウトカム」をマッチングさせることで、実現可能性の高い臨床研究を導きます。</p>
                                     </li>
                                     <li>
-                                        <h4>ワンランク上の研究志向</h4>
+                                        <h3>ワンランク上の研究志向</h3>
                                         <p>日本の実臨床だからこそ生まれた研究結果を世界に発信できるよう、先生方のご経験と絶え間ない努力の成果を医学誌や学会で発表するお手伝いをさせていただきます。
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>事業の構想から実現まで</h4>
+                                        <h3>事業の構想から実現まで</h3>
                                         <p>医師の求める研究と企業の求めるアウトカムをマッチングさせ、業界インパクトを十分含んだ実現可能な臨床研究をデザインを創出し遂行します。
                                         </p>
                                     </li>
@@ -66,44 +75,44 @@
                     </section>
 
                     <section class="c-task c-wrapper">
-                        <h3 class="c-headline js-fadein">こんなお悩みありませんか？</h3>
+                        <h2 class="c-headline js-fadein">こんなお悩みありませんか？</h2>
                         <ul class="c-task-list">
                             <li class="js-fadein">
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue1.png" alt="ISSUE01">
                                 </div>
-                                <h4>研究費獲得や企業との調整に苦戦している</h4>
+                                <h3>研究費獲得や企業との調整に苦戦している</h3>
                             </li>
                             <li class="js-fadein">
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue2.png" alt="ISSUE02">
                                 </div>
-                                <h4>研究の方向性やテーマの妥当性に不安がある</h4>
+                                <h3>研究の方向性やテーマの妥当性に不安がある</h3>
                             </li>
                             <li class="js-fadein">
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue3.png" alt="ISSUE03">
                                 </div>
-                                <h4>臨床研究法への対応に悩んでいる</h4>
+                                <h3>臨床研究法への対応に悩んでいる</h3>
                             </li>
                             <li class="js-fadein">
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue4.png" alt="ISSUE04">
                                 </div>
-                                <h4>所属機関を超えた交流のきっかけがほしい</h4>
+                                <h3>所属機関を超えた交流のきっかけがほしい</h3>
                             </li>
                         </ul>
                     </section>
 
                     <section class="c-support">
                         <div class="c-wrapper">
-                            <h3 class="c-headline js-fadein">様々なソリューションで<br class="_br-pc" />研究の成功をサポートします</h3>
+                            <h2 class="c-headline js-fadein">様々なソリューションで<br class="_br-pc" />研究の成功をサポートします</h2>
                             <ul class="c-support-list">
                                 <li class="js-fadein">
-                                    <h5>Support 01</h5>
-                                    <h4>施設・協力医師のリクルート</h4>
+                                    <h4>Support 01</h4>
+                                    <h3>施設・協力医師のリクルート</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support1.png"
                                             alt="施設・協力医師のリクルート">
                                     </div>
                                     <p>
@@ -111,10 +120,10 @@
                                     </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Support 02</h5>
-                                    <h4>プロジェクトマネジメント</h4>
+                                    <h4>Support 02</h4>
+                                    <h3>プロジェクトマネジメント</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support2.png"
                                             alt="プロジェクトマネジメント">
                                     </div>
                                     <p>
@@ -122,10 +131,10 @@
                                     </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Support 03</h5>
-                                    <h4>プロトコル・研究設計相談</h4>
+                                    <h4>Support 03</h4>
+                                    <h3>プロトコル・研究設計相談</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support3.png"
                                             alt="プロトコル・研究設計相談">
                                     </div>
                                     <p>
@@ -133,10 +142,10 @@
                                     </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Support 04</h5>
-                                    <h4>企業との関係構築</h4>
+                                    <h4>Support 04</h4>
+                                    <h3>企業との関係構築</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support4.png"
                                             alt="企業との関係構築">
                                     </div>
                                     <p>
@@ -144,10 +153,10 @@
                                     </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Support 05</h5>
-                                    <h4>研究成果の発信</h4>
+                                    <h4>Support 05</h4>
+                                    <h3>研究成果の発信</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support5.png"
                                             alt="研究成果の発信">
                                     </div>
                                     <p>
@@ -155,10 +164,10 @@
                                     </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Support 06</h5>
-                                    <h4>所属機関外での交流促進</h4>
+                                    <h4>Support 06</h4>
+                                    <h3>所属機関外での交流促進</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/support6.png"
                                             alt="所属機関外での交流促進">
                                     </div>
                                     <p>
@@ -171,62 +180,46 @@
 
                     <section class="c-support">
                         <div class="c-wrapper">
-                            <h3 class="c-headline js-fadein">サポートの流れ</h3>
+                            <h2 class="c-headline js-fadein">サポートの流れ</h2>
                             <p class="c-support-lead js-fadein">TCROSSがすべての工程をコーディネート・サポートします！</p>
                             <ul class="c-support-list _process">
                                 <li class="js-fadein">
-                                    <h5>STEP 01</h5>
-                                    <h4>お問い合わせ<br />お打ち合わせ</h4>
+                                    <h4>STEP 01</h4>
+                                    <h3>お問い合わせ<br />お打ち合わせ</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/step1.png"
                                             alt="お問い合わせ・お打ち合わせ">
                                     </div>
-                                    <p>
-                                        企業との研究費交渉を仲介し、実現可能な研究計画の構築を支援
-                                    </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>STEP 02</h5>
-                                    <h4>研究の企画</h4>
+                                    <h4>STEP 02</h4>
+                                    <h3>研究の企画</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png" alt="研究の企画">
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/step2.png" alt="研究の企画">
                                     </div>
-                                    <p>
-                                        研究参加施設や協力医師の募集をサポートし、スムーズな研究開始を後押し
-                                    </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>STEP 03</h5>
-                                    <h4>資金調達支援</h4>
+                                    <h4>STEP 03</h4>
+                                    <h3>資金調達支援</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
-                                            alt="資金調達支援">
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/step3.png" alt="資金調達支援">
                                     </div>
-                                    <p>
-                                        臨床研究の進行管理、モニタリング、データマネジメントまで一貫して支援
-                                    </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>STEP 04</h5>
-                                    <h4>協力医師<br />協力企業との調整</h4>
+                                    <h4>STEP 04</h4>
+                                    <h3>協力医師<br />協力企業との調整</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/step4.png"
                                             alt="協力医師・協力企業との調整">
                                     </div>
-                                    <p>
-                                        研究計画やプロトコルの相談を通じ、法規制にも適合した高品質な研究設計を支援
-                                    </p>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>STEP 05</h5>
-                                    <h4>論文化&学会発表</h4>
+                                    <h4>STEP 05</h4>
+                                    <h3>論文化&学会発表</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/step5.png"
                                             alt="論文化&学会発表">
                                     </div>
-                                    <p>
-                                        研究に必要な企業との関係づくりをサポートし、研究の実現性を高める
-                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -234,7 +227,7 @@
 
                     <section class="c-member">
                         <div class="wrapper">
-                            <h3 class="c-title c-wrapper js-fadein"><span>Our</span> Team</h3>
+                            <h2 class="c-title c-wrapper js-fadein"><span>Our</span> Team</h2>
                             <ul class="c-member-list">
                                 <li class="js-fadein">
                                     <div>
@@ -246,11 +239,10 @@
                                             アメリカ、ネブラスカ州ベルビュー大学経営学部卒業（cum
                                             laude）後帰国、外資系ヘルスケアコンサルティング会社を経て、ジョンソン・エンド・ジョンソン株式会社コーディス事業部に入社。その後は一貫してカテーテルインターベンション領域で営業・マーケティングのキャリアを経て、2005年株式会社テクロスを設立。
                                             2019年グロービス経営大学院経営研究科入学、2021年同大学院経営研究科卒業
-                                            MBA（経営学修士：成績優秀修了者）。2023年　中央大学大学院戦略経営研究科ビジネス科学専攻　博士後期課程。
+                                            MBA（経営学修士：成績優秀修了者）。2023年　中央大学大学院戦略経営研究科ビジネス科学専攻　博士後期課程。<br class="_br-pc">
                                             多摩大学医療・介護ソリューション研究所、日本科学技術ジャーナリスト会議、及び、International Science Writers
                                             Association (ISWA) 正会員、日本医療マネジメント学会所属
                                         </p>
-                                        <a href="https://example.com">プロフィール詳細<span class="c-link-short-arrow"></span></a>
                                     </div>
                                 </li>
                                 <li class="js-fadein">
@@ -262,10 +254,9 @@
                                         <h4>許沢 佳弘</h4>
                                         <p>
                                             日本赤十字社医療センター、東京大学医学部附属病院で循環器内科医として勤務。東京大学大学院で分子生物学領域の基礎研究に従事。医療系ベンチャーミーカンパニー株式会社を経て、2019年より株式会社テクロスへ入社。現在も臨床医の傍ら、TCROSS
-                                            NEWSでwebコンテンツの企画とMedical advisorを兼任。
+                                            NEWSでwebコンテンツの企画とMedical advisorを兼任。<br class="_br-pc">
                                             循環器専門医、東京大学医学部卒業(MD)、 東京大学大学院医学系研究科博士課程修了(Ph.D.)。
                                         </p>
-                                        <a href="https://example.com">プロフィール詳細<span class="c-link-short-arrow"></span></a>
                                     </div>
                                 </li>
                                 <li class="js-fadein">
@@ -276,27 +267,14 @@
                                     <div>
                                         <h4>小田桐 周平</h4>
                                         <p>
-                                            外資系CROにてCRA業務およびデータマネジメント業務を経験後、内資系体外診断薬メーカーにて研究開発に従事。
-                                            2021年株式会社テクロスへ入社し、Clinical Study & Strategic Consulting 事業の立ち上げメンバーとなる。
+                                            外資系CROにてCRA業務およびデータマネジメント業務を経験後、内資系体外診断薬メーカーにて研究開発に従事。<br class="_br-pc">
+                                            2021年株式会社テクロスへ入社し、Clinical Study & Strategic Consulting 事業の立ち上げメンバーとなる。<br
+                                                class="_br-pc">
                                             臨床研究の実務経験3年以上。創薬科学修士。Googleデータアナリティクスプロフェッショナル認定保有。統計検定準1級。
                                         </p>
-                                        <a href="https://example.com">プロフィール詳細<span class="c-link-short-arrow"></span></a>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                    </section>
-
-                    <section class="c-service-contact">
-                        <div class="c-wrapper">
-                            <div class="c-service-contact-item">
-                                <h3 class="js-fadein">一緒に臨床研究をはじめませんか？<br class="_br-pc">ぜひお気軽にお問い合わせください。</h3><span
-                                    class="js-fadein"></span>
-                                <a href="https://example.com"
-                                    class="c-link-long c-inter js-fadein">
-                                    <p>お問い合わせ・ご相談はこちら</p>
-                                </a>
-                            </div>
                         </div>
                     </section>
 

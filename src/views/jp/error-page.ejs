@@ -1,6 +1,6 @@
-<% let meta={ title: "株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル" ,
-    ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" , basePath: "../../"
-    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" }; %>
+<% let meta={ title: "株式会社テクロス" , description: "テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。" , keywords: "循環器,インターベンション,テクロス,tcross" , ogTitle: "株式会社テクロス" ,
+    ogDescription: "テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。" , ogType: "website" , canonical: "/error-page.html" , ogUrl: "/error-page.html" , ogImage: "asset/img/ogp.png" , ogsiteName: "株式会社テクロス" , basePath: "../../"
+    , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" , infoTitle: "大切なお知らせ" , infoText: "サーバーメンテナンスについて"}; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
@@ -10,7 +10,7 @@
                 <%- include('/common/_header', {meta}) %>
 
                     <main class="error">
-                        <h2 class="error-code c-inter">404</h2>
+                        <h1 class="error-code c-inter">404</h1>
                         <p class="error-title c-inter">Not Found</p>
                         <p class="error-text">お探しのページは見つかりませんでした。</p>
 

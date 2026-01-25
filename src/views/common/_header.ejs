@@ -3,15 +3,15 @@
     <div class="header-info-wrapper">
       <div class="header-info-icn"><span></span></div>
       <div class="header-info-txt">
-        <p>大切なお知らせ</p>
-        <p class="header-info-txt-sub"><a href="https://example.com">サーバーメンテナンスについて</a></p>
+        <p><%= meta.infoTitle %></p>
+        <a href="https://example.com" class="header-info-txt-sub"><%= meta.infoText %></a>
       </div>
     </div>
   </div>
   <div class="header-nav">
     <div class="header-nav-wapper">
-      <h1><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html" class="header-nav-logo"><img
-            src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS"></a></h1>
+      <a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>index.html" class="header-nav-logo"><img
+          src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS"></a>
       <nav class="header-nav-menu c-inter _pc">
         <ul>
           <li><a href="<%= meta.basePath %><%= ASSET_PATH %><%= meta.lang %>about.html">Who we are</a></li>
@@ -41,8 +41,7 @@
 
   <nav class="menu">
     <div class="menu-header">
-      <h1><img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS">
-      </h1>
+      <div class="menu-header-logo"><img src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/logo_horizontal.svg" alt="TCROSS"></div>
       <div class="menu-header-close" id="menu-close-btn"><img
           src="<%= meta.basePath %><%= ASSET_PATH %>asset/img/common/menu_close.svg" alt="menu"></div>
     </div>

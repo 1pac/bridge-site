@@ -1,7 +1,8 @@
-<% let meta={ title: "イベントコーディネート事業｜株式会社テクロス" , description: "トップページの説明" , keywords: "test, bridge" , ogTitle: "ページタイトル"
-    , ogDescription: "ページ説明文" , ogtype: "" , ogUrl: "" , ogImage: "" , ogsiteName: "" , ogLocate: "" ,
-    basePath: "../../../" , selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" ,
-    lang: "jp/" }; %>
+<% let meta={ title: "イベントコーディネート事業｜株式会社テクロス" , description: "テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。" ,
+    keywords: "循環器,インターベンション,テクロス,tcross" , ogTitle: "イベントコーディネート事業｜株式会社テクロス" ,
+    ogDescription: "テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。" , ogType: "website" , canonical: "/services/event.html" ,
+    ogUrl: "/services/event.html" , ogImage: "asset/img/ogp.png" , ogsiteName: "株式会社テクロス" , basePath: "../../../" ,
+    selected: "" , optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/", infoTitle: "大切なお知らせ" , infoText: "サーバーメンテナンスについて" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
         <html lang="ja">
@@ -17,38 +18,45 @@
                     </ul>
 
                     <section class="c-hero c-wrapper">
-                        <h2 class="js-fadein">イベントコーディネート事業</h2>
+                        <h1 class="js-fadein">イベントコーディネート事業</h1>
                         <div class="c-hero-content js-fadein">
                             <div>
-                                <h3 class="c-headline">医療の知を結び、<br />ユーザーの「見たい」を<br />カタチに。</h3>
+                                <h2 class="c-headline">医療の知を結び、<br />ユーザーの「見たい」を<br />カタチに。</h2>
                                 <p>循環器領域に精通した私たちは、医療従事者・企業・参加者をつなぎ、
                                     研究会・講演会・セミナーを通じて新たな価値を生み出してきました。<br />学会運営の経験と、データ分析・広報設計のノウハウを活かし、現場の声やトレンドを捉えながら、医療の未来を動かすイベントを創出しています。
                                 </p>
                             </div>
                             <div>
-                                <img src="../../../<%= ASSET_PATH %>asset/img/services/event-mv.jpg"
+                                <picture>
+                                    <source srcset="../../../<%= ASSET_PATH %>asset/img/services/event-mv-sp.png"
+                                        media="(max-width: 960px)">
+                                    <img src="../../../<%= ASSET_PATH %>asset/img/services/event-mv.jpg"
                                     alt="医療の知を結び、ユーザーの「見たい」をカタチに。">
+                                </picture>
                             </div>
                         </div>
                     </section>
 
                     <section class="c-explanation">
                         <div class="c-explanation-bg">
-                            <img src="../../../<%= ASSET_PATH %>asset/img/services/explanation.jpg" alt="依頼に応えるだけでなく、医療の現場と市場の変化を捉え、新しい企画を自ら生み出すイベントプロデュースチーム">
+                            <img src="../../../<%= ASSET_PATH %>asset/img/services/explanation.jpg"
+                                alt="依頼に応えるだけでなく、医療の現場と市場の変化を捉え、新しい企画を自ら生み出すイベントプロデュースチーム">
                             <div class="c-explanation-bg-overlay"></div>
                         </div>
                         <div class="c-explanation-content c-wrapper">
-                            <h3>医療現場と市場の変化を的確に捉え、<br class="_br-pc" />新たな価値を生み出す企画を<br class="_br-pc" />提案するイベントコーディネートチーム</h3>
+                            <h2>医療現場と市場の変化を的確に捉え、<br class="_br-pc" />新たな価値を生み出す企画を<br
+                                    class="_br-pc" />提案するイベントコーディネートチーム</h2>
                             <div>
                                 <ul>
                                     <li>
-                                        <h4>専門領域への<br class="_pc" />深い理解</h4>
+                                        <h3>専門領域への<br class="_pc" />深い理解</h3>
                                         <p>循環器領域に特化して培ってきた知見と経験を基に、医療現場が直面する課題や最新のトレンドを的確に把握し、実効性の高いイベント企画を設計します。
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>信頼関係に<br class="_pc" />基づく共創体制</h4>
-                                        <p>30年にわたる業界経験を通じて築いてきた強固な信頼関係を基盤に、主催者と参加者の双方にとって価値ある、Win-Winの関係を実現する共創型のイベント運営を行います。</p>
+                                        <h3>信頼関係に<br class="_pc" />基づく共創体制</h3>
+                                        <p>30年にわたる業界経験を通じて築いてきた強固な信頼関係を基盤に、主催者と参加者の双方にとって価値ある、Win-Winの関係を実現する共創型のイベント運営を行います。
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
@@ -56,13 +64,13 @@
                     </section>
 
                     <section class="c-task c-wrapper">
-                        <h3 class="c-headline js-fadein">こんなお悩みありませんか？</h3>
+                        <h2 class="c-headline js-fadein">こんなお悩みありませんか？</h2>
                         <ul class="c-task-list">
                             <li class="js-fadein">
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue1.png" alt="ISSUE01">
                                 </div>
-                                <h4>集客が思うようにいかない</h4>
+                                <h3>集客が思うようにいかない</h3>
                                 <p>告知はしているものの、参加者が集まらず、期待した成果につながらない。
                                 </p>
                             </li>
@@ -70,7 +78,7 @@
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue2.png" alt="ISSUE02">
                                 </div>
-                                <h4>やりたい企画と予算のバランスが取れない</h4>
+                                <h3>やりたい企画と予算のバランスが取れない</h3>
                                 <p>理想のイベント像はあるが、コスト面で実現が難しく、妥協を強いられてしまう
                                 </p>
                             </li>
@@ -78,7 +86,7 @@
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue3.png" alt="ISSUE03">
                                 </div>
-                                <h4>最新のトレンドが読めない</h4>
+                                <h3>最新のトレンドが読めない</h3>
                                 <p>何をテーマにすべきか、どの切り口が今求められているのか判断が難しい。
                                 </p>
                             </li>
@@ -86,7 +94,7 @@
                                 <div>
                                     <img src="../../../<%= ASSET_PATH %>asset/img/services/issue4.png" alt="ISSUE04">
                                 </div>
-                                <h4>プロモーション手法が限られている</h4>
+                                <h3>プロモーション手法が限られている</h3>
                                 <p>いつも同じ告知・集客手段に頼ってしまい、新しい打ち手が見つからない。
                                 </p>
                             </li>
@@ -95,45 +103,44 @@
 
                     <section class="c-support">
                         <div class="c-wrapper">
-                            <h3 class="c-headline js-fadein">企画から運営・分析まで、 <br class="_br-pc" />必要なフェーズを柔軟にサポート</h3>
+                            <h2 class="c-headline js-fadein">企画から運営・分析まで、 <br class="_br-pc" />必要なフェーズを柔軟にサポート</h2>
                             <ul class="c-support-list">
                                 <li class="js-fadein">
-                                    <h5>Phase 01</h5>
-                                    <h4>ビジョン設計</h4>
+                                    <h4>Phase 01</h4>
+                                    <h3>ビジョン設計</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
-                                            alt="ビジョン設計">
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/phase1.png" alt="ビジョン設計">
                                     </div>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Phase 02</h5>
-                                    <h4>データ分析・戦略立案</h4>
+                                    <h4>Phase 02</h4>
+                                    <h3>データ分析・戦略立案</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/phase2.png"
                                             alt="データ分析・戦略立案">
                                     </div>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Phase 03</h5>
-                                    <h4>広報・コンテンツ設計</h4>
+                                    <h4>Phase 03</h4>
+                                    <h3>広報・コンテンツ設計</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/phase3.png"
                                             alt="広報・コンテンツ設計">
                                     </div>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Phase 04</h5>
-                                    <h4>運営・進行管理</h4>
+                                    <h4>Phase 04</h4>
+                                    <h3>運営・進行管理</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/phase4.png"
                                             alt="運営・進行管理">
                                     </div>
                                 </li>
                                 <li class="js-fadein">
-                                    <h5>Phase 05</h5>
-                                    <h4>効果分析と改善提案</h4>
+                                    <h4>Phase 05</h4>
+                                    <h3>効果分析と改善提案</h3>
                                     <div>
-                                        <img src="../../../<%= ASSET_PATH %>asset/img/about/strengths1.png"
+                                        <img src="../../../<%= ASSET_PATH %>asset/img/services/phase5.png"
                                             alt="効果分析と改善提案">
                                     </div>
                                 </li>
@@ -143,55 +150,43 @@
 
                     <section class="event-clause">
                         <div class="c-wrapper">
-                            <h3 class="c-headline js-fadein">学会・医療研究会を成功に導く5か条</h3>
-                            <p class="event-clause-lead js-fadein">私たちは、医療イベントを運営する企業ではなく、「価値を生み、次につながる場」として設計することを大切にしています。その実現には、以下の5つの要素が欠かせないと考えています。</p>
+                            <h2 class="c-headline js-fadein">学会・医療研究会を成功に導く5か条</h2>
+                            <p class="event-clause-lead js-fadein">
+                                私たちは、医療イベントを運営する企業ではなく、「価値を生み、次につながる場」として設計することを大切にしています。その実現には、以下の5つの要素が欠かせないと考えています。
+                            </p>
                             <ul class="event-clause-list">
                                 <li class="js-fadein">
                                     <div>
-                                        <h4>01</h4>
-                                        <h5>明確で持続的な<br class="_pc" />ビジョン</h5>
+                                        <h3>01</h3>
+                                        <h4>明確で持続的な<br class="_pc" />ビジョン</h4>
                                     </div>
                                 </li>
                                 <li class="js-fadein">
                                     <div>
-                                        <h4>02</h4>
-                                        <h5>一定の開催実績と体制</h5>
+                                        <h3>02</h3>
+                                        <h4>一定の開催実績と体制</h4>
                                     </div>
                                 </li>
                                 <li class="js-fadein">
                                     <div>
-                                        <h4>03</h4>
-                                        <h5>関係者間で<br />共有・浸透したビジョン</h5>
+                                        <h3>03</h3>
+                                        <h4>関係者間で<br />共有・浸透したビジョン</h4>
                                     </div>
                                 </li>
                                 <li class="js-fadein">
                                     <div>
-                                        <h4>04</h4>
-                                        <h5>外部ステークホルダーとの連携・支援体制</h5>
+                                        <h3>04</h3>
+                                        <h4>外部ステークホルダーとの連携・支援体制</h4>
 
                                     </div>
                                 </li>
                                 <li class="js-fadein">
                                     <div>
-                                        <h4>05</h4>
-                                        <h5>提供価値に応じた<br />公正な対価設計</h5>
+                                        <h3>05</h3>
+                                        <h4>提供価値に応じた<br />公正な対価設計</h4>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                    </section>
-
-                    <section class="c-service-contact">
-                        <div class="c-wrapper">
-                            <div class="c-service-contact-item">
-                                <h3 class="js-fadein">テクロスは、要望対応にとどまらず、<br class="_br-pc" />医療の潮流を読み取り、<br
-                                        class="_br-sp" />確かな知見から新たな企画を生み出すパートナーです。</h3>
-                                <span class="js-fadein"></span>
-                                <a href="https://example.com"
-                                    class="c-link-long c-inter js-fadein">
-                                    <p>ご相談はこちら</p>
-                                </a>
-                            </div>
                         </div>
                     </section>
 

@@ -471,7 +471,7 @@
         &-pickup {
             display: flex;
             flex-direction: column;
-            margin-top: 160px;
+            margin-top: 120px;
             row-gap: 120px;
 
             @include mixins.mediaquery-md {
@@ -831,8 +831,7 @@
     }
 
     &-title {
-        font-size: 120px;
-        font-size: clamp(58px, calc((120 / 1600) * 100vw), 120px);
+        font-size: clamp(58px, calc((120 / 1600) * 100vw), 80px);
         font-weight: 600;
         line-height: 1.5;
 
@@ -846,7 +845,7 @@
     }
 
     &-content {
-        font-size: 32px;
+        font-size: 28px;
         line-height: 2;
         font-weight: 700;
         padding-left: calc((124 / 1600) * 100vw);
@@ -894,18 +893,18 @@
         }
 
         p:nth-of-type(2) {
-            margin-top: 95px;
+            margin-top: 64px;
 
             @include mixins.mediaquery-sm {
-                margin-top: 45px;
+                margin-top: 48px;
             }
         }
 
         p:nth-of-type(3) {
-            margin-top: 95px;
+            margin-top: 64px;
 
             @include mixins.mediaquery-sm {
-                margin-top: 45px;
+                margin-top: 48px;
             }
         }
 
@@ -1089,8 +1088,7 @@
 }
 
 .event-clause {
-    padding-top: 120px;
-    background-color: #F7F7F8 !important;
+    padding-block: 120px;
 
     &-lead {
         width: 61.6%;
@@ -1154,7 +1152,7 @@
                 width: 327px;
             }
 
-            h4 {
+            h3 {
                 font-size: 40px;
                 color: #AACE45;
                 font-weight: 400;
@@ -1164,7 +1162,7 @@
                 }
             }
 
-            h5 {
+            h4 {
                 font-size: 28px;
                 line-height: 1.5;
                 margin-top: 10px;
@@ -1181,23 +1179,40 @@
     marketing_section(webマーケティング事業ページ)
     ==================== */
 .page-services-marketing .c-support {
-    padding-bottom: 120px;
+    padding-top: 120px !important;
+    padding-bottom: 0 !important;
 
     @include mixins.mediaquery-sm {
-        padding-bottom: 80px;
+        padding-top: 80px !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+.page-services-marketing .c-support-list li {
+    width: 296px;
+
+    @include mixins.mediaquery-sm {
+        width: 279px;
     }
 }
 
 /*! ====================
     clinical_section(臨床研究サポート事業ページ)
     ==================== */
+.page-services-clinical .c-support {
+    padding-top: 120px !important;
+    padding-bottom: 0 !important;
 
+    @include mixins.mediaquery-sm {
+        padding-top: 80px !important;
+    }
+}
 .page-services-clinical .c-support-list {
     flex-wrap: wrap;
 }
 
 .page-services-clinical .c-support-list li {
-    width: 296px;
+    width: clamp(320px, calc((421 / 1600) * 100vw), 421px);
 }
 
 .page-services-clinical .c-support-list._process li {
@@ -1282,10 +1297,10 @@
 .achievements {
     line-height: 2.1;
     background-color: #F7F7F8 !important;
-    padding-bottom: 80px;
+    padding-top: 80px;
 
     @include mixins.mediaquery-md {
-        padding-bottom: 64px;
+        padding-top: 64px;
     }
 
     &-company {
@@ -1333,10 +1348,10 @@
 
 .page-services .contact {
     background-color: #F7F7F8 !important;
-    padding-bottom: 80px;
+    padding-block: 80px;
 
     @include mixins.mediaquery-md {
-        padding-bottom: 40px;
+        padding-block: 40px;
     }
 }
 
@@ -1351,7 +1366,7 @@
 .news-title {
     width: 100%;
 
-    h2 {
+    h1 {
         font-size: 40px;
     }
 
@@ -1375,7 +1390,7 @@
         margin-top: 80px !important;
     }
 
-    h3 {
+    h2 {
         font-size: 28px;
         margin-top: 48px;
         line-height: 1.5;
@@ -1408,12 +1423,12 @@
         background-color: map.get(common.$colors, black30);
         padding: 40px 48px;
 
-        h3 {
+        h2 {
             font-size: 28px;
             line-height: 1.5;
         }
 
-        h4 {
+        h3 {
             font-size: 20px;
             margin-block: 16px;
             line-height: 1.5;
