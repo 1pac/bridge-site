@@ -607,7 +607,8 @@
                 }
 
                 &More {
-                    width: 196px !important;
+                    width: fit-content !important;
+                    text-align: center;
                     padding: 14px 72px 14px 32px !important;
 
                     &:before {
@@ -847,7 +848,7 @@
     &-content {
         font-size: 28px;
         line-height: 2;
-        font-weight: 700;
+        font-weight: 400;
         padding-left: calc((124 / 1600) * 100vw);
         display: flex;
         margin-top: 64px;
@@ -865,7 +866,8 @@
         }
 
         &-text {
-            font-size: clamp(18px, calc((32 / 1600) * 100vw), 32px);
+            font-size: clamp(18px, calc((28 / 1600) * 100vw), 28px);
+            letter-spacing: 1px;
 
             &-mvv {
                 font-size: max(calc((90 / 1600) * 100vw), 60px);
@@ -1000,6 +1002,10 @@
         background-position: 0% 100%;
         background-repeat: no-repeat;
 
+        @include mixins.mediaquery-md {
+            background-size: 52%;
+        }
+
         h3 {
             font-size: 20px;
             font-weight: 700;
@@ -1028,6 +1034,15 @@
 
                 }
 
+                ul {
+                    list-style: disc;
+                    margin-left: 22px;
+
+                    li {
+                        margin-top: 15px;
+                    }
+                }
+
                 &:last-of-type {
                     align-items: flex-start;
 
@@ -1037,6 +1052,7 @@
                 }
 
                 h4 {
+                    width: 136px;
                     font-weight: 400;
                     font-size: 16px;
                     min-width: 85px;
@@ -1207,6 +1223,7 @@
         padding-top: 80px !important;
     }
 }
+
 .page-services-clinical .c-support-list {
     flex-wrap: wrap;
 }
