@@ -64,70 +64,71 @@ root/
 │   │   │   ├── marketing.html   （Webマーケティング事業）
 │   │   │   ├── event.html       （イベントコーディネート事業）
 │   │   │   └── clinical.html    （臨床研究サポート事業）
+│   │   ├── news-detail.html     （お知らせ詳細ページ）
+│   │   ├── error-page.html      （404エラーページ）
 │   │   ├── terms.html           （利用規約）
 │   │   └── privacy.html         （個人情報保護方針）
-│   │   
 │   │
-│   │── en/                      （英語版 / 多言語 HTML）
+│   ├── en/                      （英語版 HTML）
 │   │   ├── index.html           （トップページ）
 │   │   ├── company.html         （会社概要）
 │   │   ├── service.html         （事業紹介ページ）
-│   │   ├── service/
+│   │   ├── service/             （事業紹介の下層ページ）
 │   │   │   ├── marketing.html   （Webマーケティング事業）
 │   │   │   ├── event.html       （イベントコーディネート事業）
 │   │   │   └── clinical.html    （臨床研究サポート事業）
+│   │   ├── news-detail.html     （お知らせ詳細ページ）
+│   │   ├── error-page.html      （404エラーページ）
 │   │   ├── terms.html           （利用規約）
 │   │   └── privacy.html         （個人情報保護方針）
-│   │ 
-│   └── asset/                       （静的ファイル）
-│		  ├── css/                       (scss出力先)
-│		  ├── js/                                       
-│		  └── img/                  
-│     
-│
-│
-│
-├── src/  
-│   │  
-│   ├── views/                       （EJSソース）
-│   │   ├── jp/                      （日本語ページのEJS）
-│   │   │   ├── index.ejs            （トップページ）
-│   │   │   ├── about.ejs            （会社概要）
-│   │   │   ├── service.ejs          （事業紹介）
-│   │   │   ├── service/
-│   │   │   │   ├── marketing.ejs    （Webマーケティング事業）
-│   │   │   │   ├── event.ejs        （イベントコーディネート事業）
-│   │   │   │   └── clinical.ejs     （臨床研究サポート事業）
-│   │   │   ├── terms.ejs            （利用規約）
-│   │   │   └── privacy.ejs          （個人情報保護方針）
-│   │   │   
-│   │   │ 
-│   │   ├── en/                      （英語ページのEJS）
-│   │   │   ├── index.ejs
-│   │   │   ├── about.ejs
-│   │   │   ├── service.ejs
-│   │   │   ├── service/
-│   │   │   │   ├── marketing.ejs
-│   │   │   │   ├── event.ejs
-│   │   │   │   └── clinical.ejs
-│   │   │   ├── terms.ejs
-│   │   │   └── privacy.ejs
-│   │   │   
-│   │   └── common/                  （共通パーツ）
-│   │       ├── _headContent.ejs     （<head> 内共通パーツ）
-│   │       ├── _metaCreate.ejs      （meta系情報整形共通処理）
-│   │       ├── _header.ejs          （共通ヘッダー）
-│   │       ├── _contact.ejs         （お問い合わせ共通パーツ）
-│   │       └── _footer.ejs          （共通フッター）
 │   │
-│   └── scss/                   （SCSSソース）
-│       ├── main.scss           （各コンテンツスタイル）                    
-│       ├── common.scss         （共通スタイル）                    
-│       ├── _header.scss        （ヘッダー共通スタイル）                    
-│       ├── _footer.scss        （フッター共通スタイル）                    
-│       ├── _reset.scss         （リセットcss）                   
-│       └── common.vars.scss     (共通変数格納ファイル)
-│       
+│   └── asset/                   （静的ファイル）
+│       ├── css/                 （scss出力先）
+│       ├── js/
+│       └── img/
+│
+└── src/
+    ├── views/                   （EJSソース）
+    │   ├── jp/                  （日本語ページのEJS）
+    │   │   ├── index.ejs        （トップページ）
+    │   │   ├── about.ejs        （会社概要）
+    │   │   ├── service.ejs      （事業紹介）
+    │   │   ├── service/
+    │   │   │   ├── marketing.ejs（Webマーケティング事業）
+    │   │   │   ├── event.ejs    （イベントコーディネート事業）
+    │   │   │   └── clinical.ejs （臨床研究サポート事業）
+    │   │   ├── news-detail.ejs  （お知らせ詳細）
+    │   │   ├── error-page.ejs   （404エラーページ）
+    │   │   ├── terms.ejs        （利用規約）
+    │   │   └── privacy.ejs      （個人情報保護方針）
+    │
+    │   ├── en/                  （英語ページのEJS）
+    │   │   ├── index.ejs
+    │   │   ├── about.ejs
+    │   │   ├── service.ejs
+    │   │   ├── service/
+    │   │   │   ├── marketing.ejs
+    │   │   │   ├── event.ejs
+    │   │   │   └── clinical.ejs
+    │   │   ├── news-detail.ejs
+    │   │   ├── error-page.ejs
+    │   │   ├── terms.ejs
+    │   │   └── privacy.ejs
+    │
+    │   └── common/              （共通パーツ）
+    │       ├── _headContent.ejs （<head> 内共通パーツ）
+    │       ├── _metaCreate.ejs  （meta系情報整形共通処理）
+    │       ├── _header.ejs      （共通ヘッダー）
+    │       ├── _contact.ejs     （お問い合わせ共通パーツ）
+    │       └── _footer.ejs      （共通フッター）
+    │
+    └── scss/                    （SCSSソース）
+        ├── main.scss            （各コンテンツスタイル）
+        ├── common.scss          （共通スタイル）
+        ├── _header.scss         （ヘッダー共通スタイル）
+        ├── _footer.scss         （フッター共通スタイル）
+        ├── _reset.scss          （リセットCSS）
+        └── common.vars.scss     （共通変数格納ファイル）    
 
 ```
 
