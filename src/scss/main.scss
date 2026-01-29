@@ -635,9 +635,10 @@
 .recruit {
     padding-top: 190px;
     position: relative;
-
+    padding-bottom: 120px;
     @include mixins.mediaquery-md {
         padding-top: 80px;
+        padding-bottom: 0;
         overflow: hidden;
     }
 
@@ -738,7 +739,7 @@
     justify-content: flex-end;
 
     @include mixins.mediaquery-md {
-        margin-block: 64px 80px !important;
+        margin-block: 80px !important;
         flex-direction: column;
     }
 
