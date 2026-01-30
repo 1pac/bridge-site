@@ -1059,6 +1059,11 @@ body:has(.recruit + .news) .news {
                     list-style: disc;
                     margin-left: 22px;
                     line-height: 1.8;
+
+                    @include mixins.mediaquery-md {
+                            margin-top: 15px;
+                    }
+
                 }
 
                 &:last-of-type {
