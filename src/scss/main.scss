@@ -317,6 +317,7 @@
             font-size: 88px;
             font-weight: 700;
             padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+            color: map.get(common.$colors, black600);
 
             @include mixins.mediaquery-md {
                 font-size: 72px;
@@ -395,7 +396,7 @@
                 }
 
                 h3 {
-                    font-size: clamp(20px, (calc((26 / 1600) * 100vw)), 32px);
+                    font-size: clamp(20px, (calc((32 / 1600) * 100vw)), 32px);
                     font-weight: 700;
                     transition: color 0.3s ease;
                     cursor: pointer;
@@ -633,9 +634,9 @@
 }
 
 .recruit {
-    padding-top: 190px;
+    padding-top: 189px;
     position: relative;
-    padding-bottom: 120px;
+
     @include mixins.mediaquery-md {
         padding-top: 80px;
         padding-bottom: 0;
@@ -677,7 +678,7 @@
         }
 
         &-text {
-            margin-top: 48px;
+            margin-top: 38px;
             position: relative;
             z-index: 1;
 
@@ -693,12 +694,12 @@
 
         &-image {
             margin: 0 auto;
-            // width: min(calc((928 / 1600) * 100vw), 928px);
-            width: min(calc((908 / 1600) * 100vw), 928px);
+            width: min(calc((928 / 1600) * 100vw), 928px);
             height: auto;
             position: absolute;
-            top: 98.5px;
-            right: -228px;
+            top: 37.5px;
+            right: -18.5vw;
+            z-index: -1;
 
             @include mixins.mediaquery-md {
                 position: relative;
@@ -723,7 +724,7 @@
 
     &-link {
         width: fit-content;
-        margin-top: 56px;
+        margin-top: 47.3px;
 
         @include mixins.mediaquery-md {
             margin-top: 40px;
@@ -744,7 +745,7 @@
     }
 
     &-wrapper {
-        width: 82.6%;
+        width: 65.2%;
 
         @include mixins.mediaquery-md {
             width: 100%;
@@ -765,7 +766,7 @@
             display: flex;
             margin-bottom: 32px;
             line-height: 1.5;
-            column-gap: 159px;
+            column-gap: min(calc((120 / 1600) * 100vw), 120px);
 
             @include mixins.mediaquery-md {
                 column-gap: 97px;
@@ -813,6 +814,10 @@
 
 }
 
+body:has(.recruit + .news) .news {
+    padding-top: 120px;
+}
+
 /*! ====================
     about_section(会社概要ページ)
     ==================== */
@@ -838,7 +843,7 @@
         line-height: 1.5;
 
         @include mixins.mediaquery-sm {
-            text-align: center;
+            text-align: left;
         }
     }
 
@@ -943,17 +948,20 @@
 }
 
 .about-strengths {
+    width: fit-content;
     margin-top: 150px;
     padding-block: 120px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include mixins.mediaquery-md {
         padding-block: 64px;
     }
 
     h3 {
+        width: 97.5%;
         font-size: 40px;
-        font-weight: 600;
-
+        font-weight: 700;
         @include mixins.mediaquery-md {
             font-size: 20px;
         }
@@ -992,28 +1000,37 @@
     position: relative;
 
     &-wrapper {
+        width: fit-content;
         display: flex;
         justify-content: center;
         position: relative;
         max-width: 1600px;
         margin: 0 auto;
         padding-inline: min(calc((88 / 1600) * 100vw), 88px);
-        width: 100%;
         background-image: url(../../asset/img/about/symbol_logo.svg);
         background-position: 0% 100%;
         background-repeat: no-repeat;
+        flex-direction: column;
+        align-items: center;
 
         @include mixins.mediaquery-md {
             background-size: 52%;
         }
 
-        h3 {
-            font-size: 20px;
-            font-weight: 700;
+        &-title {
+            width: 100%;
+            margin-top: 80px;
+            text-align: left;
+
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+            }
         }
 
+
         &-list {
-            margin-block: 80px 88px;
+            margin-block: 64px 88px;
             display: flex;
             flex-direction: column;
             row-gap: 32px;
@@ -1038,7 +1055,7 @@
                 ul {
                     list-style: disc;
                     margin-left: 22px;
-
+                    line-height: 1.8;
                     li {
                         margin-top: 15px;
                     }
@@ -1062,6 +1079,10 @@
                 p {
                     font-size: 16px;
                     line-height: 2.5;
+
+                    @include mixins.mediaquery-md {
+                        margin-top: 12px;
+                    }
                 }
             }
         }
@@ -1211,6 +1232,10 @@
     @include mixins.mediaquery-sm {
         width: 279px;
     }
+}
+
+.page-services-marketing .c-case-list-more {
+    font-size: 16px !important;
 }
 
 /*! ====================

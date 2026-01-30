@@ -84,7 +84,7 @@
         width: 100%;
         background-color: #fff;
         background-size: 100% 100%;
-        padding-block: 16px;
+        padding-block: 22.5px;
         padding-inline: min(calc((88 / 1600) * 100vw), 88px);
 
         @include mixins.mediaquery-md {
@@ -136,9 +136,9 @@
                     &._is-contact {
                         position: relative;
                         display: inline-block;
-                        padding: 7px 16px;
+                        padding: 8.5px 12px;
                         border-radius: 80px;
-                        border: 1px solid #4b5157;
+                        border: 1px solid map.get(common.$colors, black400);
                         transition: color .2s ease, background-color .2s ease, border-color .2s ease;
 
                         &:hover {

@@ -1454,6 +1454,13 @@ img {
         height: 120px;
     }
 }
+.c-adjustment{
+    background-color: #F7F7F8;
+    padding-bottom: 120px;
+    @include mixins.mediaquery-md {
+        padding-bottom: 120px;
+    }
+}
 
 /*! =====================
     js-animation-class

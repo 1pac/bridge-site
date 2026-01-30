@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeEl = document.querySelectorAll('.js-fadein');
 
     const checkFade = () => {
-        const windowBottom = window.scrollY + (window.innerHeight / 1.5);
+        const windowBottom = window.scrollY + (window.innerHeight / 1.25);
 
         fadeEl.forEach(el => {
             const elTop = el.getBoundingClientRect().top + window.scrollY;
@@ -86,8 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const swiper = new Swiper(".top-hero-swiper", {
             loop: true,
+            speed: 1000,
             autoplay: {
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             wrapperClass: "top-hero-swiper-wrapper",
