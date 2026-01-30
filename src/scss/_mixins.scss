@@ -1,14 +1,8 @@
 $screen-md: 961px;
-$screen-mdsm: 775px;
 $screen-sm: 451px;
 $screen-xs: 400px;
 
 @mixin mediaquery-md() {
-  @media screen and (max-width: #{ $screen-md - 1px }) {
-    @content;
-  }
-}
-@mixin mediaquery-mdsm() {
   @media screen and (max-width: #{ $screen-md - 1px }) {
     @content;
   }

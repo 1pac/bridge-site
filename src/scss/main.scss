@@ -58,7 +58,7 @@
 
             &Title {
                 font-size: min(calc((64 /1600) * 100vw), 64px);
-                font-weight: 700;
+                font-weight: 900;
 
                 @include mixins.mediaquery-md {
                     font-size: 32px;
@@ -958,14 +958,14 @@ body:has(.recruit + .news) .news {
     &-wrapper {
         display: flex;
         flex-direction: column;
-        // align-items: center;
+        align-items: center;
 
         h3 {
             font-size: 40px;
             font-weight: 700;
 
             @include mixins.mediaquery-md {
-                font-size: 20px;
+                font-size: 32px;
             }
         }
     }
@@ -981,10 +981,6 @@ body:has(.recruit + .news) .news {
 
         &-item {
             width: clamp(327px, calc((432 / 1600) * 100vw), 432px);
-
-            @include mixins.mediaquery-mdsm {
-                width: 500px;
-            }
 
             h4 {
                 margin-top: 20px;
@@ -1063,10 +1059,6 @@ body:has(.recruit + .news) .news {
                     list-style: disc;
                     margin-left: 22px;
                     line-height: 1.8;
-
-                    li {
-                        margin-top: 15px;
-                    }
                 }
 
                 &:last-of-type {
