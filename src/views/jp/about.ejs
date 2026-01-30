@@ -2,7 +2,7 @@
     keywords: "循環器,インターベンション,テクロス,tcross" , ogTitle: "会社概要｜株式会社テクロス" ,
     ogDescription: "テクロスは、医療業界のあらゆるステークホルダーを支援する企業です。" , ogType: "website" , canonical: "/about.html" ,
     ogUrl: "/about.html" , ogImage: "asset/img/ogp.png" , ogsiteName: "株式会社テクロス" , basePath: "../../" , selected: "" ,
-    optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "個人情報保護方針" , lang: "jp/" , infoTitle: "大切なお知らせ" ,
+    optionJp: "JP" , optionEn: "EN" , terms: "利用規約" , privacy: "privacy policy" , lang: "jp/" , infoTitle: "大切なお知らせ" ,
     infoText: "サーバーメンテナンスについて" }; %>
     <%- include('/common/_metaCreate', { meta }) %>
         <!DOCTYPE html>
@@ -55,54 +55,56 @@
                         </div>
                     </section>
                     <section class="about-strengths c-wrapper">
-                        <h3 class="js-fadein">独自性と価値</h3>
-                        <ul class="about-strengths-list">
-                            <li class="about-strengths-list-item js-fadein">
-                                <div>
-                                    <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img1.png"
-                                        alt="高度な専門人材">
-                                </div>
-                                <h4>高度な専門人材</h4>
-                                <p>博士・修士保有者、医師、看護師など、高度な専門資格を持つ人材による体制</p>
-                            </li>
-                            <li class="about-strengths-list-item js-fadein">
-                                <div>
-                                    <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img2.png"
-                                        alt="専門性と展開力">
-                                </div>
-                                <h4>専門性と展開力</h4>
-                                <p>循環器領域で培った専門性と幅広い医療分野への展開力</p>
-                            </li>
-                            <li class="about-strengths-list-item js-fadein">
-                                <div>
-                                    <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img3.png"
-                                        alt="豊富な実績">
-                                </div>
-                                <h4>豊富な実績</h4>
-                                <p>国内外の製薬・医療機器企業との豊富な実績</p>
-                            </li>
-                            <li class="about-strengths-list-item js-fadein">
-                                <div>
-                                    <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img4.png"
-                                        alt="高度なデータ活用力">
-                                </div>
-                                <h4>高度なデータ活用力</h4>
-                                <p>独自開発ソリューションInsighTCROSS®を含む高度なデータ活用力</p>
-                            </li>
-                            <li class="about-strengths-list-item js-fadein">
-                                <div>
-                                    <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img5.png"
-                                        alt="知的財産の強み">
-                                </div>
-                                <h4>知的財産の強み</h4>
-                                <p>知的財産の強み：国内特許4件、出願中3件、PCT出願5件（2025年9月現在）</p>
-                            </li>
-                        </ul>
+                        <div class="about-strengths-wrapper">
+                            <h3 class="js-fadein">独自性と価値</h3>
+                            <ul class="about-strengths-list">
+                                <li class="about-strengths-list-item js-fadein">
+                                    <div>
+                                        <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img1.png"
+                                            alt="高度な専門人材">
+                                    </div>
+                                    <h4>高度な専門人材</h4>
+                                    <p>博士・修士保有者、医師、看護師など、高度な専門資格を持つ人材による体制</p>
+                                </li>
+                                <li class="about-strengths-list-item js-fadein">
+                                    <div>
+                                        <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img2.png"
+                                            alt="専門性と展開力">
+                                    </div>
+                                    <h4>専門性と展開力</h4>
+                                    <p>循環器領域で培った専門性と幅広い医療分野への展開力</p>
+                                </li>
+                                <li class="about-strengths-list-item js-fadein">
+                                    <div>
+                                        <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img3.png"
+                                            alt="豊富な実績">
+                                    </div>
+                                    <h4>豊富な実績</h4>
+                                    <p>国内外の製薬・医療機器企業との豊富な実績</p>
+                                </li>
+                                <li class="about-strengths-list-item js-fadein">
+                                    <div>
+                                        <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img4.png"
+                                            alt="高度なデータ活用力">
+                                    </div>
+                                    <h4>高度なデータ活用力</h4>
+                                    <p>独自開発ソリューションInsighTCROSS®を含む高度なデータ活用力</p>
+                                </li>
+                                <li class="about-strengths-list-item js-fadein">
+                                    <div>
+                                        <img src="../../<%= ASSET_PATH %>asset/img/about/key-differentiator-img5.png"
+                                            alt="知的財産の強み">
+                                    </div>
+                                    <h4>知的財産の強み</h4>
+                                    <p>知的財産の強み：国内特許4件、出願中3件、PCT出願5件（2025年9月現在）</p>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
 
                     <section class="about-company">
                         <div class="about-company-wrapper">
-                            <div class="about-company-wrapper-title">
+                            <div class="about-company-wrapper-title js-fadein">
                                 <h3>会社概要</h3>
                             </div>
                             <ul class="about-company-wrapper-list js-fadein">

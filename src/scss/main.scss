@@ -69,7 +69,7 @@
             &Text {
                 margin-top: calc((32 / 1600) * 100vw);
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: 2;
 
                 @include mixins.mediaquery-md {
@@ -193,7 +193,7 @@
                 cursor: pointer;
 
                 .top-hero-swiper-controlsPaginationItem {
-                    height: 4px;
+                    height: 6px;
                     border-radius: 20px;
                     transition: width 0.2s linear, background 0.2s linear;
 
@@ -314,7 +314,7 @@
         }
 
         &-title {
-            font-size: 88px;
+            font-size: clamp(88px, (calc((120 / 1600) * 100vw)), 120px);
             font-weight: 700;
             padding-inline: min(calc((88 / 1600) * 100vw), 88px);
             color: map.get(common.$colors, black600);
@@ -948,24 +948,28 @@ body:has(.recruit + .news) .news {
 }
 
 .about-strengths {
-    width: fit-content;
     margin-top: 150px;
     padding-block: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     @include mixins.mediaquery-md {
         padding-block: 64px;
     }
 
-    h3 {
-        width: 97.5%;
-        font-size: 40px;
-        font-weight: 700;
-        @include mixins.mediaquery-md {
-            font-size: 20px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        h3 {
+            font-size: 40px;
+            font-weight: 700;
+
+            @include mixins.mediaquery-md {
+                font-size: 20px;
+            }
         }
     }
+
 
     &-list {
         margin-top: 50px;
@@ -976,8 +980,11 @@ body:has(.recruit + .news) .news {
         justify-content: center;
 
         &-item {
-            // width: 29%;
             width: clamp(327px, calc((432 / 1600) * 100vw), 432px);
+
+            @include mixins.mediaquery-mdsm {
+                width: 500px;
+            }
 
             h4 {
                 margin-top: 20px;
@@ -1038,7 +1045,7 @@ body:has(.recruit + .news) .news {
             @include mixins.mediaquery-md {
                 flex-direction: column;
                 align-items: start;
-                margin-block: 64px;
+                margin-block: 48px 64px;
             }
 
             &-item {
@@ -1056,6 +1063,7 @@ body:has(.recruit + .news) .news {
                     list-style: disc;
                     margin-left: 22px;
                     line-height: 1.8;
+
                     li {
                         margin-top: 15px;
                     }
@@ -1063,10 +1071,6 @@ body:has(.recruit + .news) .news {
 
                 &:last-of-type {
                     align-items: flex-start;
-
-                    h4 {
-                        margin-top: 15px;
-                    }
                 }
 
                 h4 {

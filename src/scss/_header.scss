@@ -201,7 +201,8 @@
             font-weight: 500;
             transition: color 0.3s;
             width: 180%;
-
+            color: map.get(common.$colors, black800);
+            padding-left: 2px;
             &:hover {
                 cursor: pointer;
                 color: map.get(common.$colors, t-green);
