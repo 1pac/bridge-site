@@ -862,7 +862,7 @@ body:has(.recruit + .news) .news {
 
         @include mixins.mediaquery-md {
             padding-left: calc((22 / 767) * 100vw);
-            font-weight: 500;
+            font-weight: 400;
 
         }
 
