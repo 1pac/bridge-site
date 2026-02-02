@@ -1061,7 +1061,7 @@ body:has(.recruit + .news) .news {
                     line-height: 1.8;
 
                     @include mixins.mediaquery-md {
-                            margin-top: 15px;
+                        margin-top: 15px;
                     }
 
                 }
@@ -1409,16 +1409,22 @@ body:has(.recruit + .news) .news {
     ==================== */
 .news-title {
     width: 100%;
+
     h1 {
         font-size: 40px;
         color: map.get(common.$colors, black800);
         line-height: 1.5;
+
+        @include mixins.mediaquery-md {
+            margin-top: 64px;
+        }
     }
 
     p {
         font-size: 16px;
         margin-top: 32px;
         color: map.get(common.$colors, black600);
+
         @include mixins.mediaquery-md {
             margin-top: 24px;
             margin-bottom: 8px;
@@ -1548,7 +1554,7 @@ body:has(.recruit + .news) .news {
 
     &-code {
         font-size: 120px;
-        font-weight: 600;
+        font-weight: 500;
         color: map.get(common.$colors, black600);
         margin: 0;
 
