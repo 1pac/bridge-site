@@ -1420,7 +1420,7 @@ body:has(.recruit + .news) .news {
         margin-top: 32px;
         color: map.get(common.$colors, black600);
         @include mixins.mediaquery-md {
-            margin-top: 64px;
+            margin-top: 24px;
             margin-bottom: 8px;
         }
     }
@@ -1522,7 +1522,7 @@ body:has(.recruit + .news) .news {
 
         &::before {
             content: "";
-            width: 100%;
+            width: 85%;
             height: 1px;
             background-color: map.get(common.$colors, black200);
             position: absolute;
