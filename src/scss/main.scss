@@ -1146,7 +1146,7 @@ body:has(.recruit + .news) .news {
         }
     }
 
-    h3 {
+    h2 {
         text-align: start;
 
         @include mixins.mediaquery-md {
