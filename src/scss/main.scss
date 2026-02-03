@@ -1226,7 +1226,9 @@ body:has(.recruit + .news) .news {
         padding-bottom: 0 !important;
     }
 }
-
+.page-services-marketing .c-support:has(+ .c-case) {
+  padding-bottom: 120px !important;
+}
 .page-services-marketing .c-support-list li {
     width: 296px;
 

@@ -997,14 +997,10 @@ img {
                 background-position: center;
                 background-size: contain;
                 position: absolute;
-                top: 25.08px;
+                top: 22.08px;
                 right: 19px;
                 width: 26px;
                 height: 13.85px;
-
-                @include mixins.mediaquery-md {
-                    top: 19.08px;
-                }
             }
 
             &::after {
@@ -1456,15 +1452,6 @@ img {
         border: map.get(common.$colors, black600) 1px solid;
         width: 1px;
         height: 120px;
-    }
-}
-
-.c-adjustment {
-    background-color: #F7F7F8;
-    padding-bottom: 120px;
-
-    @include mixins.mediaquery-md {
-        padding-bottom: 120px;
     }
 }
 
