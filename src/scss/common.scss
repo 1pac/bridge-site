@@ -633,6 +633,7 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 
     &.show {
@@ -875,10 +876,10 @@ img {
 
 // 事例セクション
 .c-case {
-    padding-block: 120px;
+    padding-block: 80px;
 
     @include mixins.mediaquery-md {
-        padding-block: 80px;
+        padding-block: 64px;
     }
 
     &-list {
@@ -886,11 +887,12 @@ img {
         margin-top: 64px;
         display: flex;
         flex-direction: column;
-        row-gap: 50px;
+        row-gap: 80px;
         flex-wrap: wrap;
 
         @include mixins.mediaquery-md {
             padding-left: 0;
+            row-gap: 64px;
         }
 
         li {
@@ -903,16 +905,16 @@ img {
                 flex-direction: column;
             }
 
-            h4 {
-                font-size: clamp(28px, calc((32 / 1600) * 100vw), 32px);
-
+            span {
+                font-size: 32px;
+                font-weight: 600;
                 span {
                     color: #AACE45;
                 }
             }
 
             h3 {
-                font-size: clamp(28px, calc((40 / 1600) * 100vw), 40px);
+                font-size: clamp(28px, calc((40 / 1600) * 100vw), 32px);
                 line-height: 1.5;
                 margin-top: 16px;
             }
@@ -924,6 +926,7 @@ img {
                 line-height: 1.8;
 
                 @include mixins.mediaquery-md {
+                    font-size: 16px;
                     margin-top: 15px;
                     line-height: 1.8;
                 }
