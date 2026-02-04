@@ -1356,6 +1356,7 @@ body:has(.recruit + .news) .news {
 
     @include mixins.mediaquery-md {
         padding-top: 64px;
+        padding-bottom: 64px;
     }
 
     &-company {
