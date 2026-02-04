@@ -4,7 +4,7 @@
 
 body {
     width: 100%;
-    font-family: "Noto Sans JP", "Inter" ,"sans-serif";
+    font-family: "Noto Sans JP", "Inter", "sans-serif";
 }
 
 img {
@@ -765,7 +765,7 @@ img {
         li {
             display: flex;
             flex-direction: column;
-            row-gap: 16px;
+            row-gap: 12px;
             width: 36.5%;
 
             @include mixins.mediaquery-sm {
@@ -803,6 +803,7 @@ img {
         font-size: 18px;
         text-align: center;
         margin-top: 32px;
+        line-height: 2;
     }
 
     @include mixins.mediaquery-md {
@@ -831,7 +832,7 @@ img {
             display: flex;
             flex-direction: column;
             align-items: center;
-            row-gap: 16px;
+            row-gap: 8px;
 
             @include mixins.mediaquery-sm {
                 width: 279px;
@@ -845,6 +846,7 @@ img {
 
             h3 {
                 font-size: clamp(14px, calc((20 / 1600) * 100vw), 20px);
+                line-height: 1.5;
 
                 @include mixins.mediaquery-sm {
                     font-size: 20px;
@@ -853,6 +855,7 @@ img {
 
             div {
                 width: 100%;
+                margin-top: 24px;
             }
 
             p {
@@ -864,10 +867,6 @@ img {
                 @include mixins.mediaquery-sm {
                     font-size: 16px;
                 }
-            }
-
-            img {
-                margin-top: 16px;
             }
         }
     }
@@ -1139,6 +1138,7 @@ img {
 
     @include mixins.mediaquery-md {
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .wrapper {
@@ -1147,6 +1147,16 @@ img {
 
         @include mixins.mediaquery-md {
             padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+        }
+    }
+
+    &-title {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding-inline: min(calc((88 / 1600) * 100vw), 88px);
+
+        @include mixins.mediaquery-md {
+            padding-inline: 0;
         }
     }
 
@@ -1234,7 +1244,7 @@ img {
                 }
 
                 @include mixins.mediaquery-md {
-                    width: 82%;
+                    width: 95%;
                     position: relative;
                     top: 0;
                     left: 0;
@@ -1419,6 +1429,7 @@ img {
         &-detail {
             padding-left: 15px;
         }
+
         &-heading-bottom {
             margin-top: 16px;
         }

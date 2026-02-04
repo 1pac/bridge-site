@@ -1255,6 +1255,15 @@ body:has(.recruit + .news) .news {
 
 .page-services-clinical .c-support-list {
     flex-wrap: wrap;
+    row-gap: 80px;
+    padding-bottom: 120px;
+}
+.page-services-clinical .c-support-list._process {
+    padding-bottom: 80px !important;
+}
+.page-services-clinical .c-support._process {
+    background-color: #FFFFFF !important;
+    padding-top: 80px !important;
 }
 
 .page-services-clinical .c-support-list li {
@@ -1264,14 +1273,14 @@ body:has(.recruit + .news) .news {
 .page-services-clinical .c-support-list._process li {
     width: 19.1%;
 
-    h4 {
-        min-height: 12.4%;
-
+    h3 {
+        min-height: 18.4%;
+        text-align: center;
         @include mixins.mediaquery-sm {
             min-height: unset;
         }
     }
-
+    
     @include mixins.mediaquery-md {
         width: 296px;
     }
