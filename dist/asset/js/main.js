@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*  =====================
-        services:共通モーダル(※CaseStudyは不要になったがコメントアウト残すため処理も残置)
+        services:共通モーダル(※CaseStudyのセクションは不要になったが将来的に使用する可能性があるため処理も残置)
         ===================== */
 
     //モーダルコンテンツ配列

@@ -647,17 +647,12 @@ img {
         top: 50%;
         left: 50%;
         background-color: #fff;
-        padding: calc((85 / 1600) * 100vw) calc((122 / 1600) * 100vw) calc((112 / 1600) * 100vw) calc((120 / 1600) * 100vw);
-        max-height: 90vh;
         transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
         transition: transform .3s ease, opacity .3s ease;
-        overflow-y: auto;
 
         @include mixins.mediaquery-md {
             width: calc((1477 / 1600) * 100vw);
-            height: 80vh;
-            padding-top: 85px;
         }
 
         &.show {
@@ -665,9 +660,21 @@ img {
             opacity: 1;
         }
 
+        &-wrapper {
+            padding: min(calc((80 / 1600) * 100vw), 80px);
+            max-height: 90vh;
+            overflow-y: auto;
+
+            @include mixins.mediaquery-md {
+                height: 80vh;
+                padding-top: 85px;
+            }
+
+        }
+
         &-img {
-            width: 57.3%;
-            width: max(calc((679 / 1600) * 100vw), 277px);
+            width: 100%;
+            max-width: 679px;
             height: auto;
             margin: 0 auto;
             padding-block: 46px;
@@ -721,10 +728,9 @@ img {
 
         &-close {
             position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 26px;
-            font-weight: 700;
+            top: 8px;
+            right: 8px;
+            font-size: 36px;
             cursor: pointer;
             transition: opacity 0.3s ease;
 
@@ -1428,9 +1434,13 @@ img {
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 18px;
+            line-height: 2;
             margin-top: 16px;
+        }
+
+        b {
+            font-size: 16px;
         }
 
         &-detail {

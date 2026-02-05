@@ -541,6 +541,7 @@
                     h3 {
                         font-size: 40px;
                         font-weight: 700;
+                        line-height: 1.5;
                         transition: color 0.3s ease;
 
                         @include mixins.mediaquery-md {
@@ -985,6 +986,7 @@ body:has(.recruit + .news) .news {
             h4 {
                 margin-top: 20px;
                 font-size: clamp(20px, calc((28 / 1600) * 100vw), 28px);
+                line-height: 1.5;
             }
 
             p {
@@ -1079,8 +1081,8 @@ body:has(.recruit + .news) .news {
 
                 p {
                     font-size: 16px;
-                    line-height: 2.5;
-
+                    line-height: 1.8;
+                    
                     @include mixins.mediaquery-md {
                         margin-top: 12px;
                     }
@@ -1162,12 +1164,12 @@ body:has(.recruit + .news) .news {
         margin-top: 48px;
         display: flex;
         flex-wrap: wrap;
-        gap: min(calc((8 / 1600) * 100vw), 8px);
+        // gap: min(calc((8 / 1600) * 100vw), 8px);
+        gap: 8px;
         justify-content: center;
 
         @include mixins.mediaquery-sm {
             justify-content: center;
-            row-gap: 8px;
         }
 
         li {
@@ -1181,14 +1183,10 @@ body:has(.recruit + .news) .news {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
             @include mixins.mediaquery-md {
-                width: 49.4%;
+                width: 100%;
                 justify-content: unset;
                 min-height: 0;
                 padding: 24px;
-            }
-
-            @include mixins.mediaquery-sm {
-                width: 327px;
             }
 
             h3 {
