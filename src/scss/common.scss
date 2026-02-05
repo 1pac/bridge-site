@@ -4,7 +4,7 @@
 
 body {
     width: 100%;
-    font-family: "Noto Sans JP", "Inter", "sans-serif";
+    font-family: "Noto Sans JP", "sans-serif";
 }
 
 img {
@@ -661,13 +661,13 @@ img {
         }
 
         &-wrapper {
-            padding: min(calc((80 / 1600) * 100vw), 80px);
+            padding-block: clamp(64px, calc((80 / 1600) * 100vw), 80px);
+            padding-inline: clamp(24px, calc((80 / 1600) * 100vw), 80px);
             max-height: 90vh;
             overflow-y: auto;
 
             @include mixins.mediaquery-md {
                 height: 80vh;
-                padding-top: 85px;
             }
 
         }
@@ -728,9 +728,10 @@ img {
 
         &-close {
             position: absolute;
-            top: 8px;
-            right: 8px;
+            top: -40px;
+            right: -5px;
             font-size: 36px;
+            color: #fff;
             cursor: pointer;
             transition: opacity 0.3s ease;
 
@@ -1306,6 +1307,18 @@ img {
 
         li:nth-of-type(3) {
             height: 300px;
+
+            @include mixins.mediaquery-md {
+                width: 100%;
+                height: unset;
+                background-color: unset;
+                flex-direction: column;
+                row-gap: 48px;
+            }
+        }
+
+        li._en {
+            height: 313px;
 
             @include mixins.mediaquery-md {
                 width: 100%;

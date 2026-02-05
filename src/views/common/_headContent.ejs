@@ -19,8 +19,10 @@
 
     <link rel="canonical" href="<%= meta.canonical %>">
     <link rel="icon" href="<%= meta.basePath %><%= ASSET_PATH %>asset/img/tcross_favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= meta.basePath %><%= ASSET_PATH %>asset/img/tcross_favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= meta.basePath %><%= ASSET_PATH %>asset/img/tcross_favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="<%= meta.basePath %><%= ASSET_PATH %>asset/img/tcross_favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="<%= meta.basePath %><%= ASSET_PATH %>asset/img/tcross_favicon.ico">
     <link rel="stylesheet" href="<%= meta.basePath %><%= ASSET_PATH %>asset/css/main.bundle.css">
     <link rel="stylesheet" href="<%= meta.basePath %><%= ASSET_PATH %>asset/css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,5 +35,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
         rel="stylesheet">
+    <% if (meta.lang==='en/' ) { %>
+        <style>
+            body {
+                width: 100%;
+                font-family: "Inter", "sans-serif";
+            }
+        </style>
+    <% } %>
 
 </head>
