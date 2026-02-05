@@ -665,6 +665,10 @@ img {
             padding-inline: clamp(24px, calc((80 / 1600) * 100vw), 80px);
             max-height: 80vh;
             overflow-y: auto;
+
+            @include mixins.mediaquery-md {
+                max-height: 70vh;
+            }
         }
 
         &-img {
