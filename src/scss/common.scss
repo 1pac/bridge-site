@@ -342,7 +342,7 @@ img {
         }
 
         &-title {
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 600;
             margin-bottom: 56px;
 
@@ -380,14 +380,14 @@ img {
 .c-breadcrumbs {
     display: flex;
     column-gap: 16px;
-    margin: 20px auto 50px;
+    margin: 20px auto 10px;
 
     @include mixins.mediaquery-md {
         display: none;
     }
 
     li {
-        font-size: 12px;
+        font-size: 16px;
 
         &._active {
             text-decoration: underline;
@@ -424,7 +424,7 @@ img {
 
     &-arrow {
         color: map.get(common.$colors, t-gray);
-        font-size: 5px !important;
+        font-size: 8px !important;
         display: flex;
         align-items: center;
     }
@@ -448,7 +448,7 @@ img {
 
 // 下層見出し
 .c-headline {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.5;
 
@@ -478,7 +478,7 @@ img {
     }
 
     h1 {
-        font-size: 56px;
+        font-size: 40px;
         font-weight: 700;
         line-height: 1.5;
 
@@ -498,7 +498,11 @@ img {
         }
 
         .c-headline {
-            font-size: clamp(28px, calc((40 / 1600) * 100vw), 40px);
+            font-size: 32px;
+            font-size: clamp(30px, calc((32 / 1600) * 100vw), 32px);
+            @include mixins.mediaquery-md {
+                font-size: 28px;
+            }
         }
 
         p {
@@ -573,7 +577,7 @@ img {
         color: #fff;
 
         h2 {
-            font-size: 48px;
+            font-size: 40px;
             line-height: 1.5;
 
             @include mixins.mediaquery-md {
@@ -606,7 +610,7 @@ img {
             }
 
             h3 {
-                font-size: 40px;
+                font-size: 32px;
                 line-height: 1.5;
 
                 @include mixins.mediaquery-md {
@@ -794,7 +798,7 @@ img {
             }
 
             h3 {
-                font-size: clamp(24px, calc((28 / 1600) * 100vw), 28px);
+                font-size: clamp(20px, calc((24 / 1600) * 100vw), 24px);
                 font-weight: 700;
                 line-height: 1.5;
 
@@ -932,7 +936,7 @@ img {
             }
 
             h3 {
-                font-size: clamp(28px, calc((40 / 1600) * 100vw), 32px);
+                font-size: 28px;
                 line-height: 1.5;
                 margin-top: 16px;
             }

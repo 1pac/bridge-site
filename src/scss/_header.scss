@@ -92,7 +92,7 @@
         }
 
         &-logo {
-            width: 138px;
+            width: 176px;
             height: auto;
             display: block;
             transition: opacity 0.3s;
@@ -106,7 +106,7 @@
             display: flex;
             gap: calc((24 / 1600) * 100vw);
             align-items: center;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 400;
 
             li {
@@ -197,7 +197,7 @@
 
         #header-nav-select {
             position: relative;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 500;
             transition: color 0.3s;
             width: 180%;
