@@ -46,8 +46,8 @@
         &-heading {
             width: 783px;
             position: absolute;
-            top: calc((265.5 / 1600) * 100vw);
-            left: calc((88 / 1600) * 100vw);
+            top: min(calc((265.5 / 1600) * 100vw), 265.5px);
+            left: min(calc((88 / 1600) * 100vw), 88px);
             line-height: 1.3;
 
             @include mixins.mediaquery-md {
@@ -90,8 +90,8 @@
 
         &-link {
             position: absolute;
-            right: calc((88 / 1600) * 100vw);
-            bottom: calc((88 / 1600) * 100vw);
+            right: min(calc((88 / 1600) * 100vw), 88px);
+            bottom: min(calc((88 / 1600) * 100vw), 88px);
 
             @include mixins.mediaquery-md {
                 right: unset;
@@ -122,8 +122,8 @@
 
         &-controls {
             position: absolute;
-            bottom: calc((24 / 1600) * 100vw);
-            left: calc((88 / 1600) * 100vw);
+            bottom: min(calc((24 / 1600) * 100vw), 24px);
+            left: min(calc((88 / 1600) * 100vw), 88px);
             display: flex;
             align-items: center;
             column-gap: calc((16 / 1600) * 100vw);
@@ -139,7 +139,9 @@
 
             &TogglePlay {
                 width: max(calc((50 / 1600) * 100vw), 32px);
+                width: clamp(32px,calc((50 / 1600) * 100vw), 50px);
                 height: max(calc((50 / 1600) * 100vw), 32px);
+                height: clamp(32px,calc((50 / 1600) * 100vw), 50px);
                 border-radius: 50%;
                 cursor: pointer;
                 position: relative;
@@ -490,7 +492,7 @@
 
             &Content {
                 display: flex;
-                column-gap: calc((64 / 1600) * 100vw);
+                column-gap: min(calc((64 / 1600) * 100vw), 64px);
                 padding-left: min(calc((88 / 1600) * 100vw), 88px);
                 cursor: pointer;
 
@@ -707,9 +709,8 @@
             height: auto;
             position: absolute;
             top: 37.5px;
-            right: -18.5vw;
+            right: max(calc((-300 / 1600) * 100vw), -300px);
             z-index: -1;
-
             @include mixins.mediaquery-md {
                 position: relative;
                 width: 120%;

@@ -900,7 +900,7 @@ img {
     }
 
     &-list {
-        padding-left: calc((248 / 1600) * 100vw);
+        padding-left: min(calc((248 / 1600) * 100vw), 248px);
         margin-top: 64px;
         display: flex;
         flex-direction: column;
