@@ -340,7 +340,7 @@ img {
         &-title {
             font-size: 48px;
             font-weight: 600;
-            margin-bottom: 56px;
+            margin-bottom: 32px;
 
             @include mixins.mediaquery-md {
                 font-size: 32px;
@@ -376,7 +376,7 @@ img {
 .c-breadcrumbs {
     display: flex;
     column-gap: 16px;
-    margin: 20px auto 10px;
+    margin: 20px auto 16px;
 
     @include mixins.mediaquery-md {
         display: none;
@@ -486,7 +486,7 @@ img {
     &-content {
         display: flex;
         column-gap: min(calc((64 / 1600) * 100vw), 64px);
-        margin-top: 133px;
+        margin-top: 80px;
 
         @include mixins.mediaquery-md {
             flex-direction: column;
@@ -534,7 +534,7 @@ img {
 
 // 下層説明セクション
 .c-explanation {
-    margin-top: 130px;
+    margin-top: 160px;
     margin-inline: auto;
 
     @include mixins.mediaquery-md {
