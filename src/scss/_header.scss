@@ -179,13 +179,12 @@
                 top: 40%;
                 right: -18px;
                 margin-left: calc((8 / 1600) * 100vw);
-                width: calc((6 / 1600) * 100vw);
-                height: calc((6 / 1600) * 100vw);
+                width: 7px;
+                height: 7px;
                 border-right: calc((2 / 1600) * 100vw) solid #333;
                 border-bottom: calc((2 / 1600) * 100vw) solid #333;
                 transform: translateY(-50%) rotate(45deg);
                 transition: border-right-color 0.3s, border-bottom-color 0.3s;
-
                 pointer-events: none;
             }
 
