@@ -9,7 +9,6 @@
     width: 100%;
     padding-top: 48px;
     padding-bottom: 48px;
-    padding-inline: min(calc((88 / 1600) * 100vw), 88px);
     margin: 40px auto 0;
     background-color: map.get(common.$colors, black30);
 
