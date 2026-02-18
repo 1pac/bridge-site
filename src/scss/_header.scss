@@ -92,10 +92,14 @@
         }
 
         &-logo {
-            width: 176px;
+            width: 180px;
             height: auto;
             display: block;
             transition: opacity 0.3s;
+
+            @include mixins.mediaquery-md {
+                width: 112px;
+            }
 
             &:hover {
                 opacity: 0.5;
@@ -202,6 +206,7 @@
             width: 180%;
             color: map.get(common.$colors, black800);
             padding-left: 2px;
+
             &:hover {
                 cursor: pointer;
                 color: map.get(common.$colors, t-green);
@@ -215,7 +220,7 @@
             display: flex;
             justify-content: space-between;
             column-gap: 15px;
-
+            align-items: center;
         }
     }
 
@@ -277,6 +282,7 @@
             padding: 16px;
 
             &-logo {
+                width: 112px;
                 display: flex;
                 align-items: center;
             }
