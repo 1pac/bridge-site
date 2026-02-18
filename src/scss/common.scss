@@ -494,7 +494,6 @@ img {
         }
 
         .c-headline {
-            font-size: 32px;
             font-size: clamp(30px, calc((32 / 1600) * 100vw), 32px);
             @include mixins.mediaquery-md {
                 font-size: 28px;
@@ -522,8 +521,6 @@ img {
 
         div:last-of-type {
             width: 59%;
-            // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
             @include mixins.mediaquery-md {
                 width: 100%;
                 margin-top: 48px;
@@ -825,7 +822,6 @@ img {
 
     @include mixins.mediaquery-md {
         padding-block: 80px;
-        // padding-top: 80px;
     }
 
     .c-headline {
@@ -953,7 +949,6 @@ img {
 
 
             div:last-of-type {
-                // width: 47%;
                 width: min(calc((552 / 1600) * 100vw), 552px);
                 height: min(calc((310 / 1600) * 100vw), 310px);
                 flex-shrink: 0;
@@ -962,7 +957,6 @@ img {
                 overflow: hidden;
 
                 @include mixins.mediaquery-md {
-                    // width: 100%;
                     width: clamp(327px, calc((680 / 767) * 100vw), 695px);
                     height: clamp(183px, calc((404 / 767) * 100vw), 404px);
                 }
@@ -1207,7 +1201,6 @@ img {
             }
 
             div:first-of-type {
-                // width: 19.4%;
                 width: 184px;
                 max-width: 184px;
                 position: absolute;

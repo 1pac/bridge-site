@@ -190,7 +190,6 @@
             &Pagination {
                 display: flex;
                 align-items: center;
-                // gap: calc((10 / 1600) * 100vw);
                 column-gap: 16px;
                 background: rgba(0, 0, 0, 0.45);
                 padding: 8px 12px;
@@ -333,7 +332,6 @@
         &-list {
             width: 100%;
             display: flex;
-            // gap: min(calc(64 / 1600) * 100vw, 64px);
             gap: clamp(24px, (calc((64 / 1600) * 100vw)), 64px);
             margin-top: 160px;
             flex-wrap: wrap;
@@ -595,7 +593,6 @@
                     flex-shrink: 0;
 
                     img {
-                        // position: absolute;
                         object-fit: cover;
                         transition: scale 0.3s ease;
                         width: min(calc((935 / 1600) * 100vw), 935px);
@@ -1021,7 +1018,6 @@ body:has(.recruit + .news) .news {
         width: fit-content;
         display: flex;
         position: relative;
-        // max-width: 1600px;
         max-width: 1352px;
         margin: 0 auto;
         padding-inline: min(calc((88 / 1600) * 100vw), 88px);
@@ -1202,7 +1198,6 @@ body:has(.recruit + .news) .news {
         margin-top: 48px;
         display: flex;
         flex-wrap: wrap;
-        // gap: min(calc((8 / 1600) * 100vw), 8px);
         gap: 8px;
         justify-content: center;
 
